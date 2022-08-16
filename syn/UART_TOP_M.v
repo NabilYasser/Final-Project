@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : K-2015.06
-// Date      : Wed Aug 17 02:28:20 2022
+// Date      : Wed Aug 17 05:40:04 2022
 /////////////////////////////////////////////////////////////
 
 
@@ -33,120 +33,92 @@ endmodule
 
 
 module RX_FSM ( clk, rst, RX_IN, PAR_EN, Prescale, bit_cnt, data_finish_flag, 
-        edge_cnt, par_err, start_err, stop_err, counter_en, bits_counter_en, 
-        data_samp_en, start_check_en, deser_en, par_check_en, stop_check_en, 
-        data_valid );
+        edge_cnt, P_DATA, PAR_TYP, Error, Compared_bit, counter_en, 
+        bits_counter_en, Error_Unit_En, data_samp_en, deser_en, data_valid );
   input [1:0] Prescale;
   input [4:0] edge_cnt;
-  input clk, rst, RX_IN, PAR_EN, bit_cnt, data_finish_flag, par_err, start_err,
-         stop_err;
-  output counter_en, bits_counter_en, data_samp_en, start_check_en, deser_en,
-         par_check_en, stop_check_en, data_valid;
-  wire   par_error, N66, N67, n63, n64, n65, n1, n2, n3, n4, n5, n6, n7, n8,
-         n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22,
-         n23, n24, n25, n26, n27, n28, n29, n30;
+  input [7:0] P_DATA;
+  input clk, rst, RX_IN, PAR_EN, bit_cnt, data_finish_flag, PAR_TYP, Error;
+  output Compared_bit, counter_en, bits_counter_en, Error_Unit_En,
+         data_samp_en, deser_en, data_valid;
+  wire   n43, N77, n62, n1, n3, n4, n6, n7, n8, n9, n10, n11, n12, n13, n14,
+         n15, n16, n17, n18, n19, n20, n21, n22, n23, n24, n25, n26, n27, n28,
+         n29, n30, n31, n32, n33, n34, n35, n36, n37, n38, n39, n40, n41, n42;
   wire   [2:0] CurrentState;
   wire   [2:0] NextState;
-  assign data_valid = N66;
-  assign data_samp_en = N67;
 
-  DFFRX1M stp_error_reg ( .D(n63), .CK(clk), .RN(rst), .QN(n6) );
-  DFFRX1M strt_error_reg ( .D(n65), .CK(clk), .RN(rst), .QN(n1) );
   DFFRX1M \CurrentState_reg[1]  ( .D(NextState[1]), .CK(clk), .RN(rst), .Q(
-        CurrentState[1]), .QN(n30) );
-  DFFRX1M \CurrentState_reg[2]  ( .D(NextState[2]), .CK(clk), .RN(rst), .Q(
+        CurrentState[1]), .QN(n38) );
+  DFFRQX1M \CurrentState_reg[2]  ( .D(NextState[2]), .CK(clk), .RN(rst), .Q(
         CurrentState[2]) );
-  DFFRQX1M par_error_reg ( .D(n64), .CK(clk), .RN(rst), .Q(par_error) );
   DFFRQX1M \CurrentState_reg[0]  ( .D(NextState[0]), .CK(clk), .RN(rst), .Q(
         CurrentState[0]) );
-  NOR2X4M U3 ( .A(edge_cnt[4]), .B(n22), .Y(N67) );
-  NOR3BX2M U4 ( .AN(n3), .B(n4), .C(CurrentState[1]), .Y(start_check_en) );
-  NOR3BX2M U5 ( .AN(n8), .B(n4), .C(CurrentState[0]), .Y(stop_check_en) );
-  NOR4BXLM U6 ( .AN(n17), .B(n27), .C(n28), .D(n21), .Y(N66) );
-  MXI2X1M U7 ( .A(n1), .B(n2), .S0(start_check_en), .Y(n65) );
-  CLKMX2X2M U8 ( .A(par_error), .B(par_err), .S0(par_check_en), .Y(n64) );
-  NOR2X1M U9 ( .A(n5), .B(n4), .Y(par_check_en) );
-  MXI2X1M U10 ( .A(n6), .B(n7), .S0(stop_check_en), .Y(n63) );
-  NOR2X1M U11 ( .A(n4), .B(n9), .Y(deser_en) );
-  CLKINVX1M U12 ( .A(n10), .Y(n4) );
-  OAI211X1M U13 ( .A0(n11), .A1(n12), .B0(n13), .C0(n14), .Y(n10) );
-  NOR2X1M U14 ( .A(edge_cnt[4]), .B(edge_cnt[3]), .Y(n14) );
-  OAI211X1M U15 ( .A0(edge_cnt[0]), .A1(edge_cnt[1]), .B0(n15), .C0(
-        edge_cnt[2]), .Y(n13) );
-  CLKINVX1M U16 ( .A(Prescale[0]), .Y(n15) );
-  OAI211X1M U17 ( .A0(bit_cnt), .A1(n16), .B0(n17), .C0(n18), .Y(counter_en)
+  DFFSQX1M data_valid_reg ( .D(n62), .CK(clk), .SN(rst), .Q(n43) );
+  OAI32X1M U3 ( .A0(n27), .A1(n28), .A2(n29), .B0(n30), .B1(n31), .Y(N77) );
+  XNOR2X2M U4 ( .A(P_DATA[3]), .B(P_DATA[2]), .Y(n1) );
+  CLKXOR2X2M U5 ( .A(P_DATA[7]), .B(P_DATA[6]), .Y(n42) );
+  CLKINVX40M U6 ( .A(n3), .Y(data_valid) );
+  CLKINVX1M U7 ( .A(n43), .Y(n3) );
+  INVXLM U8 ( .A(n3), .Y(n4) );
+  OAI31X2M U9 ( .A0(n37), .A1(Prescale[0]), .A2(n32), .B0(n36), .Y(n10) );
+  CLKBUFX2M U10 ( .A(N77), .Y(data_samp_en) );
+  CLKINVX2M U11 ( .A(Prescale[1]), .Y(n28) );
+  XOR3XLM U12 ( .A(P_DATA[5]), .B(P_DATA[4]), .C(n42), .Y(n40) );
+  XOR3XLM U13 ( .A(P_DATA[1]), .B(P_DATA[0]), .C(n1), .Y(n41) );
+  OAI2BB1X1M U14 ( .A0N(n4), .A1N(n6), .B0(n7), .Y(n62) );
+  OAI211X1M U15 ( .A0(n8), .A1(n9), .B0(n10), .C0(Error), .Y(n6) );
+  NOR2X1M U16 ( .A(n11), .B(n12), .Y(deser_en) );
+  CLKNAND2X2M U17 ( .A(n13), .B(n14), .Y(counter_en) );
+  OAI21X1M U18 ( .A0(n15), .A1(n16), .B0(n17), .Y(n14) );
+  OAI2BB1X1M U19 ( .A0N(bits_counter_en), .A1N(data_finish_flag), .B0(n18), 
+        .Y(NextState[2]) );
+  OAI2B11X1M U20 ( .A1N(n16), .A0(n17), .B0(n12), .C0(n18), .Y(NextState[1])
          );
-  OAI2B11X1M U18 ( .A1N(data_finish_flag), .A0(n9), .B0(n17), .C0(n5), .Y(
-        NextState[2]) );
-  OAI211X1M U19 ( .A0(n16), .A1(n19), .B0(n17), .C0(n20), .Y(NextState[1]) );
-  NOR2BX1M U20 ( .AN(n5), .B(bits_counter_en), .Y(n20) );
-  CLKINVX1M U21 ( .A(n9), .Y(bits_counter_en) );
-  OAI2B11X1M U22 ( .A1N(PAR_EN), .A0(n9), .B0(n16), .C0(n18), .Y(NextState[0])
-         );
-  CLKINVX1M U23 ( .A(n21), .Y(n18) );
-  MX3X1M U24 ( .A(n23), .B(n24), .C(n25), .S0(Prescale[0]), .S1(edge_cnt[3]), 
-        .Y(n22) );
-  NAND3X1M U25 ( .A(n11), .B(n12), .C(Prescale[1]), .Y(n25) );
-  CLKINVX1M U26 ( .A(edge_cnt[2]), .Y(n12) );
-  NAND3BX1M U27 ( .AN(Prescale[1]), .B(n11), .C(edge_cnt[2]), .Y(n24) );
-  CLKNAND2X2M U28 ( .A(edge_cnt[1]), .B(edge_cnt[0]), .Y(n11) );
-  MXI2X1M U29 ( .A(edge_cnt[1]), .B(n26), .S0(edge_cnt[2]), .Y(n23) );
-  NOR2X1M U30 ( .A(edge_cnt[1]), .B(edge_cnt[0]), .Y(n26) );
-  OAI221X1M U31 ( .A0(bit_cnt), .A1(n5), .B0(data_finish_flag), .B1(n9), .C0(
-        n29), .Y(n21) );
-  OR4X1M U32 ( .A(RX_IN), .B(CurrentState[1]), .C(CurrentState[0]), .D(
-        CurrentState[2]), .Y(n29) );
-  CLKNAND2X2M U33 ( .A(n16), .B(n9), .Y(n28) );
-  CLKNAND2X2M U34 ( .A(n3), .B(CurrentState[1]), .Y(n9) );
-  NAND3X1M U35 ( .A(n30), .B(n2), .C(n3), .Y(n16) );
-  NOR2BX1M U36 ( .AN(CurrentState[0]), .B(CurrentState[2]), .Y(n3) );
-  CLKINVX1M U37 ( .A(start_err), .Y(n2) );
-  NAND4BX1M U38 ( .AN(par_error), .B(n5), .C(n6), .D(n1), .Y(n27) );
-  CLKNAND2X2M U39 ( .A(CurrentState[0]), .B(n8), .Y(n5) );
-  NAND3X1M U40 ( .A(n19), .B(n7), .C(n8), .Y(n17) );
-  NOR2BX1M U41 ( .AN(CurrentState[2]), .B(n30), .Y(n8) );
-  CLKINVX1M U42 ( .A(stop_err), .Y(n7) );
-  CLKINVX1M U43 ( .A(bit_cnt), .Y(n19) );
+  AOI21X1M U21 ( .A0(n17), .A1(n9), .B0(n8), .Y(n18) );
+  CLKINVX1M U22 ( .A(n19), .Y(n9) );
+  CLKINVX1M U23 ( .A(bit_cnt), .Y(n17) );
+  NAND3X1M U24 ( .A(n20), .B(n13), .C(n21), .Y(NextState[0]) );
+  AOI21X1M U25 ( .A0(PAR_EN), .A1(bits_counter_en), .B0(n16), .Y(n21) );
+  NOR2X1M U26 ( .A(n7), .B(Error), .Y(n16) );
+  CLKINVX1M U27 ( .A(n12), .Y(bits_counter_en) );
+  CLKINVX1M U28 ( .A(n22), .Y(n13) );
+  OAI32X1M U29 ( .A0(n23), .A1(CurrentState[1]), .A2(CurrentState[0]), .B0(
+        data_finish_flag), .B1(n12), .Y(n22) );
+  NAND3X1M U30 ( .A(CurrentState[1]), .B(n24), .C(CurrentState[0]), .Y(n12) );
+  OR2X1M U31 ( .A(RX_IN), .B(CurrentState[2]), .Y(n23) );
+  MXI2X1M U32 ( .A(n8), .B(n25), .S0(bit_cnt), .Y(n20) );
+  NOR2X1M U33 ( .A(RX_IN), .B(n19), .Y(n25) );
+  CLKINVX1M U34 ( .A(n26), .Y(n8) );
+  MX3X1M U35 ( .A(n32), .B(n33), .C(n34), .S0(edge_cnt[2]), .S1(Prescale[0]), 
+        .Y(n31) );
+  NAND3X1M U36 ( .A(n35), .B(n28), .C(edge_cnt[2]), .Y(n34) );
+  OR2X1M U37 ( .A(edge_cnt[0]), .B(edge_cnt[1]), .Y(n33) );
+  CLKINVX1M U38 ( .A(n36), .Y(n30) );
+  CLKINVX1M U39 ( .A(edge_cnt[3]), .Y(n29) );
+  NAND3BX1M U40 ( .AN(edge_cnt[4]), .B(n37), .C(n35), .Y(n27) );
+  CLKNAND2X2M U41 ( .A(edge_cnt[0]), .B(edge_cnt[1]), .Y(n35) );
+  AOI31X1M U42 ( .A0(n19), .A1(n26), .A2(n7), .B0(n11), .Y(Error_Unit_En) );
+  CLKINVX1M U43 ( .A(n10), .Y(n11) );
+  NOR2X1M U44 ( .A(edge_cnt[4]), .B(edge_cnt[3]), .Y(n36) );
+  CLKINVX1M U45 ( .A(edge_cnt[1]), .Y(n32) );
+  CLKINVX1M U46 ( .A(edge_cnt[2]), .Y(n37) );
+  NAND3X1M U47 ( .A(n38), .B(n24), .C(CurrentState[0]), .Y(n7) );
+  OAI21X1M U48 ( .A0(n39), .A1(n26), .B0(n19), .Y(Compared_bit) );
+  NAND2BX1M U49 ( .AN(CurrentState[0]), .B(n15), .Y(n19) );
+  CLKNAND2X2M U50 ( .A(CurrentState[0]), .B(n15), .Y(n26) );
+  NOR2X1M U51 ( .A(n24), .B(n38), .Y(n15) );
+  CLKINVX1M U52 ( .A(CurrentState[2]), .Y(n24) );
+  XOR3XLM U53 ( .A(n40), .B(PAR_TYP), .C(n41), .Y(n39) );
 endmodule
 
 
-module Start_Check ( clk, rst, sampled_bit, start_check_en, start_err );
-  input clk, rst, sampled_bit, start_check_en;
-  output start_err;
+module Error_Unit ( clk, rst, sampled_bit, Compared_bit, Enable, Error );
+  input clk, rst, sampled_bit, Compared_bit, Enable;
+  output Error;
   wire   n1;
 
-  DFFRQX1M start_err_reg ( .D(n1), .CK(clk), .RN(rst), .Q(start_err) );
-  OA21X1M U3 ( .A0(start_err), .A1(sampled_bit), .B0(start_check_en), .Y(n1)
-         );
-endmodule
-
-
-module Parity_Check ( clk, rst, par_check_en, PAR_TYP, sampled_bit, P_DATA, 
-        par_err );
-  input [7:0] P_DATA;
-  input clk, rst, par_check_en, PAR_TYP, sampled_bit;
-  output par_err;
-  wire   N9, n1, n2, n3, n4, n5, n6;
-
-  DFFRQX1M par_err_reg ( .D(N9), .CK(clk), .RN(rst), .Q(par_err) );
-  XOR3XLM U3 ( .A(n2), .B(n3), .C(n4), .Y(n1) );
-  XNOR2X2M U4 ( .A(P_DATA[3]), .B(P_DATA[2]), .Y(n5) );
-  XNOR2X2M U5 ( .A(P_DATA[7]), .B(P_DATA[6]), .Y(n6) );
-  XOR3XLM U6 ( .A(P_DATA[1]), .B(P_DATA[0]), .C(n5), .Y(n2) );
-  NOR2BX2M U7 ( .AN(par_check_en), .B(n1), .Y(N9) );
-  XNOR2X2M U8 ( .A(sampled_bit), .B(PAR_TYP), .Y(n4) );
-  XOR3XLM U9 ( .A(P_DATA[5]), .B(P_DATA[4]), .C(n6), .Y(n3) );
-endmodule
-
-
-module Stop_Check ( clk, rst, sampled_bit, stop_check_en, stop_err );
-  input clk, rst, sampled_bit, stop_check_en;
-  output stop_err;
-  wire   n2, n1;
-
-  DFFRQX1M stop_err_reg ( .D(n2), .CK(clk), .RN(rst), .Q(stop_err) );
-  AOI2B1X1M U3 ( .A1N(stop_err), .A0(sampled_bit), .B0(n1), .Y(n2) );
-  INVXLM U4 ( .A(stop_check_en), .Y(n1) );
+  NOR2BX2M U3 ( .AN(Enable), .B(n1), .Y(Error) );
+  XNOR2X2M U4 ( .A(sampled_bit), .B(Compared_bit), .Y(n1) );
 endmodule
 
 
@@ -156,7 +128,7 @@ module Bits_Counter ( clk, rst, enable, bits_counter, finish );
   output finish;
   wire   n1, n2, n4, n5, n6, n3;
 
-  DFFRX1M \bits_counter_reg[2]  ( .D(n4), .CK(clk), .RN(rst), .Q(
+  DFFRQX1M \bits_counter_reg[2]  ( .D(n4), .CK(clk), .RN(rst), .Q(
         bits_counter[2]) );
   DFFRQX1M \bits_counter_reg[0]  ( .D(n6), .CK(clk), .RN(rst), .Q(
         bits_counter[0]) );
@@ -164,11 +136,11 @@ module Bits_Counter ( clk, rst, enable, bits_counter, finish );
         bits_counter[1]) );
   NOR3BX2M U3 ( .AN(bits_counter[2]), .B(n2), .C(n3), .Y(finish) );
   NAND2X2M U4 ( .A(enable), .B(bits_counter[0]), .Y(n2) );
-  INVX2M U5 ( .A(bits_counter[1]), .Y(n3) );
-  CLKXOR2X2M U6 ( .A(enable), .B(bits_counter[0]), .Y(n6) );
-  XNOR2X2M U7 ( .A(bits_counter[1]), .B(n2), .Y(n5) );
-  CLKXOR2X2M U8 ( .A(bits_counter[2]), .B(n1), .Y(n4) );
-  NOR2X2M U9 ( .A(n2), .B(n3), .Y(n1) );
+  XNOR2X2M U5 ( .A(bits_counter[1]), .B(n2), .Y(n5) );
+  CLKXOR2X2M U6 ( .A(bits_counter[2]), .B(n1), .Y(n4) );
+  NOR2X2M U7 ( .A(n2), .B(n3), .Y(n1) );
+  CLKXOR2X2M U8 ( .A(enable), .B(bits_counter[0]), .Y(n6) );
+  INVX2M U9 ( .A(bits_counter[1]), .Y(n3) );
 endmodule
 
 
@@ -181,22 +153,22 @@ module Edge_Bit_Counter ( clk, rst, enable, Prescale, edge_cnt, finish );
          N21, n5, \add_21/carry[4] , \add_21/carry[3] , \add_21/carry[2] , n1,
          n2, n3, n4, n6, n7, n8, n9, n10, n11, n12, n13;
 
-  DFFRHQX4M \edge_cnt_reg[1]  ( .D(N11), .CK(clk), .RN(rst), .Q(edge_cnt[1])
-         );
-  DFFRQX2M \edge_cnt_reg[0]  ( .D(N10), .CK(clk), .RN(rst), .Q(edge_cnt[0]) );
   DFFRQX1M finish_reg ( .D(N21), .CK(clk), .RN(rst), .Q(finish) );
-  DFFRQX1M \edge_cnt_reg[3]  ( .D(N13), .CK(clk), .RN(rst), .Q(edge_cnt[3]) );
   DFFRQX1M \edge_cnt_reg[4]  ( .D(N14), .CK(clk), .RN(rst), .Q(edge_cnt[4]) );
-  DFFRHQX1M \edge_cnt_reg[2]  ( .D(N12), .CK(clk), .RN(rst), .Q(edge_cnt[2])
+  DFFRQX1M \edge_cnt_reg[3]  ( .D(N13), .CK(clk), .RN(rst), .Q(edge_cnt[3]) );
+  DFFRQX1M \edge_cnt_reg[2]  ( .D(N12), .CK(clk), .RN(rst), .Q(edge_cnt[2]) );
+  DFFRHQX1M \edge_cnt_reg[0]  ( .D(N10), .CK(clk), .RN(rst), .Q(edge_cnt[0])
+         );
+  DFFRHQX1M \edge_cnt_reg[1]  ( .D(N11), .CK(clk), .RN(rst), .Q(edge_cnt[1])
          );
   NOR2BX2M U3 ( .AN(N8), .B(n5), .Y(N13) );
   NOR2BX2M U4 ( .AN(N7), .B(n5), .Y(N12) );
   NOR2BX2M U5 ( .AN(N6), .B(n5), .Y(N11) );
-  INVX2M U6 ( .A(Prescale[0]), .Y(N15) );
-  NAND2BX2M U7 ( .AN(finish), .B(enable), .Y(n5) );
-  NOR2X2M U8 ( .A(n1), .B(n5), .Y(N14) );
-  XNOR2X2M U9 ( .A(\add_21/carry[4] ), .B(edge_cnt[4]), .Y(n1) );
-  NOR2X2M U10 ( .A(edge_cnt[0]), .B(n5), .Y(N10) );
+  NAND2BX2M U6 ( .AN(finish), .B(enable), .Y(n5) );
+  NOR2X2M U7 ( .A(n1), .B(n5), .Y(N14) );
+  XNOR2X2M U8 ( .A(\add_21/carry[4] ), .B(edge_cnt[4]), .Y(n1) );
+  NOR2X2M U9 ( .A(edge_cnt[0]), .B(n5), .Y(N10) );
+  INVX2M U10 ( .A(Prescale[0]), .Y(N15) );
   ADDHX1M U11 ( .A(edge_cnt[1]), .B(edge_cnt[0]), .CO(\add_21/carry[2] ), .S(
         N6) );
   ADDHX1M U12 ( .A(edge_cnt[2]), .B(\add_21/carry[2] ), .CO(\add_21/carry[3] ), 
@@ -249,14 +221,14 @@ module Data_Sampling ( RX_in, clk, rst, data_samp_en, sampled_bit );
   DFFRX1M \bits_reg[0]  ( .D(n8), .CK(clk), .RN(rst), .Q(bits[0]), .QN(n4) );
   DFFRX1M \bits_reg[1]  ( .D(n7), .CK(clk), .RN(rst), .Q(bits[1]), .QN(n5) );
   DFFRQX1M \bits_reg[2]  ( .D(n6), .CK(clk), .RN(rst), .Q(bits[2]) );
-  AOI21X3M U2 ( .A0(n1), .A1(n2), .B0(data_samp_en), .Y(sampled_bit) );
-  INVXLM U3 ( .A(data_samp_en), .Y(n3) );
-  OAI22XLM U4 ( .A0(data_samp_en), .A1(n5), .B0(n4), .B1(n3), .Y(n7) );
+  INVXLM U2 ( .A(data_samp_en), .Y(n3) );
+  OAI22XLM U3 ( .A0(data_samp_en), .A1(n5), .B0(n4), .B1(n3), .Y(n7) );
+  AOI21X2M U4 ( .A0(n1), .A1(n2), .B0(data_samp_en), .Y(sampled_bit) );
   OAI21X2M U5 ( .A0(bits[0]), .A1(bits[1]), .B0(bits[2]), .Y(n2) );
   NAND2X2M U6 ( .A(bits[1]), .B(bits[0]), .Y(n1) );
-  OAI2BB2XLM U7 ( .B0(data_samp_en), .B1(n4), .A0N(RX_in), .A1N(data_samp_en), 
+  OAI2BB2X1M U7 ( .B0(n5), .B1(n3), .A0N(n3), .A1N(bits[2]), .Y(n6) );
+  OAI2BB2XLM U8 ( .B0(data_samp_en), .B1(n4), .A0N(RX_in), .A1N(data_samp_en), 
         .Y(n8) );
-  OAI2BB2X1M U8 ( .B0(n5), .B1(n3), .A0N(n3), .A1N(bits[2]), .Y(n6) );
 endmodule
 
 
@@ -264,46 +236,48 @@ module Deserializer ( sampled_bit, clk, rst, deser_en, bits_counter, Data );
   input [2:0] bits_counter;
   output [7:0] Data;
   input sampled_bit, clk, rst, deser_en;
-  wire   n3, n4, n6, n7, n9, n11, n13, n15, n19, n20, n21, n22, n23, n24, n25,
-         n26, n1, n2, n10, n12, n14, n16, n17, n18, n27, n28, n29, n30, n31,
-         n32;
+  wire   n35, n3, n4, n6, n7, n9, n11, n13, n15, n19, n20, n21, n22, n23, n24,
+         n25, n26, n5, n8, n10, n12, n14, n16, n17, n18, n27, n28, n29, n33,
+         n34;
 
-  DFFRX1M \Data_reg[7]  ( .D(n26), .CK(clk), .RN(rst), .Q(n2), .QN(n30) );
-  DFFRX1M \Data_reg[3]  ( .D(n22), .CK(clk), .RN(rst), .Q(n1), .QN(n29) );
   DFFRHQX1M \Data_reg[4]  ( .D(n23), .CK(clk), .RN(rst), .Q(Data[4]) );
   DFFRHQX1M \Data_reg[0]  ( .D(n19), .CK(clk), .RN(rst), .Q(Data[0]) );
   DFFRHQX1M \Data_reg[5]  ( .D(n24), .CK(clk), .RN(rst), .Q(Data[5]) );
   DFFRHQX1M \Data_reg[1]  ( .D(n20), .CK(clk), .RN(rst), .Q(Data[1]) );
-  DFFRHQX1M \Data_reg[6]  ( .D(n25), .CK(clk), .RN(rst), .Q(Data[6]) );
-  DFFRHQX1M \Data_reg[2]  ( .D(n21), .CK(clk), .RN(rst), .Q(Data[2]) );
-  INVX2M U2 ( .A(n29), .Y(Data[3]) );
-  INVX2M U3 ( .A(n30), .Y(Data[7]) );
-  OAI21BX1M U4 ( .A0(n3), .A1(n4), .B0N(n17), .Y(n19) );
-  OAI21BX1M U5 ( .A0(n3), .A1(n13), .B0N(n18), .Y(n23) );
-  OA21XLM U6 ( .A0(n6), .A1(n3), .B0(Data[0]), .Y(n17) );
-  OA21XLM U7 ( .A0(n3), .A1(n15), .B0(Data[4]), .Y(n18) );
-  OAI21BXLM U8 ( .A0(n7), .A1(n13), .B0N(n28), .Y(n24) );
-  OA21XLM U9 ( .A0(n7), .A1(n15), .B0(Data[5]), .Y(n28) );
-  OAI21BXLM U10 ( .A0(n9), .A1(n13), .B0N(n16), .Y(n25) );
-  OA21XLM U11 ( .A0(n9), .A1(n15), .B0(Data[6]), .Y(n16) );
-  OAI21BXLM U12 ( .A0(n4), .A1(n7), .B0N(n27), .Y(n20) );
-  OA21XLM U13 ( .A0(n6), .A1(n7), .B0(Data[1]), .Y(n27) );
-  OAI21BXLM U14 ( .A0(n4), .A1(n9), .B0N(n14), .Y(n21) );
-  OA21XLM U15 ( .A0(n6), .A1(n9), .B0(Data[2]), .Y(n14) );
-  OAI21BX1M U16 ( .A0(n4), .A1(n11), .B0N(n10), .Y(n22) );
-  OA21X2M U17 ( .A0(n6), .A1(n11), .B0(n1), .Y(n10) );
-  OAI21BX1M U18 ( .A0(n11), .A1(n13), .B0N(n12), .Y(n26) );
-  OA21X2M U19 ( .A0(n11), .A1(n15), .B0(n2), .Y(n12) );
-  NAND2BX2M U20 ( .AN(n15), .B(sampled_bit), .Y(n13) );
-  NAND2BX2M U21 ( .AN(n6), .B(sampled_bit), .Y(n4) );
-  NAND2X2M U22 ( .A(n32), .B(n31), .Y(n3) );
-  NAND2X2M U23 ( .A(bits_counter[2]), .B(deser_en), .Y(n15) );
-  NAND2BX2M U24 ( .AN(bits_counter[2]), .B(deser_en), .Y(n6) );
-  NAND2X2M U25 ( .A(bits_counter[0]), .B(n32), .Y(n7) );
-  NAND2X2M U26 ( .A(bits_counter[1]), .B(n31), .Y(n9) );
-  INVX2M U27 ( .A(bits_counter[0]), .Y(n31) );
-  INVX2M U28 ( .A(bits_counter[1]), .Y(n32) );
+  DFFRHQX1M \Data_reg[6]  ( .D(n25), .CK(clk), .RN(rst), .Q(n29) );
+  DFFRHQX1M \Data_reg[2]  ( .D(n21), .CK(clk), .RN(rst), .Q(n35) );
+  DFFRHQX1M \Data_reg[7]  ( .D(n26), .CK(clk), .RN(rst), .Q(Data[7]) );
+  DFFRHQX1M \Data_reg[3]  ( .D(n22), .CK(clk), .RN(rst), .Q(Data[3]) );
+  INVX2M U2 ( .A(n5), .Y(Data[2]) );
+  INVX2M U3 ( .A(n8), .Y(Data[6]) );
+  CLKINVX1M U4 ( .A(n29), .Y(n8) );
+  CLKINVX1M U5 ( .A(n35), .Y(n5) );
+  OA21XLM U6 ( .A0(n6), .A1(n9), .B0(Data[2]), .Y(n27) );
+  OA21XLM U7 ( .A0(n9), .A1(n15), .B0(Data[6]), .Y(n14) );
+  OA21XLM U8 ( .A0(n6), .A1(n7), .B0(Data[1]), .Y(n17) );
+  OA21XLM U9 ( .A0(n7), .A1(n15), .B0(Data[5]), .Y(n18) );
+  OA21XLM U10 ( .A0(n6), .A1(n3), .B0(Data[0]), .Y(n10) );
+  OA21XLM U11 ( .A0(n3), .A1(n15), .B0(Data[4]), .Y(n12) );
+  OAI21BX1M U12 ( .A0(n3), .A1(n4), .B0N(n10), .Y(n19) );
+  OAI21BX1M U13 ( .A0(n3), .A1(n13), .B0N(n12), .Y(n23) );
+  OAI21BX1M U14 ( .A0(n9), .A1(n13), .B0N(n14), .Y(n25) );
+  OAI21BX1M U15 ( .A0(n4), .A1(n11), .B0N(n16), .Y(n22) );
+  OA21X2M U16 ( .A0(n6), .A1(n11), .B0(Data[3]), .Y(n16) );
+  NAND2BX2M U17 ( .AN(n15), .B(sampled_bit), .Y(n13) );
+  NAND2BX1M U18 ( .AN(n6), .B(sampled_bit), .Y(n4) );
+  NAND2X2M U19 ( .A(n34), .B(n33), .Y(n3) );
+  OAI21BX1M U20 ( .A0(n4), .A1(n7), .B0N(n17), .Y(n20) );
+  OAI21BX1M U21 ( .A0(n7), .A1(n13), .B0N(n18), .Y(n24) );
+  OAI21BX1M U22 ( .A0(n4), .A1(n9), .B0N(n27), .Y(n21) );
+  OAI21BX1M U23 ( .A0(n11), .A1(n13), .B0N(n28), .Y(n26) );
+  OA21X2M U24 ( .A0(n11), .A1(n15), .B0(Data[7]), .Y(n28) );
+  NAND2X2M U25 ( .A(bits_counter[2]), .B(deser_en), .Y(n15) );
+  NAND2BX2M U26 ( .AN(bits_counter[2]), .B(deser_en), .Y(n6) );
+  NAND2X2M U27 ( .A(bits_counter[0]), .B(n34), .Y(n7) );
+  NAND2X2M U28 ( .A(bits_counter[1]), .B(n33), .Y(n9) );
   NAND2X2M U29 ( .A(bits_counter[1]), .B(bits_counter[0]), .Y(n11) );
+  INVX2M U30 ( .A(bits_counter[0]), .Y(n33) );
+  INVX2M U31 ( .A(bits_counter[1]), .Y(n34) );
 endmodule
 
 
@@ -314,31 +288,24 @@ module RX ( clk_Top, rst_Top, RX_IN_Top, Prescale_Top, PAR_EN_TOP, PAR_TYP_Top,
   input clk_Top, rst_Top, RX_IN_Top, PAR_EN_TOP, PAR_TYP_Top;
   output Data_Valid_Top;
   wire   n25, n26, n27, n28, n29, n30, n31, n32, bit_cnt_Top,
-         data_finish_flag_Top, par_err_Top, start_err_Top, stop_err_Top,
-         enable_Top, bits_counter_en_Top, data_samp_en_Top, start_check_en_Top,
-         deser_en_FSM_Top, par_check_en_Top, stop_check_en_Top,
-         sampled_bit_Top, n1, n2, n4, n5, n7, n8, n10, n11, n13, n14, n16, n17,
-         n19, n20, n22, n23;
+         data_finish_flag_Top, Error_Top, Compared_bit_Top, enable_Top,
+         bits_counter_en_Top, Error_Unit_En_Top, data_samp_en_Top,
+         deser_en_FSM_Top, sampled_bit_Top, n1, n2, n4, n5, n7, n8, n10, n11,
+         n13, n14, n16, n17, n19, n20, n22, n23;
   wire   [4:0] edge_cnt_Top;
   wire   [2:0] bits_counter_Top;
 
-  RX_FSM u_FSM ( .clk(clk_Top), .rst(rst_Top), .RX_IN(RX_IN_Top), .PAR_EN(
+  RX_FSM u_RX_FSM ( .clk(clk_Top), .rst(rst_Top), .RX_IN(RX_IN_Top), .PAR_EN(
         PAR_EN_TOP), .Prescale(Prescale_Top[4:3]), .bit_cnt(bit_cnt_Top), 
         .data_finish_flag(data_finish_flag_Top), .edge_cnt(edge_cnt_Top), 
-        .par_err(par_err_Top), .start_err(start_err_Top), .stop_err(
-        stop_err_Top), .counter_en(enable_Top), .bits_counter_en(
-        bits_counter_en_Top), .data_samp_en(data_samp_en_Top), 
-        .start_check_en(start_check_en_Top), .deser_en(deser_en_FSM_Top), 
-        .par_check_en(par_check_en_Top), .stop_check_en(stop_check_en_Top), 
-        .data_valid(Data_Valid_Top) );
-  Start_Check u_Start_Check ( .clk(clk_Top), .rst(rst_Top), .sampled_bit(
-        sampled_bit_Top), .start_check_en(start_check_en_Top), .start_err(
-        start_err_Top) );
-  Parity_Check u_Parity_Check ( .clk(clk_Top), .rst(rst_Top), .par_check_en(
-        par_check_en_Top), .PAR_TYP(PAR_TYP_Top), .sampled_bit(sampled_bit_Top), .P_DATA({n17, n5, n11, n23, n14, n2, n8, n20}), .par_err(par_err_Top) );
-  Stop_Check u_Stop_Check ( .clk(clk_Top), .rst(rst_Top), .sampled_bit(
-        sampled_bit_Top), .stop_check_en(stop_check_en_Top), .stop_err(
-        stop_err_Top) );
+        .P_DATA({n5, n11, n17, n23, n2, n8, n14, n20}), .PAR_TYP(PAR_TYP_Top), 
+        .Error(Error_Top), .Compared_bit(Compared_bit_Top), .counter_en(
+        enable_Top), .bits_counter_en(bits_counter_en_Top), .Error_Unit_En(
+        Error_Unit_En_Top), .data_samp_en(data_samp_en_Top), .deser_en(
+        deser_en_FSM_Top), .data_valid(Data_Valid_Top) );
+  Error_Unit u_Error_Unit ( .clk(clk_Top), .rst(rst_Top), .sampled_bit(
+        sampled_bit_Top), .Compared_bit(Compared_bit_Top), .Enable(
+        Error_Unit_En_Top), .Error(Error_Top) );
   Counter_Unit u_Counter_Unit ( .clk(clk_Top), .rst(rst_Top), .enable(
         enable_Top), .Data_enable(bits_counter_en_Top), .Prescale(Prescale_Top), .Finish_edge(bit_cnt_Top), .Finish_data(data_finish_flag_Top), 
         .bits_counter(bits_counter_Top), .edge_cnt(edge_cnt_Top) );
@@ -348,24 +315,24 @@ module RX ( clk_Top, rst_Top, RX_IN_Top, Prescale_Top, PAR_EN_TOP, PAR_TYP_Top,
   Deserializer u_Deserializer ( .sampled_bit(sampled_bit_Top), .clk(clk_Top), 
         .rst(rst_Top), .deser_en(deser_en_FSM_Top), .bits_counter(
         bits_counter_Top), .Data({n25, n26, n27, n28, n29, n30, n31, n32}) );
-  CLKINVX1M U1 ( .A(n30), .Y(n1) );
+  CLKINVX1M U1 ( .A(n29), .Y(n1) );
   INVXLM U2 ( .A(n1), .Y(n2) );
-  CLKINVX40M U3 ( .A(n1), .Y(P_Data_Top[2]) );
-  CLKINVX1M U4 ( .A(n26), .Y(n4) );
+  CLKINVX40M U3 ( .A(n1), .Y(P_Data_Top[3]) );
+  CLKINVX1M U4 ( .A(n25), .Y(n4) );
   INVXLM U5 ( .A(n4), .Y(n5) );
-  CLKINVX40M U6 ( .A(n4), .Y(P_Data_Top[6]) );
-  CLKINVX1M U7 ( .A(n31), .Y(n7) );
+  CLKINVX40M U6 ( .A(n4), .Y(P_Data_Top[7]) );
+  CLKINVX1M U7 ( .A(n30), .Y(n7) );
   INVXLM U8 ( .A(n7), .Y(n8) );
-  CLKINVX40M U9 ( .A(n7), .Y(P_Data_Top[1]) );
-  CLKINVX1M U10 ( .A(n27), .Y(n10) );
+  CLKINVX40M U9 ( .A(n7), .Y(P_Data_Top[2]) );
+  CLKINVX1M U10 ( .A(n26), .Y(n10) );
   INVXLM U11 ( .A(n10), .Y(n11) );
-  CLKINVX40M U12 ( .A(n10), .Y(P_Data_Top[5]) );
-  CLKINVX1M U13 ( .A(n29), .Y(n13) );
+  CLKINVX40M U12 ( .A(n10), .Y(P_Data_Top[6]) );
+  CLKINVX1M U13 ( .A(n31), .Y(n13) );
   INVXLM U14 ( .A(n13), .Y(n14) );
-  CLKINVX40M U15 ( .A(n13), .Y(P_Data_Top[3]) );
-  CLKINVX1M U16 ( .A(n25), .Y(n16) );
+  CLKINVX40M U15 ( .A(n13), .Y(P_Data_Top[1]) );
+  CLKINVX1M U16 ( .A(n27), .Y(n16) );
   INVXLM U17 ( .A(n16), .Y(n17) );
-  CLKINVX40M U18 ( .A(n16), .Y(P_Data_Top[7]) );
+  CLKINVX40M U18 ( .A(n16), .Y(P_Data_Top[5]) );
   CLKINVX1M U19 ( .A(n32), .Y(n19) );
   INVXLM U20 ( .A(n19), .Y(n20) );
   CLKINVX40M U21 ( .A(n19), .Y(P_Data_Top[0]) );
@@ -375,21 +342,24 @@ module RX ( clk_Top, rst_Top, RX_IN_Top, Prescale_Top, PAR_EN_TOP, PAR_TYP_Top,
 endmodule
 
 
-module Counter ( RST, clk, Counter, Finish );
+module Counter ( RST, clk, Ser_En, Counter, Finish );
   output [2:0] Counter;
-  input RST, clk;
+  input RST, clk, Ser_En;
   output Finish;
-  wire   N2, N3, N5, n2, n1;
-  assign Finish = N5;
+  wire   N8, N9, N10, N12, n2, n3, n4, n1;
+  assign Finish = N12;
 
-  DFFRQX2M \Counter_reg[2]  ( .D(N3), .CK(clk), .RN(RST), .Q(Counter[2]) );
-  DFFRQX2M \Counter_reg[1]  ( .D(N2), .CK(clk), .RN(RST), .Q(Counter[1]) );
-  DFFRQX2M \Counter_reg[0]  ( .D(n1), .CK(clk), .RN(RST), .Q(Counter[0]) );
-  XNOR2X2M U3 ( .A(Counter[2]), .B(n2), .Y(N3) );
-  NAND2X2M U4 ( .A(Counter[1]), .B(Counter[0]), .Y(n2) );
-  XNOR2X2M U5 ( .A(Counter[1]), .B(n1), .Y(N2) );
-  INVX2M U6 ( .A(Counter[0]), .Y(n1) );
-  AND3X2M U7 ( .A(Counter[2]), .B(Counter[0]), .C(Counter[1]), .Y(N5) );
+  DFFRQX1M \Counter_reg[2]  ( .D(N10), .CK(clk), .RN(RST), .Q(Counter[2]) );
+  DFFRQX1M \Counter_reg[1]  ( .D(N9), .CK(clk), .RN(RST), .Q(Counter[1]) );
+  DFFRQX1M \Counter_reg[0]  ( .D(N8), .CK(clk), .RN(RST), .Q(Counter[0]) );
+  INVX2M U3 ( .A(Ser_En), .Y(n1) );
+  NAND2X2M U4 ( .A(Counter[0]), .B(Counter[1]), .Y(n3) );
+  NOR2X2M U5 ( .A(Counter[0]), .B(n1), .Y(N8) );
+  NOR2X2M U6 ( .A(n4), .B(n1), .Y(N10) );
+  CLKXOR2X2M U7 ( .A(n3), .B(Counter[2]), .Y(n4) );
+  NOR2X2M U8 ( .A(n2), .B(n1), .Y(N9) );
+  XNOR2X2M U9 ( .A(Counter[0]), .B(Counter[1]), .Y(n2) );
+  NOR2BX2M U10 ( .AN(Counter[2]), .B(n3), .Y(N12) );
 endmodule
 
 
@@ -436,15 +406,14 @@ module Serializer_Top ( Ser_En, RST, clk, Data_Valid, P_Data_Top, Ser_Data_Top,
   input [7:0] P_Data_Top;
   input Ser_En, RST, clk, Data_Valid;
   output Ser_Data_Top, Ser_Done;
-  wire   Counter_RST;
+
   wire   [2:0] Counter_Top;
 
-  Counter u_Counter ( .RST(Counter_RST), .clk(clk), .Counter(Counter_Top), 
-        .Finish(Ser_Done) );
+  Counter u_Counter ( .RST(RST), .clk(clk), .Ser_En(Ser_En), .Counter(
+        Counter_Top), .Finish(Ser_Done) );
   Serializer u_Serializer ( .P_Data(P_Data_Top), .clk(clk), .rst(RST), 
         .Ser_En(Ser_En), .Data_Valid(Data_Valid), .Counter(Counter_Top), 
         .Ser_Data(Ser_Data_Top) );
-  AND2X1M U1 ( .A(Ser_En), .B(RST), .Y(Counter_RST) );
 endmodule
 
 
@@ -530,7 +499,7 @@ module UART ( scan_clk, scan_rst, test_mode, SE, SI, SO, RST, TX_CLK, RX_CLK,
   input scan_clk, scan_rst, test_mode, SE, SI, RST, TX_CLK, RX_CLK, RX_IN_S,
          TX_IN_V, parity_enable, parity_type;
   output SO, RX_OUT_V, TX_OUT_S, TX_OUT_V;
-  wire   n5, n6, TX_CLK_MUX, RX_CLK_MUX, RST_MUX, n1, n3;
+  wire   n3, TX_CLK_MUX, RX_CLK_MUX, RST_MUX, n1;
 
   MUX2_2 u_MUX2_TX_CLOCK ( .IN0(TX_CLK), .IN1(scan_clk), .SL(test_mode), 
         .MUX_out(TX_CLK_MUX) );
@@ -540,13 +509,11 @@ module UART ( scan_clk, scan_rst, test_mode, SE, SI, SO, RST, TX_CLK, RX_CLK,
         RST_MUX) );
   RX u_RX1 ( .clk_Top(RX_CLK_MUX), .rst_Top(RST_MUX), .RX_IN_Top(RX_IN_S), 
         .Prescale_Top(Prescale), .PAR_EN_TOP(parity_enable), .PAR_TYP_Top(
-        parity_type), .Data_Valid_Top(n5), .P_Data_Top(RX_OUT_P) );
+        parity_type), .Data_Valid_Top(RX_OUT_V), .P_Data_Top(RX_OUT_P) );
   UART_TX_Top u_UART_TX_Top1 ( .clk(TX_CLK_MUX), .RST(RST_MUX), .P_Data_UART(
         TX_IN_P), .Data_Valid_UART(TX_IN_V), .Par_En_UART(parity_enable), 
-        .Par_Type_UART(parity_type), .TX_Out_UART(n6), .Busy_UART(TX_OUT_V) );
-  CLKINVX1M U1 ( .A(n6), .Y(n1) );
+        .Par_Type_UART(parity_type), .TX_Out_UART(n3), .Busy_UART(TX_OUT_V) );
+  CLKINVX1M U1 ( .A(n3), .Y(n1) );
   CLKINVX40M U2 ( .A(n1), .Y(TX_OUT_S) );
-  CLKINVX1M U3 ( .A(n5), .Y(n3) );
-  CLKINVX40M U4 ( .A(n3), .Y(RX_OUT_V) );
 endmodule
 

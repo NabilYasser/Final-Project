@@ -77,12 +77,12 @@ compile
 #############################################################################
 
 write_file -format verilog -hierarchy -output UART_TOP_M.v
-
+write_sdc  -nosplit UART_Top.sdc
+write_sdf UART_Top.sdf
 
 report_area -hierarchy > area.rpt
-report_power -hierarchy -verbose  > power.rpt
-report_timing -max_paths 10 -delay_type min > hold.rpt
-report_timing -max_paths 10 -delay_type max > setup.rpt
+report_power  > power.rpt
+report_timing -max_paths 100 -delay_type min > hold.rpt
+report_timing -max_paths 100 -delay_type max > setup.rpt
 report_clock -attributes > clocks.rpt
 report_constraint -all_violators > constraints.rpt
-set_svf -off

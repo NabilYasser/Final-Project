@@ -23,55 +23,40 @@ wire sampled_bit_Top;
 wire data_finish_flag_Top,bits_counter_en_Top;
 wire [2:0] bits_counter_Top;
 
-    RX_FSM u_FSM(
-    	.clk            (clk_Top            ),
-        .rst            (rst_Top            ),
-        .RX_IN          (RX_IN_Top          ),
-        .PAR_EN         (PAR_EN_TOP         ),
-        .Prescale       (Prescale_Top[4:3]  ),
-        .bit_cnt        (bit_cnt_Top        ),
-        .data_finish_flag (data_finish_flag_Top ),
-        .edge_cnt       (edge_cnt_Top       ),
-        .par_err        (par_err_Top        ),
-        .start_err      (start_err_Top      ),
-        .stop_err       (stop_err_Top       ),
-        .counter_en     (enable_Top         ),
-        .bits_counter_en(bits_counter_en_Top),
-        .data_samp_en   (data_samp_en_Top   ),
-        .start_check_en (start_check_en_Top ),
-        .deser_en       (deser_en_FSM_Top   ),
-        .par_check_en   (par_check_en_Top   ),
-        .stop_check_en  (stop_check_en_Top  ),
-        .data_valid     (Data_Valid_Top     )
-    );
+wire Compared_bit_Top,Error_Unit_En_Top,Error_Top;
 
-    Start_Check u_Start_Check(
-    	.clk            (clk_Top            ),
-        .rst            (rst_Top            ),
-        .sampled_bit    (sampled_bit_Top    ),
-        .start_check_en (start_check_en_Top ),
-        .start_err      (start_err_Top      )
-    );
 
-    Parity_Check  u_Parity_Check(
-    	.clk          (clk_Top          ),
-        .rst          (rst_Top          ),
-        .par_check_en (par_check_en_Top ),
-        .PAR_TYP      (PAR_TYP_Top      ),
-        .sampled_bit  (sampled_bit_Top  ),
-        .P_DATA       (P_Data_Top       ),
-        .par_err      (par_err_Top      )
-    );
-    
-    Stop_Check u_Stop_Check(
-    	.clk           (clk_Top           ),
-        .rst           (rst_Top           ),
-        .sampled_bit   (sampled_bit_Top   ),
-        .stop_check_en (stop_check_en_Top ),
-        .stop_err      (stop_err_Top      )
-    );
-    
-    
+
+RX_FSM u_RX_FSM(
+    .clk              (clk_Top              ),
+    .rst              (rst_Top              ),
+    .RX_IN            (RX_IN_Top            ),
+    .PAR_EN           (PAR_EN_TOP           ),
+    .Prescale         (Prescale_Top[4:3]          ),
+    .bit_cnt          (bit_cnt_Top          ),
+    .data_finish_flag (data_finish_flag_Top ),
+    .edge_cnt         (edge_cnt_Top         ),
+    .P_DATA           (P_Data_Top           ), //!
+    .PAR_TYP          (PAR_TYP_Top          ), //!
+    .Error            (Error_Top            ),
+    .Compared_bit     (Compared_bit_Top     ),
+    .counter_en       (enable_Top       ),
+    .bits_counter_en  (bits_counter_en_Top  ),
+    .Error_Unit_En    (Error_Unit_En_Top    ), 
+    .data_samp_en     (data_samp_en_Top     ),
+    .deser_en         (deser_en_FSM_Top         ),
+    .data_valid       (Data_Valid_Top       )
+);
+
+Error_Unit u_Error_Unit(
+    .clk          (clk_Top          ),
+    .rst          (rst_Top          ),
+    .sampled_bit  (sampled_bit_Top  ),
+    .Compared_bit (Compared_bit_Top ),
+    .Enable       (Error_Unit_En_Top       ),
+    .Error        (Error_Top        )
+);
+
 Counter_Unit u_Counter_Unit(
     .clk         (clk_Top         ),
     .rst         (rst_Top         ),

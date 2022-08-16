@@ -1,4 +1,3 @@
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
@@ -8,7 +7,7 @@ Report : power
         -analysis_effort low
 Design : UART
 Version: K-2015.06
-Date   : Wed Aug 17 05:40:05 2022
+Date   : Wed Aug 17 05:41:59 2022
 ****************************************
 
 
@@ -34,12 +33,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =   6.8558 uW   (12%)
-  Net Switching Power  =  52.5055 uW   (88%)
+  Cell Internal Power  =  10.1749 uW    (4%)
+  Net Switching Power  = 272.7287 uW   (96%)
                          ---------
-Total Dynamic Power    =  59.3613 uW  (100%)
+Total Dynamic Power    = 282.9035 uW  (100%)
 
-Cell Leakage Power     = 655.9858 nW
+Cell Leakage Power     = 718.0023 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -48,10 +47,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network  2.8981e-04        2.7917e-03        8.2465e+03        3.0898e-03  (   5.15%)
-register       5.3773e-03        3.3814e-04        2.3702e+05        5.9525e-03  (   9.92%)
+clock_network  2.9085e-04        2.8006e-03        8.2465e+03        3.0997e-03  (   1.09%)
+register       6.3108e-03        6.4236e-04        2.7439e+05        7.2276e-03  (   2.55%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  1.1887e-03        4.9376e-02        4.1072e+05        5.0975e-02  (  84.93%)
+combinational  3.5732e-03            0.2693        4.3537e+05            0.2733  (  96.36%)
 --------------------------------------------------------------------------------------------------
-Total          6.8558e-03 mW     5.2506e-02 mW     6.5599e+05 pW     6.0017e-02 mW
+Total          1.0175e-02 mW         0.2727 mW     7.1800e+05 pW         0.2836 mW
 1

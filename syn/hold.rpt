@@ -3,92 +3,14 @@
 Report : timing
         -path full
         -delay min
-        -max_paths 10
+        -max_paths 100
 Design : UART
 Version: K-2015.06
-Date   : Wed Aug 17 02:28:21 2022
+Date   : Wed Aug 17 05:40:05 2022
 ****************************************
 
 Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
 Wire Load Model Mode: top
-
-  Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]
-              (rising edge-triggered flip-flop clocked by CLK1)
-  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]
-            (rising edge-triggered flip-flop clocked by CLK1)
-  Path Group: CLK1
-  Path Type: min
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/CK (DFFRQX2M)
-                                                          0.00       0.00 r
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/Q (DFFRQX2M)
-                                                          0.32       0.32 r
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U3/Y (XNOR2X2M)
-                                                          0.08       0.40 f
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/D (DFFRQX2M)
-                                                          0.00       0.40 f
-  data arrival time                                                  0.40
-
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                       0.05       0.05
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/CK (DFFRQX2M)
-                                                          0.00       0.05 r
-  library hold time                                      -0.02       0.03
-  data required time                                                 0.03
-  --------------------------------------------------------------------------
-  data required time                                                 0.03
-  data arrival time                                                 -0.40
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.37
-
-
-  Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]
-              (rising edge-triggered flip-flop clocked by CLK1)
-  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]
-            (rising edge-triggered flip-flop clocked by CLK1)
-  Path Group: CLK1
-  Path Type: min
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/CK (DFFRQX2M)
-                                                          0.00       0.00 r
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/Q (DFFRQX2M)
-                                                          0.37       0.37 r
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U5/Y (XNOR2X2M)
-                                                          0.09       0.46 f
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/D (DFFRQX2M)
-                                                          0.00       0.46 f
-  data arrival time                                                  0.46
-
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                       0.05       0.05
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/CK (DFFRQX2M)
-                                                          0.00       0.05 r
-  library hold time                                      -0.02       0.03
-  data required time                                                 0.03
-  --------------------------------------------------------------------------
-  data required time                                                 0.03
-  data arrival time                                                 -0.46
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.43
-
 
   Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]
               (rising edge-triggered flip-flop clocked by CLK1)
@@ -105,28 +27,28 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/CK (DFFRQX2M)
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/CK (DFFRQX1M)
                                                           0.00       0.00 r
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/Q (DFFRQX2M)
-                                                          0.37       0.37 r
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U6/Y (INVX2M)
-                                                          0.11       0.48 f
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/D (DFFRQX2M)
-                                                          0.00       0.48 f
-  data arrival time                                                  0.48
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/Q (DFFRQX1M)
+                                                          0.46       0.46 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U5/Y (NOR2X2M)
+                                                          0.08       0.54 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/D (DFFRQX1M)
+                                                          0.00       0.54 f
+  data arrival time                                                  0.54
 
   clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/CK (DFFRQX2M)
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[0]/CK (DFFRQX1M)
                                                           0.00       0.05 r
-  library hold time                                      -0.02       0.03
-  data required time                                                 0.03
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
   --------------------------------------------------------------------------
-  data required time                                                 0.03
-  data arrival time                                                 -0.48
+  data required time                                                 0.04
+  data arrival time                                                 -0.54
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.45
+  slack (MET)                                                        0.50
 
 
   Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[6]
@@ -402,49 +324,11 @@ Wire Load Model Mode: top
   slack (MET)                                                        0.53
 
 
-  Startpoint: RX_IN_S (input port clocked by RXCLK)
-  Endpoint: RX_OUT_V (output port clocked by RXCLK)
-  Path Group: INOUT
-  Path Type: min
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock RXCLK (rise edge)                  0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  input external delay                    20.00      20.00 f
-  RX_IN_S (in)                             0.08      20.08 f
-  u_RX1/RX_IN_Top (RX)                     0.00      20.08 f
-  u_RX1/u_FSM/RX_IN (RX_FSM)               0.00      20.08 f
-  u_RX1/u_FSM/U32/Y (OR4X1M)               0.29      20.37 f
-  u_RX1/u_FSM/U31/Y (OAI221X1M)            0.19      20.56 r
-  u_RX1/u_FSM/U6/Y (NOR4BXLM)              0.14      20.71 f
-  u_RX1/u_FSM/data_valid (RX_FSM)          0.00      20.71 f
-  u_RX1/Data_Valid_Top (RX)                0.00      20.71 f
-  U3/Y (CLKINVX1M)                         0.41      21.11 r
-  U4/Y (CLKINVX40M)                        8.90      30.02 f
-  RX_OUT_V (out)                           0.00      30.02 f
-  data arrival time                                  30.02
-
-  clock RXCLK (rise edge)                  0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  clock uncertainty                        0.05       0.05
-  output external delay                  -20.00     -19.95
-  data required time                                -19.95
-  -----------------------------------------------------------
-  data required time                                -19.95
-  data arrival time                                 -30.02
-  -----------------------------------------------------------
-  slack (MET)                                        49.97
-
-
-  Startpoint: RX_IN_S (input port clocked by RXCLK)
-  Endpoint: u_RX1/u_Data_Sampling/bits_reg[0]
-            (rising edge-triggered flip-flop clocked by RXCLK)
-  Path Group: INREG
+  Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[7]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[7]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: CLK1
   Path Type: min
 
   Des/Clust/Port     Wire Load Model       Library
@@ -453,27 +337,188 @@ Wire Load Model Mode: top
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  clock RXCLK (rise edge)                                 0.00       0.00
+  clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  input external delay                                   20.00      20.00 f
-  RX_IN_S (in)                                            0.08      20.08 f
-  u_RX1/RX_IN_Top (RX)                                    0.00      20.08 f
-  u_RX1/u_Data_Sampling/RX_in (Data_Sampling)             0.00      20.08 f
-  u_RX1/u_Data_Sampling/U7/Y (OAI2BB2XLM)                 0.19      20.27 f
-  u_RX1/u_Data_Sampling/bits_reg[0]/D (DFFRX1M)           0.00      20.27 f
-  data arrival time                                                 20.27
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[7]/CK (DFFRX1M)
+                                                          0.00       0.00 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[7]/Q (DFFRX1M)
+                                                          0.39       0.39 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U20/Y (AO22X1M)
+                                                          0.23       0.62 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[7]/D (DFFRX1M)
+                                                          0.00       0.62 f
+  data arrival time                                                  0.62
 
-  clock RXCLK (rise edge)                                 0.00       0.00
+  clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_RX1/u_Data_Sampling/bits_reg[0]/CK (DFFRX1M)          0.00       0.05 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[7]/CK (DFFRX1M)
+                                                          0.00       0.05 r
   library hold time                                      -0.02       0.03
   data required time                                                 0.03
   --------------------------------------------------------------------------
   data required time                                                 0.03
-  data arrival time                                                -20.27
+  data arrival time                                                 -0.62
   --------------------------------------------------------------------------
-  slack (MET)                                                       20.25
+  slack (MET)                                                        0.59
+
+
+  Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: CLK1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/Q (DFFRQX1M)
+                                                          0.38       0.38 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U7/Y (CLKXOR2X2M)
+                                                          0.21       0.59 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U6/Y (NOR2X2M)
+                                                          0.05       0.65 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/D (DFFRQX1M)
+                                                          0.00       0.65 f
+  data arrival time                                                  0.65
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                       0.00       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                 -0.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: CLK1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/Q (DFFRQX1M)
+                                                          0.40       0.40 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U9/Y (XNOR2X2M)
+                                                          0.18       0.58 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/U8/Y (NOR2X2M)
+                                                          0.07       0.65 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/D (DFFRQX1M)
+                                                          0.00       0.65 f
+  data arrival time                                                  0.65
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_Serializer_Top/u_Counter/Counter_reg[1]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: u_UART_TX_Top1/u_FSM/Current_State_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_FSM/Current_State_reg[1]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: CLK1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/CK (DFFRX1M)
+                                                          0.00       0.00 r
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/QN (DFFRX1M)
+                                                          0.54       0.54 r
+  u_UART_TX_Top1/u_FSM/U10/Y (AOI2B1X1M)                  0.12       0.65 f
+  u_UART_TX_Top1/u_FSM/Current_State_reg[1]/D (DFFRX1M)
+                                                          0.00       0.65 f
+  data arrival time                                                  0.65
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_FSM/Current_State_reg[1]/CK (DFFRX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.02       0.03
+  data required time                                                 0.03
+  --------------------------------------------------------------------------
+  data required time                                                 0.03
+  data arrival time                                                 -0.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: u_UART_TX_Top1/u_FSM/Current_State_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_FSM/Current_State_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: CLK1
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/CK (DFFRX1M)
+                                                          0.00       0.00 r
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/QN (DFFRX1M)
+                                                          0.54       0.54 r
+  u_UART_TX_Top1/u_FSM/U9/Y (OAI2BB2X1M)                  0.15       0.68 f
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/D (DFFRX1M)
+                                                          0.00       0.68 f
+  data arrival time                                                  0.68
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/CK (DFFRX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.02       0.03
+  data required time                                                 0.03
+  --------------------------------------------------------------------------
+  data required time                                                 0.03
+  data arrival time                                                 -0.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.65
 
 
   Startpoint: parity_enable
@@ -495,10 +540,10 @@ Wire Load Model Mode: top
   parity_enable (in)                                      0.08      20.08 f
   u_UART_TX_Top1/Par_En_UART (UART_TX_Top)                0.00      20.08 f
   u_UART_TX_Top1/u_FSM/Par_En (FSM)                       0.00      20.08 f
-  u_UART_TX_Top1/u_FSM/U10/Y (AOI2B1X1M)                  0.19      20.27 f
+  u_UART_TX_Top1/u_FSM/U10/Y (AOI2B1X1M)                  0.20      20.28 f
   u_UART_TX_Top1/u_FSM/Current_State_reg[1]/D (DFFRX1M)
-                                                          0.00      20.27 f
-  data arrival time                                                 20.27
+                                                          0.00      20.28 f
+  data arrival time                                                 20.28
 
   clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
@@ -509,7 +554,7 @@ Wire Load Model Mode: top
   data required time                                                 0.03
   --------------------------------------------------------------------------
   data required time                                                 0.03
-  data arrival time                                                -20.27
+  data arrival time                                                -20.28
   --------------------------------------------------------------------------
   slack (MET)                                                       20.25
 
@@ -551,9 +596,8 @@ Wire Load Model Mode: top
   slack (MET)                                                       20.25
 
 
-  Startpoint: parity_enable
-              (input port clocked by RXCLK)
-  Endpoint: u_RX1/u_FSM/CurrentState_reg[0]
+  Startpoint: RX_IN_S (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Data_Sampling/bits_reg[0]
             (rising edge-triggered flip-flop clocked by RXCLK)
   Path Group: INREG
   Path Type: min
@@ -567,22 +611,22 @@ Wire Load Model Mode: top
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   input external delay                                   20.00      20.00 f
-  parity_enable (in)                                      0.08      20.08 f
-  u_RX1/PAR_EN_TOP (RX)                                   0.00      20.08 f
-  u_RX1/u_FSM/PAR_EN (RX_FSM)                             0.00      20.08 f
-  u_RX1/u_FSM/U22/Y (OAI2B11X1M)                          0.23      20.31 f
-  u_RX1/u_FSM/CurrentState_reg[0]/D (DFFRQX1M)            0.00      20.31 f
-  data arrival time                                                 20.31
+  RX_IN_S (in)                                            0.12      20.12 f
+  u_RX1/RX_IN_Top (RX)                                    0.00      20.12 f
+  u_RX1/u_Data_Sampling/RX_in (Data_Sampling)             0.00      20.12 f
+  u_RX1/u_Data_Sampling/U8/Y (OAI2BB2XLM)                 0.21      20.32 f
+  u_RX1/u_Data_Sampling/bits_reg[0]/D (DFFRX1M)           0.00      20.32 f
+  data arrival time                                                 20.32
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_RX1/u_FSM/CurrentState_reg[0]/CK (DFFRQX1M)           0.00       0.05 r
+  u_RX1/u_Data_Sampling/bits_reg[0]/CK (DFFRX1M)          0.00       0.05 r
   library hold time                                      -0.02       0.03
   data required time                                                 0.03
   --------------------------------------------------------------------------
   data required time                                                 0.03
-  data arrival time                                                -20.31
+  data arrival time                                                -20.32
   --------------------------------------------------------------------------
   slack (MET)                                                       20.29
 
@@ -843,11 +887,97 @@ Wire Load Model Mode: top
   slack (MET)                                                       20.33
 
 
-  Startpoint: u_RX1/u_Deserializer/Data_reg[6]
-              (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: RX_OUT_P[6]
-            (output port clocked by RXCLK)
-  Path Group: REGOUT
+  Startpoint: TX_IN_P[6] (input port clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[6]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  TX_IN_P[6] (in)                                         0.09      20.09 f
+  u_UART_TX_Top1/P_Data_UART[6] (UART_TX_Top)             0.00      20.09 f
+  u_UART_TX_Top1/u_Serializer_Top/P_Data_Top[6] (Serializer_Top)
+                                                          0.00      20.09 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/P_Data[6] (Serializer)
+                                                          0.00      20.09 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U9/Y (AOI22X1M)
+                                                          0.20      20.29 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U8/Y (OAI2BB1X2M)
+                                                          0.08      20.37 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[6]/D (DFFRX1M)
+                                                          0.00      20.37 f
+  data arrival time                                                 20.37
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[6]/CK (DFFRX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                -20.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                       20.33
+
+
+  Startpoint: TX_IN_P[2] (input port clocked by CLK1)
+  Endpoint: u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  TX_IN_P[2] (in)                                         0.09      20.09 f
+  u_UART_TX_Top1/P_Data_UART[2] (UART_TX_Top)             0.00      20.09 f
+  u_UART_TX_Top1/u_Serializer_Top/P_Data_Top[2] (Serializer_Top)
+                                                          0.00      20.09 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/P_Data[2] (Serializer)
+                                                          0.00      20.09 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U7/Y (AOI22X1M)
+                                                          0.20      20.29 r
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U6/Y (OAI2BB1X2M)
+                                                          0.08      20.37 f
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]/D (DFFRX1M)
+                                                          0.00      20.37 f
+  data arrival time                                                 20.37
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]/CK (DFFRX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                -20.37
+  --------------------------------------------------------------------------
+  slack (MET)                                                       20.33
+
+
+  Startpoint: parity_type
+              (input port clocked by RXCLK)
+  Endpoint: u_UART_TX_Top1/u_Parity_Unit/Par_Bit_reg
+            (rising edge-triggered flip-flop clocked by CLK1)
+  Path Group: INREG
   Path Type: min
 
   Des/Clust/Port     Wire Load Model       Library
@@ -858,25 +988,865 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Deserializer/Data_reg[6]/CK (DFFRHQX1M)         0.00       0.00 r
-  u_RX1/u_Deserializer/Data_reg[6]/Q (DFFRHQX1M)          0.25       0.25 f
-  u_RX1/u_Deserializer/Data[6] (Deserializer)             0.00       0.25 f
-  u_RX1/U4/Y (CLKINVX1M)                                  0.48       0.74 r
-  u_RX1/U6/Y (CLKINVX40M)                                 8.92       9.66 f
-  u_RX1/P_Data_Top[6] (RX)                                0.00       9.66 f
-  RX_OUT_P[6] (out)                                       0.00       9.66 f
-  data arrival time                                                  9.66
+  input external delay                                   20.00      20.00 r
+  parity_type (in)                                        0.14      20.14 r
+  u_UART_TX_Top1/Par_Type_UART (UART_TX_Top)              0.00      20.14 r
+  u_UART_TX_Top1/u_Parity_Unit/Par_Type (Parity_Unit)     0.00      20.14 r
+  u_UART_TX_Top1/u_Parity_Unit/U4/Y (XOR3XLM)             0.28      20.41 r
+  u_UART_TX_Top1/u_Parity_Unit/Par_Bit_reg/D (DFFQX2M)
+                                                          0.00      20.41 r
+  data arrival time                                                 20.41
+
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_UART_TX_Top1/u_Parity_Unit/Par_Bit_reg/CK (DFFQX2M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                -20.41
+  --------------------------------------------------------------------------
+  slack (MET)                                                       20.40
+
+
+  Startpoint: parity_enable
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/CurrentState_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  parity_enable (in)                                      0.08      20.08 f
+  u_RX1/PAR_EN_TOP (RX)                                   0.00      20.08 f
+  u_RX1/u_RX_FSM/PAR_EN (RX_FSM)                          0.00      20.08 f
+  u_RX1/u_RX_FSM/U25/Y (AOI21X1M)                         0.22      20.30 r
+  u_RX1/u_RX_FSM/U24/Y (NAND3X1M)                         0.14      20.44 f
+  u_RX1/u_RX_FSM/CurrentState_reg[0]/D (DFFRQX1M)         0.00      20.44 f
+  data arrival time                                                 20.44
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  output external delay                                 -20.00     -19.95
-  data required time                                               -19.95
+  u_RX1/u_RX_FSM/CurrentState_reg[0]/CK (DFFRQX1M)        0.00       0.05 r
+  library hold time                                      -0.02       0.03
+  data required time                                                 0.03
   --------------------------------------------------------------------------
-  data required time                                               -19.95
-  data arrival time                                                 -9.66
+  data required time                                                 0.03
+  data arrival time                                                -20.44
   --------------------------------------------------------------------------
-  slack (MET)                                                       29.61
+  slack (MET)                                                       20.41
+
+
+  Startpoint: Prescale[2]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[2] (in)                                        0.12      20.12 r
+  u_RX1/Prescale_Top[2] (RX)                              0.00      20.12 r
+  u_RX1/u_Counter_Unit/Prescale[2] (Counter_Unit)         0.00      20.12 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/Prescale[2] (Edge_Bit_Counter)
+                                                          0.00      20.12 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U17/Y (OAI2BB1X1M)
+                                                          0.17      20.29 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U28/Y (CLKXOR2X2M)
+                                                          0.15      20.44 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U30/Y (NOR4X1M)
+                                                          0.08      20.53 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg/D (DFFRQX1M)
+                                                          0.00      20.53 f
+  data arrival time                                                 20.53
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                -20.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                       20.48
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/data_valid_reg
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[3] (in)                                        0.34      20.34 r
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.34 r
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.34 r
+  u_RX1/u_RX_FSM/U9/Y (OAI31X2M)                          0.17      20.51 f
+  u_RX1/u_RX_FSM/U15/Y (OAI211X1M)                        0.13      20.64 r
+  u_RX1/u_RX_FSM/U14/Y (OAI2BB1X1M)                       0.15      20.78 r
+  u_RX1/u_RX_FSM/data_valid_reg/D (DFFSQX1M)              0.00      20.78 r
+  data arrival time                                                 20.78
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_RX_FSM/data_valid_reg/CK (DFFSQX1M)             0.00       0.05 r
+  library hold time                                      -0.03       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                -20.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                       20.76
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Data_Sampling/bits_reg[1]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  Prescale[3] (in)                                        0.19      20.19 f
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.19 f
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.19 f
+  u_RX1/u_RX_FSM/U35/Y (MX3X1M)                           0.21      20.41 f
+  u_RX1/u_RX_FSM/U3/Y (OAI32X1M)                          0.20      20.61 r
+  u_RX1/u_RX_FSM/U10/Y (CLKBUFX2M)                        0.30      20.91 r
+  u_RX1/u_RX_FSM/data_samp_en (RX_FSM)                    0.00      20.91 r
+  u_RX1/u_Data_Sampling/data_samp_en (Data_Sampling)      0.00      20.91 r
+  u_RX1/u_Data_Sampling/U3/Y (OAI22XLM)                   0.16      21.07 f
+  u_RX1/u_Data_Sampling/bits_reg[1]/D (DFFRX1M)           0.00      21.07 f
+  data arrival time                                                 21.07
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Data_Sampling/bits_reg[1]/CK (DFFRX1M)          0.00       0.05 r
+  library hold time                                      -0.03       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                -21.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.04
+
+
+  Startpoint: RX_IN_S (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  RX_IN_S (in)                                            0.19      20.19 r
+  u_RX1/RX_IN_Top (RX)                                    0.00      20.19 r
+  u_RX1/u_RX_FSM/RX_IN (RX_FSM)                           0.00      20.19 r
+  u_RX1/u_RX_FSM/U31/Y (OR2X1M)                           0.16      20.35 r
+  u_RX1/u_RX_FSM/U29/Y (OAI32X1M)                         0.10      20.45 f
+  u_RX1/u_RX_FSM/U28/Y (CLKINVX1M)                        0.20      20.65 r
+  u_RX1/u_RX_FSM/U17/Y (CLKNAND2X2M)                      0.15      20.79 f
+  u_RX1/u_RX_FSM/counter_en (RX_FSM)                      0.00      20.79 f
+  u_RX1/u_Counter_Unit/enable (Counter_Unit)              0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/enable (Edge_Bit_Counter)
+                                                          0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U6/Y (NAND2BX2M)
+                                                          0.31      21.10 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U3/Y (NOR2BX2M)
+                                                          0.09      21.18 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]/D (DFFRQX1M)
+                                                          0.00      21.18 f
+  data arrival time                                                 21.18
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                       0.00       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                -21.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.14
+
+
+  Startpoint: RX_IN_S (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  RX_IN_S (in)                                            0.19      20.19 r
+  u_RX1/RX_IN_Top (RX)                                    0.00      20.19 r
+  u_RX1/u_RX_FSM/RX_IN (RX_FSM)                           0.00      20.19 r
+  u_RX1/u_RX_FSM/U31/Y (OR2X1M)                           0.16      20.35 r
+  u_RX1/u_RX_FSM/U29/Y (OAI32X1M)                         0.10      20.45 f
+  u_RX1/u_RX_FSM/U28/Y (CLKINVX1M)                        0.20      20.65 r
+  u_RX1/u_RX_FSM/U17/Y (CLKNAND2X2M)                      0.15      20.79 f
+  u_RX1/u_RX_FSM/counter_en (RX_FSM)                      0.00      20.79 f
+  u_RX1/u_Counter_Unit/enable (Counter_Unit)              0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/enable (Edge_Bit_Counter)
+                                                          0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U6/Y (NAND2BX2M)
+                                                          0.31      21.10 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U4/Y (NOR2BX2M)
+                                                          0.09      21.18 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]/D (DFFRQX1M)
+                                                          0.00      21.18 f
+  data arrival time                                                 21.18
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                       0.00       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                -21.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.14
+
+
+  Startpoint: RX_IN_S (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  RX_IN_S (in)                                            0.19      20.19 r
+  u_RX1/RX_IN_Top (RX)                                    0.00      20.19 r
+  u_RX1/u_RX_FSM/RX_IN (RX_FSM)                           0.00      20.19 r
+  u_RX1/u_RX_FSM/U31/Y (OR2X1M)                           0.16      20.35 r
+  u_RX1/u_RX_FSM/U29/Y (OAI32X1M)                         0.10      20.45 f
+  u_RX1/u_RX_FSM/U28/Y (CLKINVX1M)                        0.20      20.65 r
+  u_RX1/u_RX_FSM/U17/Y (CLKNAND2X2M)                      0.15      20.79 f
+  u_RX1/u_RX_FSM/counter_en (RX_FSM)                      0.00      20.79 f
+  u_RX1/u_Counter_Unit/enable (Counter_Unit)              0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/enable (Edge_Bit_Counter)
+                                                          0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U6/Y (NAND2BX2M)
+                                                          0.31      21.10 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U7/Y (NOR2X2M)
+                                                          0.09      21.18 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/D (DFFRQX1M)
+                                                          0.00      21.18 f
+  data arrival time                                                 21.18
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                -21.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.14
+
+
+  Startpoint: RX_IN_S (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  RX_IN_S (in)                                            0.19      20.19 r
+  u_RX1/RX_IN_Top (RX)                                    0.00      20.19 r
+  u_RX1/u_RX_FSM/RX_IN (RX_FSM)                           0.00      20.19 r
+  u_RX1/u_RX_FSM/U31/Y (OR2X1M)                           0.16      20.35 r
+  u_RX1/u_RX_FSM/U29/Y (OAI32X1M)                         0.10      20.45 f
+  u_RX1/u_RX_FSM/U28/Y (CLKINVX1M)                        0.20      20.65 r
+  u_RX1/u_RX_FSM/U17/Y (CLKNAND2X2M)                      0.15      20.79 f
+  u_RX1/u_RX_FSM/counter_en (RX_FSM)                      0.00      20.79 f
+  u_RX1/u_Counter_Unit/enable (Counter_Unit)              0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/enable (Edge_Bit_Counter)
+                                                          0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U6/Y (NAND2BX2M)
+                                                          0.31      21.10 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U5/Y (NOR2BX2M)
+                                                          0.09      21.19 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/D (DFFRHQX1M)
+                                                          0.00      21.19 f
+  data arrival time                                                 21.19
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/CK (DFFRHQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.02       0.03
+  data required time                                                 0.03
+  --------------------------------------------------------------------------
+  data required time                                                 0.03
+  data arrival time                                                -21.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.16
+
+
+  Startpoint: RX_IN_S (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  RX_IN_S (in)                                            0.19      20.19 r
+  u_RX1/RX_IN_Top (RX)                                    0.00      20.19 r
+  u_RX1/u_RX_FSM/RX_IN (RX_FSM)                           0.00      20.19 r
+  u_RX1/u_RX_FSM/U31/Y (OR2X1M)                           0.16      20.35 r
+  u_RX1/u_RX_FSM/U29/Y (OAI32X1M)                         0.10      20.45 f
+  u_RX1/u_RX_FSM/U28/Y (CLKINVX1M)                        0.20      20.65 r
+  u_RX1/u_RX_FSM/U17/Y (CLKNAND2X2M)                      0.15      20.79 f
+  u_RX1/u_RX_FSM/counter_en (RX_FSM)                      0.00      20.79 f
+  u_RX1/u_Counter_Unit/enable (Counter_Unit)              0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/enable (Edge_Bit_Counter)
+                                                          0.00      20.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U6/Y (NAND2BX2M)
+                                                          0.31      21.10 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U9/Y (NOR2X2M)
+                                                          0.09      21.19 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/D (DFFRHQX1M)
+                                                          0.00      21.19 f
+  data arrival time                                                 21.19
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/CK (DFFRHQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                -21.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.18
+
+
+  Startpoint: Prescale[4]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Data_Sampling/bits_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  Prescale[4] (in)                                        0.12      20.12 f
+  u_RX1/Prescale_Top[4] (RX)                              0.00      20.12 f
+  u_RX1/u_RX_FSM/Prescale[1] (RX_FSM)                     0.00      20.12 f
+  u_RX1/u_RX_FSM/U11/Y (CLKINVX2M)                        0.15      20.27 r
+  u_RX1/u_RX_FSM/U3/Y (OAI32X1M)                          0.11      20.39 f
+  u_RX1/u_RX_FSM/U10/Y (CLKBUFX2M)                        0.29      20.68 f
+  u_RX1/u_RX_FSM/data_samp_en (RX_FSM)                    0.00      20.68 f
+  u_RX1/u_Data_Sampling/data_samp_en (Data_Sampling)      0.00      20.68 f
+  u_RX1/u_Data_Sampling/U2/Y (INVXLM)                     0.42      21.10 r
+  u_RX1/u_Data_Sampling/U7/Y (OAI2BB2X1M)                 0.16      21.26 f
+  u_RX1/u_Data_Sampling/bits_reg[2]/D (DFFRQX1M)          0.00      21.26 f
+  data arrival time                                                 21.26
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Data_Sampling/bits_reg[2]/CK (DFFRQX1M)         0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                -21.26
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.23
+
+
+  Startpoint: parity_type
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/CurrentState_reg[1]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  parity_type (in)                                        0.14      20.14 r
+  u_RX1/PAR_TYP_Top (RX)                                  0.00      20.14 r
+  u_RX1/u_RX_FSM/PAR_TYP (RX_FSM)                         0.00      20.14 r
+  u_RX1/u_RX_FSM/U53/Y (XOR3XLM)                          0.26      20.39 r
+  u_RX1/u_RX_FSM/U48/Y (OAI21X1M)                         0.13      20.52 f
+  u_RX1/u_RX_FSM/Compared_bit (RX_FSM)                    0.00      20.52 f
+  u_RX1/u_Error_Unit/Compared_bit (Error_Unit)            0.00      20.52 f
+  u_RX1/u_Error_Unit/U4/Y (XNOR2X2M)                      0.16      20.67 f
+  u_RX1/u_Error_Unit/U3/Y (NOR2BX2M)                      0.24      20.91 r
+  u_RX1/u_Error_Unit/Error (Error_Unit)                   0.00      20.91 r
+  u_RX1/u_RX_FSM/Error (RX_FSM)                           0.00      20.91 r
+  u_RX1/u_RX_FSM/U26/Y (NOR2X1M)                          0.21      21.12 f
+  u_RX1/u_RX_FSM/U20/Y (OAI2B11X1M)                       0.26      21.38 f
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/D (DFFRX1M)          0.00      21.38 f
+  data arrival time                                                 21.38
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/CK (DFFRX1M)         0.00       0.05 r
+  library hold time                                      -0.03       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                -21.38
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.36
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[3]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[3] (in)                                        0.34      20.34 r
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.34 r
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.34 r
+  u_RX1/u_RX_FSM/U9/Y (OAI31X2M)                          0.17      20.51 f
+  u_RX1/u_RX_FSM/U43/Y (CLKINVX1M)                        0.21      20.72 r
+  u_RX1/u_RX_FSM/U16/Y (NOR2X1M)                          0.16      20.88 f
+  u_RX1/u_RX_FSM/deser_en (RX_FSM)                        0.00      20.88 f
+  u_RX1/u_Deserializer/deser_en (Deserializer)            0.00      20.88 f
+  u_RX1/u_Deserializer/U26/Y (NAND2BX2M)                  0.28      21.16 r
+  u_RX1/u_Deserializer/U16/Y (OA21X2M)                    0.15      21.31 r
+  u_RX1/u_Deserializer/U15/Y (OAI21BX1M)                  0.13      21.44 r
+  u_RX1/u_Deserializer/Data_reg[3]/D (DFFRHQX1M)          0.00      21.44 r
+  data arrival time                                                 21.44
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[3]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.05       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                -21.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.44
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[7]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[3] (in)                                        0.34      20.34 r
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.34 r
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.34 r
+  u_RX1/u_RX_FSM/U9/Y (OAI31X2M)                          0.17      20.51 f
+  u_RX1/u_RX_FSM/U43/Y (CLKINVX1M)                        0.21      20.72 r
+  u_RX1/u_RX_FSM/U16/Y (NOR2X1M)                          0.16      20.88 f
+  u_RX1/u_RX_FSM/deser_en (RX_FSM)                        0.00      20.88 f
+  u_RX1/u_Deserializer/deser_en (Deserializer)            0.00      20.88 f
+  u_RX1/u_Deserializer/U25/Y (NAND2X2M)                   0.28      21.16 r
+  u_RX1/u_Deserializer/U24/Y (OA21X2M)                    0.16      21.32 r
+  u_RX1/u_Deserializer/U23/Y (OAI21BX1M)                  0.13      21.45 r
+  u_RX1/u_Deserializer/Data_reg[7]/D (DFFRHQX1M)          0.00      21.45 r
+  data arrival time                                                 21.45
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[7]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.05       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                -21.45
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.45
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[6]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  Prescale[3] (in)                                        0.19      20.19 f
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.19 f
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.19 f
+  u_RX1/u_RX_FSM/U35/Y (MX3X1M)                           0.21      20.41 f
+  u_RX1/u_RX_FSM/U3/Y (OAI32X1M)                          0.20      20.61 r
+  u_RX1/u_RX_FSM/U10/Y (CLKBUFX2M)                        0.30      20.91 r
+  u_RX1/u_RX_FSM/data_samp_en (RX_FSM)                    0.00      20.91 r
+  u_RX1/u_Data_Sampling/data_samp_en (Data_Sampling)      0.00      20.91 r
+  u_RX1/u_Data_Sampling/U4/Y (AOI21X2M)                   0.16      21.07 f
+  u_RX1/u_Data_Sampling/sampled_bit (Data_Sampling)       0.00      21.07 f
+  u_RX1/u_Deserializer/sampled_bit (Deserializer)         0.00      21.07 f
+  u_RX1/u_Deserializer/U17/Y (NAND2BX2M)                  0.25      21.32 r
+  u_RX1/u_Deserializer/U14/Y (OAI21BX1M)                  0.14      21.46 f
+  u_RX1/u_Deserializer/Data_reg[6]/D (DFFRHQX1M)          0.00      21.46 f
+  data arrival time                                                 21.46
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[6]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                -21.46
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.45
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[4]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  Prescale[3] (in)                                        0.19      20.19 f
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.19 f
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.19 f
+  u_RX1/u_RX_FSM/U35/Y (MX3X1M)                           0.21      20.41 f
+  u_RX1/u_RX_FSM/U3/Y (OAI32X1M)                          0.20      20.61 r
+  u_RX1/u_RX_FSM/U10/Y (CLKBUFX2M)                        0.30      20.91 r
+  u_RX1/u_RX_FSM/data_samp_en (RX_FSM)                    0.00      20.91 r
+  u_RX1/u_Data_Sampling/data_samp_en (Data_Sampling)      0.00      20.91 r
+  u_RX1/u_Data_Sampling/U4/Y (AOI21X2M)                   0.16      21.07 f
+  u_RX1/u_Data_Sampling/sampled_bit (Data_Sampling)       0.00      21.07 f
+  u_RX1/u_Deserializer/sampled_bit (Deserializer)         0.00      21.07 f
+  u_RX1/u_Deserializer/U17/Y (NAND2BX2M)                  0.25      21.32 r
+  u_RX1/u_Deserializer/U13/Y (OAI21BX1M)                  0.14      21.46 f
+  u_RX1/u_Deserializer/Data_reg[4]/D (DFFRHQX1M)          0.00      21.46 f
+  data arrival time                                                 21.46
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[4]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                -21.46
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.45
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[5]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 f
+  Prescale[3] (in)                                        0.19      20.19 f
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.19 f
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.19 f
+  u_RX1/u_RX_FSM/U35/Y (MX3X1M)                           0.21      20.41 f
+  u_RX1/u_RX_FSM/U3/Y (OAI32X1M)                          0.20      20.61 r
+  u_RX1/u_RX_FSM/U10/Y (CLKBUFX2M)                        0.30      20.91 r
+  u_RX1/u_RX_FSM/data_samp_en (RX_FSM)                    0.00      20.91 r
+  u_RX1/u_Data_Sampling/data_samp_en (Data_Sampling)      0.00      20.91 r
+  u_RX1/u_Data_Sampling/U4/Y (AOI21X2M)                   0.16      21.07 f
+  u_RX1/u_Data_Sampling/sampled_bit (Data_Sampling)       0.00      21.07 f
+  u_RX1/u_Deserializer/sampled_bit (Deserializer)         0.00      21.07 f
+  u_RX1/u_Deserializer/U17/Y (NAND2BX2M)                  0.25      21.32 r
+  u_RX1/u_Deserializer/U21/Y (OAI21BX1M)                  0.14      21.46 f
+  u_RX1/u_Deserializer/Data_reg[5]/D (DFFRHQX1M)          0.00      21.46 f
+  data arrival time                                                 21.46
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[5]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                -21.46
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.45
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[3] (in)                                        0.34      20.34 r
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.34 r
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.34 r
+  u_RX1/u_RX_FSM/U9/Y (OAI31X2M)                          0.17      20.51 f
+  u_RX1/u_RX_FSM/U43/Y (CLKINVX1M)                        0.21      20.72 r
+  u_RX1/u_RX_FSM/U16/Y (NOR2X1M)                          0.16      20.88 f
+  u_RX1/u_RX_FSM/deser_en (RX_FSM)                        0.00      20.88 f
+  u_RX1/u_Deserializer/deser_en (Deserializer)            0.00      20.88 f
+  u_RX1/u_Deserializer/U26/Y (NAND2BX2M)                  0.28      21.16 r
+  u_RX1/u_Deserializer/U6/Y (OA21XLM)                     0.19      21.36 r
+  u_RX1/u_Deserializer/U22/Y (OAI21BX1M)                  0.14      21.50 r
+  u_RX1/u_Deserializer/Data_reg[2]/D (DFFRHQX1M)          0.00      21.50 r
+  data arrival time                                                 21.50
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[2]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.05       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                -21.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.50
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[3] (in)                                        0.34      20.34 r
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.34 r
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.34 r
+  u_RX1/u_RX_FSM/U9/Y (OAI31X2M)                          0.17      20.51 f
+  u_RX1/u_RX_FSM/U43/Y (CLKINVX1M)                        0.21      20.72 r
+  u_RX1/u_RX_FSM/U16/Y (NOR2X1M)                          0.16      20.88 f
+  u_RX1/u_RX_FSM/deser_en (RX_FSM)                        0.00      20.88 f
+  u_RX1/u_Deserializer/deser_en (Deserializer)            0.00      20.88 f
+  u_RX1/u_Deserializer/U26/Y (NAND2BX2M)                  0.28      21.16 r
+  u_RX1/u_Deserializer/U10/Y (OA21XLM)                    0.19      21.36 r
+  u_RX1/u_Deserializer/U12/Y (OAI21BX1M)                  0.14      21.50 r
+  u_RX1/u_Deserializer/Data_reg[0]/D (DFFRHQX1M)          0.00      21.50 r
+  data arrival time                                                 21.50
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[0]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.05       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                -21.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.50
+
+
+  Startpoint: Prescale[3]
+              (input port clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[1]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: INREG
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   20.00      20.00 r
+  Prescale[3] (in)                                        0.34      20.34 r
+  u_RX1/Prescale_Top[3] (RX)                              0.00      20.34 r
+  u_RX1/u_RX_FSM/Prescale[0] (RX_FSM)                     0.00      20.34 r
+  u_RX1/u_RX_FSM/U9/Y (OAI31X2M)                          0.17      20.51 f
+  u_RX1/u_RX_FSM/U43/Y (CLKINVX1M)                        0.21      20.72 r
+  u_RX1/u_RX_FSM/U16/Y (NOR2X1M)                          0.16      20.88 f
+  u_RX1/u_RX_FSM/deser_en (RX_FSM)                        0.00      20.88 f
+  u_RX1/u_Deserializer/deser_en (Deserializer)            0.00      20.88 f
+  u_RX1/u_Deserializer/U26/Y (NAND2BX2M)                  0.28      21.16 r
+  u_RX1/u_Deserializer/U8/Y (OA21XLM)                     0.19      21.36 r
+  u_RX1/u_Deserializer/U20/Y (OAI21BX1M)                  0.14      21.50 r
+  u_RX1/u_Deserializer/Data_reg[1]/D (DFFRHQX1M)          0.00      21.50 r
+  data arrival time                                                 21.50
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[1]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.05       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                -21.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                       21.50
 
 
   Startpoint: u_RX1/u_Deserializer/Data_reg[5]
@@ -897,8 +1867,8 @@ Wire Load Model Mode: top
   u_RX1/u_Deserializer/Data_reg[5]/CK (DFFRHQX1M)         0.00       0.00 r
   u_RX1/u_Deserializer/Data_reg[5]/Q (DFFRHQX1M)          0.25       0.25 f
   u_RX1/u_Deserializer/Data[5] (Deserializer)             0.00       0.25 f
-  u_RX1/U10/Y (CLKINVX1M)                                 0.48       0.74 r
-  u_RX1/U12/Y (CLKINVX40M)                                8.92       9.66 f
+  u_RX1/U16/Y (CLKINVX1M)                                 0.48       0.74 r
+  u_RX1/U18/Y (CLKINVX40M)                                8.92       9.66 f
   u_RX1/P_Data_Top[5] (RX)                                0.00       9.66 f
   RX_OUT_P[5] (out)                                       0.00       9.66 f
   data arrival time                                                  9.66
@@ -951,42 +1921,6 @@ Wire Load Model Mode: top
   slack (MET)                                                       29.61
 
 
-  Startpoint: u_RX1/u_Deserializer/Data_reg[2]
-              (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: RX_OUT_P[2]
-            (output port clocked by RXCLK)
-  Path Group: REGOUT
-  Path Type: min
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock RXCLK (rise edge)                                 0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Deserializer/Data_reg[2]/CK (DFFRHQX1M)         0.00       0.00 r
-  u_RX1/u_Deserializer/Data_reg[2]/Q (DFFRHQX1M)          0.25       0.25 f
-  u_RX1/u_Deserializer/Data[2] (Deserializer)             0.00       0.25 f
-  u_RX1/U1/Y (CLKINVX1M)                                  0.48       0.74 r
-  u_RX1/U3/Y (CLKINVX40M)                                 8.92       9.66 f
-  u_RX1/P_Data_Top[2] (RX)                                0.00       9.66 f
-  RX_OUT_P[2] (out)                                       0.00       9.66 f
-  data arrival time                                                  9.66
-
-  clock RXCLK (rise edge)                                 0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                       0.05       0.05
-  output external delay                                 -20.00     -19.95
-  data required time                                               -19.95
-  --------------------------------------------------------------------------
-  data required time                                               -19.95
-  data arrival time                                                 -9.66
-  --------------------------------------------------------------------------
-  slack (MET)                                                       29.61
-
-
   Startpoint: u_RX1/u_Deserializer/Data_reg[1]
               (rising edge-triggered flip-flop clocked by RXCLK)
   Endpoint: RX_OUT_P[1]
@@ -1005,8 +1939,8 @@ Wire Load Model Mode: top
   u_RX1/u_Deserializer/Data_reg[1]/CK (DFFRHQX1M)         0.00       0.00 r
   u_RX1/u_Deserializer/Data_reg[1]/Q (DFFRHQX1M)          0.25       0.25 f
   u_RX1/u_Deserializer/Data[1] (Deserializer)             0.00       0.25 f
-  u_RX1/U7/Y (CLKINVX1M)                                  0.48       0.74 r
-  u_RX1/U9/Y (CLKINVX40M)                                 8.92       9.66 f
+  u_RX1/U13/Y (CLKINVX1M)                                 0.48       0.74 r
+  u_RX1/U15/Y (CLKINVX40M)                                8.92       9.66 f
   u_RX1/P_Data_Top[1] (RX)                                0.00       9.66 f
   RX_OUT_P[1] (out)                                       0.00       9.66 f
   data arrival time                                                  9.66
@@ -1074,15 +2008,14 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Deserializer/Data_reg[7]/CK (DFFRX1M)           0.00       0.00 r
-  u_RX1/u_Deserializer/Data_reg[7]/QN (DFFRX1M)           0.28       0.28 r
-  u_RX1/u_Deserializer/U3/Y (INVX2M)                      0.06       0.34 f
-  u_RX1/u_Deserializer/Data[7] (Deserializer)             0.00       0.34 f
-  u_RX1/U16/Y (CLKINVX1M)                                 0.46       0.80 r
-  u_RX1/U18/Y (CLKINVX40M)                                8.92       9.72 f
-  u_RX1/P_Data_Top[7] (RX)                                0.00       9.72 f
-  RX_OUT_P[7] (out)                                       0.00       9.72 f
-  data arrival time                                                  9.72
+  u_RX1/u_Deserializer/Data_reg[7]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[7]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/Data[7] (Deserializer)             0.00       0.25 f
+  u_RX1/U4/Y (CLKINVX1M)                                  0.48       0.74 r
+  u_RX1/U6/Y (CLKINVX40M)                                 8.92       9.66 f
+  u_RX1/P_Data_Top[7] (RX)                                0.00       9.66 f
+  RX_OUT_P[7] (out)                                       0.00       9.66 f
+  data arrival time                                                  9.66
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
@@ -1091,9 +2024,9 @@ Wire Load Model Mode: top
   data required time                                               -19.95
   --------------------------------------------------------------------------
   data required time                                               -19.95
-  data arrival time                                                 -9.72
+  data arrival time                                                 -9.66
   --------------------------------------------------------------------------
-  slack (MET)                                                       29.67
+  slack (MET)                                                       29.61
 
 
   Startpoint: u_RX1/u_Deserializer/Data_reg[3]
@@ -1111,15 +2044,14 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Deserializer/Data_reg[3]/CK (DFFRX1M)           0.00       0.00 r
-  u_RX1/u_Deserializer/Data_reg[3]/QN (DFFRX1M)           0.28       0.28 r
-  u_RX1/u_Deserializer/U2/Y (INVX2M)                      0.06       0.34 f
-  u_RX1/u_Deserializer/Data[3] (Deserializer)             0.00       0.34 f
-  u_RX1/U13/Y (CLKINVX1M)                                 0.46       0.80 r
-  u_RX1/U15/Y (CLKINVX40M)                                8.92       9.72 f
-  u_RX1/P_Data_Top[3] (RX)                                0.00       9.72 f
-  RX_OUT_P[3] (out)                                       0.00       9.72 f
-  data arrival time                                                  9.72
+  u_RX1/u_Deserializer/Data_reg[3]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[3]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/Data[3] (Deserializer)             0.00       0.25 f
+  u_RX1/U1/Y (CLKINVX1M)                                  0.48       0.74 r
+  u_RX1/U3/Y (CLKINVX40M)                                 8.92       9.66 f
+  u_RX1/P_Data_Top[3] (RX)                                0.00       9.66 f
+  RX_OUT_P[3] (out)                                       0.00       9.66 f
+  data arrival time                                                  9.66
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
@@ -1128,9 +2060,120 @@ Wire Load Model Mode: top
   data required time                                               -19.95
   --------------------------------------------------------------------------
   data required time                                               -19.95
-  data arrival time                                                 -9.72
+  data arrival time                                                 -9.66
   --------------------------------------------------------------------------
-  slack (MET)                                                       29.67
+  slack (MET)                                                       29.61
+
+
+  Startpoint: u_RX1/u_RX_FSM/data_valid_reg
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: RX_OUT_V (output port clocked by RXCLK)
+  Path Group: REGOUT
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_RX_FSM/data_valid_reg/CK (DFFSQX1M)             0.00       0.00 r
+  u_RX1/u_RX_FSM/data_valid_reg/Q (DFFSQX1M)              0.32       0.32 f
+  u_RX1/u_RX_FSM/U7/Y (CLKINVX1M)                         0.47       0.79 r
+  u_RX1/u_RX_FSM/U6/Y (CLKINVX40M)                        8.92       9.71 f
+  u_RX1/u_RX_FSM/data_valid (RX_FSM)                      0.00       9.71 f
+  u_RX1/Data_Valid_Top (RX)                               0.00       9.71 f
+  RX_OUT_V (out)                                          0.00       9.71 f
+  data arrival time                                                  9.71
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  output external delay                                 -20.00     -19.95
+  data required time                                               -19.95
+  --------------------------------------------------------------------------
+  data required time                                               -19.95
+  data arrival time                                                 -9.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                       29.66
+
+
+  Startpoint: u_RX1/u_Deserializer/Data_reg[6]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: RX_OUT_P[6]
+            (output port clocked by RXCLK)
+  Path Group: REGOUT
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[6]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[6]/Q (DFFRHQX1M)          0.21       0.21 f
+  u_RX1/u_Deserializer/U4/Y (CLKINVX1M)                   0.12       0.33 r
+  u_RX1/u_Deserializer/U3/Y (INVX2M)                      0.09       0.42 f
+  u_RX1/u_Deserializer/Data[6] (Deserializer)             0.00       0.42 f
+  u_RX1/U10/Y (CLKINVX1M)                                 0.47       0.89 r
+  u_RX1/U12/Y (CLKINVX40M)                                8.92       9.81 f
+  u_RX1/P_Data_Top[6] (RX)                                0.00       9.81 f
+  RX_OUT_P[6] (out)                                       0.00       9.81 f
+  data arrival time                                                  9.81
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  output external delay                                 -20.00     -19.95
+  data required time                                               -19.95
+  --------------------------------------------------------------------------
+  data required time                                               -19.95
+  data arrival time                                                 -9.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                       29.76
+
+
+  Startpoint: u_RX1/u_Deserializer/Data_reg[2]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: RX_OUT_P[2]
+            (output port clocked by RXCLK)
+  Path Group: REGOUT
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[2]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[2]/Q (DFFRHQX1M)          0.21       0.21 f
+  u_RX1/u_Deserializer/U5/Y (CLKINVX1M)                   0.12       0.33 r
+  u_RX1/u_Deserializer/U2/Y (INVX2M)                      0.09       0.42 f
+  u_RX1/u_Deserializer/Data[2] (Deserializer)             0.00       0.42 f
+  u_RX1/U7/Y (CLKINVX1M)                                  0.47       0.89 r
+  u_RX1/U9/Y (CLKINVX40M)                                 8.92       9.81 f
+  u_RX1/P_Data_Top[2] (RX)                                0.00       9.81 f
+  RX_OUT_P[2] (out)                                       0.00       9.81 f
+  data arrival time                                                  9.81
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  output external delay                                 -20.00     -19.95
+  data required time                                               -19.95
+  --------------------------------------------------------------------------
+  data required time                                               -19.95
+  data arrival time                                                 -9.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                       29.76
 
 
   Startpoint: u_UART_TX_Top1/u_Parity_Unit/Par_Bit_reg
@@ -1174,9 +2217,9 @@ Wire Load Model Mode: top
   slack (MET)                                                       29.82
 
 
-  Startpoint: u_RX1/u_FSM/stp_error_reg
-              (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: RX_OUT_V (output port clocked by RXCLK)
+  Startpoint: u_UART_TX_Top1/u_FSM/Current_State_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: TX_OUT_V (output port clocked by CLK1)
   Path Group: REGOUT
   Path Type: min
 
@@ -1186,29 +2229,31 @@ Wire Load Model Mode: top
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
-  clock RXCLK (rise edge)                                 0.00       0.00
+  clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_FSM/stp_error_reg/CK (DFFRX1M)                  0.00       0.00 r
-  u_RX1/u_FSM/stp_error_reg/QN (DFFRX1M)                  0.31       0.31 f
-  u_RX1/u_FSM/U38/Y (NAND4BX1M)                           0.16       0.46 r
-  u_RX1/u_FSM/U6/Y (NOR4BXLM)                             0.11       0.58 f
-  u_RX1/u_FSM/data_valid (RX_FSM)                         0.00       0.58 f
-  u_RX1/Data_Valid_Top (RX)                               0.00       0.58 f
-  U3/Y (CLKINVX1M)                                        0.41       0.98 r
-  U4/Y (CLKINVX40M)                                       8.90       9.89 f
-  RX_OUT_V (out)                                          0.00       9.89 f
-  data arrival time                                                  9.89
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/CK (DFFRX1M)
+                                                          0.00       0.00 r
+  u_UART_TX_Top1/u_FSM/Current_State_reg[0]/Q (DFFRX1M)
+                                                          0.36       0.36 f
+  u_UART_TX_Top1/u_FSM/U8/Y (NAND2X2M)                    0.14       0.50 r
+  u_UART_TX_Top1/u_FSM/U5/Y (NAND2XLM)                    0.14       0.64 f
+  u_UART_TX_Top1/u_FSM/U3/Y (CLKINVX1M)                   0.43       1.07 r
+  u_UART_TX_Top1/u_FSM/U4/Y (CLKINVX40M)                  8.90       9.97 f
+  u_UART_TX_Top1/u_FSM/Busy (FSM)                         0.00       9.97 f
+  u_UART_TX_Top1/Busy_UART (UART_TX_Top)                  0.00       9.97 f
+  TX_OUT_V (out)                                          0.00       9.97 f
+  data arrival time                                                  9.97
 
-  clock RXCLK (rise edge)                                 0.00       0.00
+  clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
   output external delay                                 -20.00     -19.95
   data required time                                               -19.95
   --------------------------------------------------------------------------
   data required time                                               -19.95
-  data arrival time                                                 -9.89
+  data arrival time                                                 -9.97
   --------------------------------------------------------------------------
-  slack (MET)                                                       29.84
+  slack (MET)                                                       29.92
 
 
   Startpoint: u_RX1/u_Data_Sampling/bits_reg[1]
@@ -1228,7 +2273,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX1/u_Data_Sampling/bits_reg[1]/CK (DFFRX1M)          0.00       0.00 r
   u_RX1/u_Data_Sampling/bits_reg[1]/QN (DFFRX1M)          0.34       0.34 r
-  u_RX1/u_Data_Sampling/U8/Y (OAI2BB2X1M)                 0.12       0.46 f
+  u_RX1/u_Data_Sampling/U7/Y (OAI2BB2X1M)                 0.12       0.46 f
   u_RX1/u_Data_Sampling/bits_reg[2]/D (DFFRQX1M)          0.00       0.46 f
   data arrival time                                                  0.46
 
@@ -1243,74 +2288,6 @@ Wire Load Model Mode: top
   data arrival time                                                 -0.46
   --------------------------------------------------------------------------
   slack (MET)                                                        0.42
-
-
-  Startpoint: u_RX1/u_FSM/strt_error_reg
-              (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: u_RX1/u_FSM/strt_error_reg
-            (rising edge-triggered flip-flop clocked by RXCLK)
-  Path Group: RXCLK
-  Path Type: min
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock RXCLK (rise edge)                                 0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_FSM/strt_error_reg/CK (DFFRX1M)                 0.00       0.00 r
-  u_RX1/u_FSM/strt_error_reg/QN (DFFRX1M)                 0.34       0.34 r
-  u_RX1/u_FSM/U7/Y (MXI2X1M)                              0.13       0.47 f
-  u_RX1/u_FSM/strt_error_reg/D (DFFRX1M)                  0.00       0.47 f
-  data arrival time                                                  0.47
-
-  clock RXCLK (rise edge)                                 0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                       0.05       0.05
-  u_RX1/u_FSM/strt_error_reg/CK (DFFRX1M)                 0.00       0.05 r
-  library hold time                                      -0.02       0.03
-  data required time                                                 0.03
-  --------------------------------------------------------------------------
-  data required time                                                 0.03
-  data arrival time                                                 -0.47
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.44
-
-
-  Startpoint: u_RX1/u_FSM/stp_error_reg
-              (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: u_RX1/u_FSM/stp_error_reg
-            (rising edge-triggered flip-flop clocked by RXCLK)
-  Path Group: RXCLK
-  Path Type: min
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock RXCLK (rise edge)                                 0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_FSM/stp_error_reg/CK (DFFRX1M)                  0.00       0.00 r
-  u_RX1/u_FSM/stp_error_reg/QN (DFFRX1M)                  0.34       0.34 r
-  u_RX1/u_FSM/U10/Y (MXI2X1M)                             0.13       0.47 f
-  u_RX1/u_FSM/stp_error_reg/D (DFFRX1M)                   0.00       0.47 f
-  data arrival time                                                  0.47
-
-  clock RXCLK (rise edge)                                 0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  clock uncertainty                                       0.05       0.05
-  u_RX1/u_FSM/stp_error_reg/CK (DFFRX1M)                  0.00       0.05 r
-  library hold time                                      -0.02       0.03
-  data required time                                                 0.03
-  --------------------------------------------------------------------------
-  data required time                                                 0.03
-  data arrival time                                                 -0.47
-  --------------------------------------------------------------------------
-  slack (MET)                                                        0.44
 
 
   Startpoint: u_RX1/u_Data_Sampling/bits_reg[0]
@@ -1330,7 +2307,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX1/u_Data_Sampling/bits_reg[0]/CK (DFFRX1M)          0.00       0.00 r
   u_RX1/u_Data_Sampling/bits_reg[0]/QN (DFFRX1M)          0.33       0.33 r
-  u_RX1/u_Data_Sampling/U4/Y (OAI22XLM)                   0.15       0.48 f
+  u_RX1/u_Data_Sampling/U3/Y (OAI22XLM)                   0.15       0.48 f
   u_RX1/u_Data_Sampling/bits_reg[1]/D (DFFRX1M)           0.00       0.48 f
   data arrival time                                                  0.48
 
@@ -1364,7 +2341,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX1/u_Data_Sampling/bits_reg[0]/CK (DFFRX1M)          0.00       0.00 r
   u_RX1/u_Data_Sampling/bits_reg[0]/QN (DFFRX1M)          0.33       0.33 r
-  u_RX1/u_Data_Sampling/U7/Y (OAI2BB2XLM)                 0.16       0.49 f
+  u_RX1/u_Data_Sampling/U8/Y (OAI2BB2XLM)                 0.16       0.49 f
   u_RX1/u_Data_Sampling/bits_reg[0]/D (DFFRX1M)           0.00       0.49 f
   data arrival time                                                  0.49
 
@@ -1381,9 +2358,9 @@ Wire Load Model Mode: top
   slack (MET)                                                        0.46
 
 
-  Startpoint: u_RX1/u_Parity_Check/par_err_reg
+  Startpoint: u_RX1/u_Deserializer/Data_reg[7]
               (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: u_RX1/u_FSM/par_error_reg
+  Endpoint: u_RX1/u_Deserializer/Data_reg[7]
             (rising edge-triggered flip-flop clocked by RXCLK)
   Path Group: RXCLK
   Path Type: min
@@ -1396,30 +2373,29 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Parity_Check/par_err_reg/CK (DFFRQX1M)          0.00       0.00 r
-  u_RX1/u_Parity_Check/par_err_reg/Q (DFFRQX1M)           0.35       0.35 f
-  u_RX1/u_Parity_Check/par_err (Parity_Check)             0.00       0.35 f
-  u_RX1/u_FSM/par_err (RX_FSM)                            0.00       0.35 f
-  u_RX1/u_FSM/U8/Y (CLKMX2X2M)                            0.17       0.53 f
-  u_RX1/u_FSM/par_error_reg/D (DFFRQX1M)                  0.00       0.53 f
-  data arrival time                                                  0.53
+  u_RX1/u_Deserializer/Data_reg[7]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[7]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/U24/Y (OA21X2M)                    0.14       0.40 f
+  u_RX1/u_Deserializer/U23/Y (OAI21BX1M)                  0.16       0.55 f
+  u_RX1/u_Deserializer/Data_reg[7]/D (DFFRHQX1M)          0.00       0.55 f
+  data arrival time                                                  0.55
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_RX1/u_FSM/par_error_reg/CK (DFFRQX1M)                 0.00       0.05 r
-  library hold time                                      -0.01       0.04
-  data required time                                                 0.04
+  u_RX1/u_Deserializer/Data_reg[7]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
   --------------------------------------------------------------------------
-  data required time                                                 0.04
-  data arrival time                                                 -0.53
+  data required time                                                 0.01
+  data arrival time                                                 -0.55
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.49
+  slack (MET)                                                        0.54
 
 
-  Startpoint: u_RX1/u_Stop_Check/stop_err_reg
+  Startpoint: u_RX1/u_Deserializer/Data_reg[3]
               (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: u_RX1/u_Stop_Check/stop_err_reg
+  Endpoint: u_RX1/u_Deserializer/Data_reg[3]
             (rising edge-triggered flip-flop clocked by RXCLK)
   Path Group: RXCLK
   Path Type: min
@@ -1432,23 +2408,24 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Stop_Check/stop_err_reg/CK (DFFRQX1M)           0.00       0.00 r
-  u_RX1/u_Stop_Check/stop_err_reg/Q (DFFRQX1M)            0.39       0.39 f
-  u_RX1/u_Stop_Check/U3/Y (AOI2B1X1M)                     0.20       0.59 f
-  u_RX1/u_Stop_Check/stop_err_reg/D (DFFRQX1M)            0.00       0.59 f
-  data arrival time                                                  0.59
+  u_RX1/u_Deserializer/Data_reg[3]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[3]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/U16/Y (OA21X2M)                    0.14       0.40 f
+  u_RX1/u_Deserializer/U15/Y (OAI21BX1M)                  0.16       0.55 f
+  u_RX1/u_Deserializer/Data_reg[3]/D (DFFRHQX1M)          0.00       0.55 f
+  data arrival time                                                  0.55
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_RX1/u_Stop_Check/stop_err_reg/CK (DFFRQX1M)           0.00       0.05 r
-  library hold time                                      -0.01       0.04
-  data required time                                                 0.04
+  u_RX1/u_Deserializer/Data_reg[3]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
   --------------------------------------------------------------------------
-  data required time                                                 0.04
-  data arrival time                                                 -0.59
+  data required time                                                 0.01
+  data arrival time                                                 -0.55
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.55
+  slack (MET)                                                        0.54
 
 
   Startpoint: u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[1]
@@ -1470,7 +2447,7 @@ Wire Load Model Mode: top
                                                           0.00       0.00 r
   u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[1]/Q (DFFRHQX1M)
                                                           0.39       0.39 f
-  u_RX1/u_Counter_Unit/u_Bits_Counter/U7/Y (XNOR2X2M)     0.18       0.57 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/U5/Y (XNOR2X2M)     0.18       0.57 f
   u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[1]/D (DFFRHQX1M)
                                                           0.00       0.57 f
   data arrival time                                                  0.57
@@ -1489,7 +2466,381 @@ Wire Load Model Mode: top
   slack (MET)                                                        0.55
 
 
-  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]
+  Startpoint: u_RX1/u_Deserializer/Data_reg[4]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[4]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[4]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[4]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/U11/Y (OA21XLM)                    0.18       0.43 f
+  u_RX1/u_Deserializer/U13/Y (OAI21BX1M)                  0.17       0.61 f
+  u_RX1/u_Deserializer/Data_reg[4]/D (DFFRHQX1M)          0.00       0.61 f
+  data arrival time                                                  0.61
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[4]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: u_RX1/u_Deserializer/Data_reg[0]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[0]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[0]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/U10/Y (OA21XLM)                    0.18       0.43 f
+  u_RX1/u_Deserializer/U12/Y (OAI21BX1M)                  0.17       0.61 f
+  u_RX1/u_Deserializer/Data_reg[0]/D (DFFRHQX1M)          0.00       0.61 f
+  data arrival time                                                  0.61
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[0]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: u_RX1/u_Deserializer/Data_reg[5]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[5]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[5]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[5]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/U9/Y (OA21XLM)                     0.18       0.43 f
+  u_RX1/u_Deserializer/U21/Y (OAI21BX1M)                  0.17       0.61 f
+  u_RX1/u_Deserializer/Data_reg[5]/D (DFFRHQX1M)          0.00       0.61 f
+  data arrival time                                                  0.61
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[5]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: u_RX1/u_Deserializer/Data_reg[1]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[1]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[1]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[1]/Q (DFFRHQX1M)          0.25       0.25 f
+  u_RX1/u_Deserializer/U8/Y (OA21XLM)                     0.18       0.43 f
+  u_RX1/u_Deserializer/U20/Y (OAI21BX1M)                  0.17       0.61 f
+  u_RX1/u_Deserializer/Data_reg[1]/D (DFFRHQX1M)          0.00       0.61 f
+  data arrival time                                                  0.61
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[1]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.60
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]/Q (DFFRQX1M)
+                                                          0.48       0.48 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/U6/Y (CLKXOR2X2M)
+                                                          0.20       0.67 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]/D (DFFRQX1M)
+                                                          0.00       0.67 f
+  data arrival time                                                  0.67
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.63
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/CK (DFFRHQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/Q (DFFRHQX1M)
+                                                          0.56       0.56 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U9/Y (NOR2X2M)
+                                                          0.08       0.65 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/D (DFFRHQX1M)
+                                                          0.00       0.65 f
+  data arrival time                                                  0.65
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/CK (DFFRHQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.64
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/Q (DFFRQX1M)
+                                                          0.47       0.47 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U8/Y (XNOR2X2M)
+                                                          0.21       0.68 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U7/Y (NOR2X2M)
+                                                          0.07       0.75 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/D (DFFRQX1M)
+                                                          0.00       0.75 f
+  data arrival time                                                  0.75
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.71
+
+
+  Startpoint: u_RX1/u_RX_FSM/CurrentState_reg[1]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/data_valid_reg
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/CK (DFFRX1M)         0.00       0.00 r
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/QN (DFFRX1M)         0.31       0.31 f
+  u_RX1/u_RX_FSM/U47/Y (NAND3X1M)                         0.27       0.58 r
+  u_RX1/u_RX_FSM/U14/Y (OAI2BB1X1M)                       0.12       0.70 f
+  u_RX1/u_RX_FSM/data_valid_reg/D (DFFSQX1M)              0.00       0.70 f
+  data arrival time                                                  0.70
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_RX_FSM/data_valid_reg/CK (DFFSQX1M)             0.00       0.05 r
+  library hold time                                      -0.06      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.70
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.71
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[0]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[0]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[0]/Q (DFFRQX1M)
+                                                          0.52       0.52 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/U8/Y (CLKXOR2X2M)
+                                                          0.25       0.77 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[0]/D (DFFRQX1M)
+                                                          0.00       0.77 f
+  data arrival time                                                  0.77
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[0]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.77
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.73
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]/Q (DFFRQX1M)
+                                                          0.51       0.51 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U13/S (ADDHX1M)
+                                                          0.15       0.66 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U3/Y (NOR2BX2M)
+                                                          0.13       0.79 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]/D (DFFRQX1M)
+                                                          0.00       0.79 f
+  data arrival time                                                  0.79
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[3]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                       0.00       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                 -0.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.74
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]
               (rising edge-triggered flip-flop clocked by RXCLK)
   Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]
             (rising edge-triggered flip-flop clocked by RXCLK)
@@ -1504,35 +2855,35 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/CK (DFFRHQX4M)
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/CK (DFFRHQX1M)
                                                           0.00       0.00 r
-  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/Q (DFFRHQX4M)
-                                                          0.26       0.26 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[0]/Q (DFFRHQX1M)
+                                                          0.42       0.42 f
   u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U11/S (ADDHX1M)
-                                                          0.19       0.45 f
+                                                          0.22       0.64 f
   u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U5/Y (NOR2BX2M)
-                                                          0.13       0.58 f
-  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/D (DFFRHQX4M)
-                                                          0.00       0.58 f
-  data arrival time                                                  0.58
+                                                          0.13       0.77 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/D (DFFRHQX1M)
+                                                          0.00       0.77 f
+  data arrival time                                                  0.77
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/CK (DFFRHQX4M)
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[1]/CK (DFFRHQX1M)
                                                           0.00       0.05 r
-  library hold time                                      -0.04       0.01
-  data required time                                                 0.01
+  library hold time                                      -0.02       0.03
+  data required time                                                 0.03
   --------------------------------------------------------------------------
-  data required time                                                 0.01
-  data arrival time                                                 -0.58
+  data required time                                                 0.03
+  data arrival time                                                 -0.77
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.57
+  slack (MET)                                                        0.75
 
 
-  Startpoint: u_RX1/u_Start_Check/start_err_reg
+  Startpoint: u_RX1/u_Deserializer/Data_reg[6]
               (rising edge-triggered flip-flop clocked by RXCLK)
-  Endpoint: u_RX1/u_Start_Check/start_err_reg
+  Endpoint: u_RX1/u_Deserializer/Data_reg[6]
             (rising edge-triggered flip-flop clocked by RXCLK)
   Path Group: RXCLK
   Path Type: min
@@ -1545,23 +2896,262 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_RX1/u_Start_Check/start_err_reg/CK (DFFRQX1M)         0.00       0.00 r
-  u_RX1/u_Start_Check/start_err_reg/Q (DFFRQX1M)          0.38       0.38 r
-  u_RX1/u_Start_Check/U3/Y (OA21X1M)                      0.16       0.54 r
-  u_RX1/u_Start_Check/start_err_reg/D (DFFRQX1M)          0.00       0.54 r
-  data arrival time                                                  0.54
+  u_RX1/u_Deserializer/Data_reg[6]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[6]/Q (DFFRHQX1M)          0.21       0.21 f
+  u_RX1/u_Deserializer/U4/Y (CLKINVX1M)                   0.12       0.33 r
+  u_RX1/u_Deserializer/U3/Y (INVX2M)                      0.09       0.42 f
+  u_RX1/u_Deserializer/U7/Y (OA21XLM)                     0.16       0.59 f
+  u_RX1/u_Deserializer/U14/Y (OAI21BX1M)                  0.17       0.76 f
+  u_RX1/u_Deserializer/Data_reg[6]/D (DFFRHQX1M)          0.00       0.76 f
+  data arrival time                                                  0.76
 
   clock RXCLK (rise edge)                                 0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.05       0.05
-  u_RX1/u_Start_Check/start_err_reg/CK (DFFRQX1M)         0.00       0.05 r
-  library hold time                                      -0.10      -0.05
-  data required time                                                -0.05
+  u_RX1/u_Deserializer/Data_reg[6]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
   --------------------------------------------------------------------------
-  data required time                                                -0.05
-  data arrival time                                                 -0.54
+  data required time                                                 0.01
+  data arrival time                                                 -0.76
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.58
+  slack (MET)                                                        0.75
+
+
+  Startpoint: u_RX1/u_Deserializer/Data_reg[2]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Deserializer/Data_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Deserializer/Data_reg[2]/CK (DFFRHQX1M)         0.00       0.00 r
+  u_RX1/u_Deserializer/Data_reg[2]/Q (DFFRHQX1M)          0.21       0.21 f
+  u_RX1/u_Deserializer/U5/Y (CLKINVX1M)                   0.12       0.33 r
+  u_RX1/u_Deserializer/U2/Y (INVX2M)                      0.09       0.42 f
+  u_RX1/u_Deserializer/U6/Y (OA21XLM)                     0.16       0.59 f
+  u_RX1/u_Deserializer/U22/Y (OAI21BX1M)                  0.17       0.76 f
+  u_RX1/u_Deserializer/Data_reg[2]/D (DFFRHQX1M)          0.00       0.76 f
+  data arrival time                                                  0.76
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Deserializer/Data_reg[2]/CK (DFFRHQX1M)         0.00       0.05 r
+  library hold time                                      -0.04       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.75
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[4]/Q (DFFRQX1M)
+                                                          0.47       0.47 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U27/Y (CLKXOR2X2M)
+                                                          0.25       0.72 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U30/Y (NOR4X1M)
+                                                          0.08       0.80 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg/D (DFFRQX1M)
+                                                          0.00       0.80 f
+  data arrival time                                                  0.80
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.76
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/CurrentState_reg[0]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish_reg/Q (DFFRQX1M)
+                                                          0.47       0.47 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/finish (Edge_Bit_Counter)
+                                                          0.00       0.47 f
+  u_RX1/u_Counter_Unit/Finish_edge (Counter_Unit)         0.00       0.47 f
+  u_RX1/u_RX_FSM/bit_cnt (RX_FSM)                         0.00       0.47 f
+  u_RX1/u_RX_FSM/U32/Y (MXI2X1M)                          0.21       0.68 r
+  u_RX1/u_RX_FSM/U24/Y (NAND3X1M)                         0.16       0.84 f
+  u_RX1/u_RX_FSM/CurrentState_reg[0]/D (DFFRQX1M)         0.00       0.84 f
+  data arrival time                                                  0.84
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_RX_FSM/CurrentState_reg[0]/CK (DFFRQX1M)        0.00       0.05 r
+  library hold time                                      -0.02       0.03
+  data required time                                                 0.03
+  --------------------------------------------------------------------------
+  data required time                                                 0.03
+  data arrival time                                                 -0.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.81
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/CurrentState_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Bits_Counter/bits_counter_reg[2]/Q (DFFRQX1M)
+                                                          0.48       0.48 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/U3/Y (NOR3BX2M)     0.20       0.68 f
+  u_RX1/u_Counter_Unit/u_Bits_Counter/finish (Bits_Counter)
+                                                          0.00       0.68 f
+  u_RX1/u_Counter_Unit/Finish_data (Counter_Unit)         0.00       0.68 f
+  u_RX1/u_RX_FSM/data_finish_flag (RX_FSM)                0.00       0.68 f
+  u_RX1/u_RX_FSM/U19/Y (OAI2BB1X1M)                       0.18       0.86 f
+  u_RX1/u_RX_FSM/CurrentState_reg[2]/D (DFFRQX1M)         0.00       0.86 f
+  data arrival time                                                  0.86
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_RX_FSM/CurrentState_reg[2]/CK (DFFRQX1M)        0.00       0.05 r
+  library hold time                                      -0.01       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.86
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.82
+
+
+  Startpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.00 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]/Q (DFFRQX1M)
+                                                          0.59       0.59 r
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U12/S (ADDHX1M)
+                                                          0.16       0.75 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/U4/Y (NOR2BX2M)
+                                                          0.13       0.87 f
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]/D (DFFRQX1M)
+                                                          0.00       0.87 f
+  data arrival time                                                  0.87
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_Counter_Unit/u_Edge_Bit_Counter/edge_cnt_reg[2]/CK (DFFRQX1M)
+                                                          0.00       0.05 r
+  library hold time                                       0.00       0.05
+  data required time                                                 0.05
+  --------------------------------------------------------------------------
+  data required time                                                 0.05
+  data arrival time                                                 -0.87
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: u_RX1/u_RX_FSM/CurrentState_reg[1]
+              (rising edge-triggered flip-flop clocked by RXCLK)
+  Endpoint: u_RX1/u_RX_FSM/CurrentState_reg[1]
+            (rising edge-triggered flip-flop clocked by RXCLK)
+  Path Group: RXCLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/CK (DFFRX1M)         0.00       0.00 r
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/Q (DFFRX1M)          0.40       0.40 f
+  u_RX1/u_RX_FSM/U30/Y (NAND3X1M)                         0.33       0.72 r
+  u_RX1/u_RX_FSM/U20/Y (OAI2B11X1M)                       0.18       0.90 f
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/D (DFFRX1M)          0.00       0.90 f
+  data arrival time                                                  0.90
+
+  clock RXCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  u_RX1/u_RX_FSM/CurrentState_reg[1]/CK (DFFRX1M)         0.00       0.05 r
+  library hold time                                      -0.03       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.88
 
 
 1

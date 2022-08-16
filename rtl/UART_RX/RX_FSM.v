@@ -7,27 +7,32 @@ module RX_FSM #(parameter Counter_Size='d5) (
     input  wire bit_cnt, // Which bit is being received now
     input  wire data_finish_flag, 
     input  wire [Counter_Size-1:0] edge_cnt, // which edge the RX is at now 
+    input  wire [7:0] P_DATA ,
 
-    input  wire par_err, // parity error 
-    input  wire start_err, // start error 
-    input  wire stop_err, // stop error
+    input   wire PAR_TYP,
+    input   wire Error,
+    output  reg Compared_bit,
+    //input  wire par_err, // parity error 
+    //input  wire start_err, // start error 
+   //input  wire stop_err, // stop error
 
     output reg counter_en, // Counter enable
     output reg bits_counter_en, //Bits Counter Enable
 
+    output reg Error_Unit_En,
     output reg data_samp_en,
     //output reg comparitor_en, //! check it
-    output reg start_check_en,
+    //output reg start_check_en,
     output reg deser_en,
-    output reg par_check_en,
-    output reg stop_check_en,
+   // output reg par_check_en,
+   // output reg stop_check_en,
     output reg data_valid
 );
 
 reg [2:0] CurrentState,NextState;
 wire start_first,start_sec,start_third;
-reg strt_error , par_error , stp_error;
-
+reg Rest_data_valid;
+//reg strt_error , par_error , stp_error;
 localparam Idle =3'b000, 
            Start=3'b001,
            Data =3'b011,
@@ -47,12 +52,15 @@ end
 
 always @(*) begin
     counter_en='b0;
-    start_check_en='b0;
-    par_check_en='b0;
-    stop_check_en='b0;
+    //start_check_en='b0;
+    //par_check_en='b0;
+    //stop_check_en='b0;
+    Error_Unit_En='b0;
     bits_counter_en='b0;
     deser_en='b0;
+    Compared_bit='b0;
     //data_valid='b0;
+    Rest_data_valid='b0;
 
     case (CurrentState)
        Idle : begin
@@ -67,9 +75,11 @@ always @(*) begin
        end
 
        Start:begin
-        start_check_en=((Prescale[0]==1'b0)&(edge_cnt>=5'b00101))|((Prescale>=2'b01)&(edge_cnt>=5'b00111)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01011));
+        Compared_bit='b0;
+        Rest_data_valid='b1;
+        Error_Unit_En=((Prescale[0]==1'b0)&(edge_cnt>=5'b00110))|((Prescale>=2'b01)&(edge_cnt>=5'b01000)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01100));
        // start_check_en='b1;
-        if (start_err) begin
+        if (Error) begin
             NextState=Idle;
             counter_en='b0;
         end else begin
@@ -84,7 +94,7 @@ always @(*) begin
        end
 
        Data:begin
-        deser_en=((Prescale[0]==1'b0)&(edge_cnt>=5'b00101))|((Prescale>=2'b01)&(edge_cnt>=5'b00111)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01011));
+        deser_en=((Prescale[0]==1'b0)&(edge_cnt>=5'b00110))|((Prescale>=2'b01)&(edge_cnt>=5'b01000)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01100));
         bits_counter_en='b1;
         if (!data_finish_flag) begin
             NextState=Data;
@@ -101,8 +111,14 @@ always @(*) begin
        end
 
        Parity:begin
-        par_check_en=((Prescale[0]==1'b0)&(edge_cnt>=5'b00101))|((Prescale>=2'b01)&(edge_cnt>=5'b00111)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01011));
+        Error_Unit_En=((Prescale[0]==1'b0)&(edge_cnt>=5'b00110))|((Prescale>=2'b01)&(edge_cnt>=5'b01000)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01100));
         // par_check_en='b1;
+        if (!PAR_TYP) begin
+            Compared_bit=^P_DATA;
+        end else begin
+            Compared_bit=~^P_DATA;
+        end
+
         if (!bit_cnt) begin
             NextState=Parity;
             counter_en='b1;
@@ -113,23 +129,21 @@ always @(*) begin
        end
 
        Stop:begin
-        stop_check_en=((Prescale[0]==1'b0)&(edge_cnt>=5'b00101))|((Prescale>=2'b01)&(edge_cnt>=5'b00111)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01011));
-        if (stop_err) begin
-            NextState=Idle;
-            counter_en='b0;
-        end else begin
+        Compared_bit='b1;
+        Error_Unit_En=((Prescale[0]==1'b0)&(edge_cnt>=5'b00110))|((Prescale>=2'b01)&(edge_cnt>=5'b01000)) |((Prescale[1]==1'b1)&(edge_cnt>=5'b01100));
         if (!bit_cnt) begin
             NextState=Stop;
             counter_en='b1;
+        end else  if (!RX_IN) begin 
+            NextState=Start;
+            counter_en='b0;
+            //data_valid='b1;
         end else begin
             NextState=Idle;
             counter_en='b0;
-            //data_valid='b1;
         end
         end
-        
-
-       end
+    
 
         default: begin
             NextState=Idle;
@@ -137,24 +151,17 @@ always @(*) begin
     endcase
 end
 
-always @(*) begin
-    if (!(strt_error || par_error || stp_error)&&(NextState==Idle))  begin
-        data_valid='b1;
-    end else begin
-        data_valid='b0;
-    end
-    
-end
-
 
 always @(posedge clk or negedge rst) begin
     if (!rst) begin
-        strt_error<='b0;
-    end else if (start_check_en)  begin   
-        strt_error<=start_err;
+        data_valid<='b1;
+    end else if(Rest_data_valid)begin
+        data_valid<='b1;
+    end else if (Error_Unit_En&&data_valid)  begin   
+        data_valid<=~Error;
     end
 end
-
+/*
 always @(posedge clk or negedge rst) begin
     if (!rst) begin
         par_error<='b0;
@@ -170,7 +177,7 @@ always @(posedge clk or negedge rst) begin
         stp_error<=stop_err;
     end
 end
-
+*/
 
 always @(*) begin
     if (start_first || start_sec || start_third) begin

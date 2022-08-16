@@ -19,7 +19,7 @@
 
 Build: 4031317
 Hostname: IC (RHEL64)
-Current time: Wed Aug 17 03:00:19 2022
+Current time: Wed Aug 17 05:38:22 2022
 
 Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
 set synopsys_auto_setup true
@@ -27,6 +27,7 @@ true
 set_svf "/mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf"
 SVF set to '/mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf'.
 1
+#set_svf "/mnt/hgfs/Courses/System/UART/syn/UART.svf"
 set TTLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
 /mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
 set FFLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
@@ -49,11 +50,9 @@ Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Counter_Unit.v'
 Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Data_Sampling.v'
 Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Deserializer.v'
 Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v'
-Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Parity_Check.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Error_Unit.v'
 Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'
 Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX.v'
-Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Start_Check.v'
-Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Stop_Check.v'
 1
 read_verilog -container Ref "../rtl/UART_TX/*.v"
 No target library specified, default is WORK
@@ -97,9 +96,7 @@ Status:   Elaborating design UART   ...
 Status:   Elaborating design MUX2   ...  
 Status:   Elaborating design RX   ...  
 Status:   Elaborating design RX_FSM   ...  
-Status:   Elaborating design Start_Check   ...  
-Status:   Elaborating design Parity_Check   ...  
-Status:   Elaborating design Stop_Check   ...  
+Status:   Elaborating design Error_Unit   ...  
 Status:   Elaborating design Counter_Unit   ...  
 Status:   Elaborating design Bits_Counter   ...  
 Status:   Elaborating design Edge_Bit_Counter   ...  
@@ -185,7 +182,7 @@ match
 Reference design is 'Ref:/WORK/UART'
 Implementation design is 'Imp:/WORK/UART'
 Status:  Checking designs...
-    Warning: 1 (0) undriven nets found in reference (implementation) design; see formality3.log for list (FM-399)
+    Warning: 1 (0) undriven nets found in reference (implementation) design; see formality5.log for list (FM-399)
 Status:  Building verification models...
 Status:  Processing Guide Commands...
     Set 'Ref:/WORK/UART/SE' to constant 0    
@@ -200,13 +197,13 @@ Status:  Processing Guide Commands...
 Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
 ----------------------------------------------------------------------------
 environment         :          3          0          0          0          3
-instance_map        :         18          0          0          0         18
+instance_map        :         16          0          0          0         16
 mark                :          8          0          0          0          8
 scan_input          :          2          0          0          0          2
 transformation
    map              :          5          0          0          0          5
-   share            :          3          0          0          0          3
-uniquify            :         17          1          0          0         18
+   share            :          2          0          0          0          2
+uniquify            :         14          1          0          0         15
 ununiquify          :          1          0          0          0          1
 
 Note: If verification succeeds you can safely ignore unaccepted guidance commands.
@@ -215,14 +212,14 @@ SVF files read:
       /mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf
 
 SVF files produced:
-  /mnt/hgfs/Courses/System/UART/fm/formality3_svf/
+  /mnt/hgfs/Courses/System/UART/fm/formality5_svf/
     svf.txt
 ****************************************************************************
 
 Status:  Matching...
     
 *********************************** Matching Results ***********************************    
- 54 Compare points matched by name    
+ 49 Compare points matched by name    
  0 Compare points matched by signature analysis    
  0 Compare points matched by topology    
  21 Matched primary inputs, black-box outputs    
@@ -236,7 +233,7 @@ Reference design is 'Ref:/WORK/UART'
 Implementation design is 'Imp:/WORK/UART'
     
 *********************************** Matching Results ***********************************    
- 54 Compare points matched by name    
+ 49 Compare points matched by name    
  0 Compare points matched by signature analysis    
  0 Compare points matched by topology    
  21 Matched primary inputs, black-box outputs    
@@ -279,11 +276,11 @@ Verification SUCCEEDED
 ----------------------------------------------------------
  Reference design: Ref:/WORK/UART
  Implementation design: Imp:/WORK/UART
- 54 Passing compare points
+ 49 Passing compare points
 ----------------------------------------------------------------------------------------
 Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
 ----------------------------------------------------------------------------------------
-Passing (equivalent)           0       0       0       0      11      43       0      54
+Passing (equivalent)           0       0       0       0      11      38       0      49
 Failing (not equivalent)       0       0       0       0       0       0       0       0
 Not Compared
   Don't verify                 0       0       0       0       1       0       0       1
@@ -298,3 +295,7 @@ report_passing_points > "passing_points.rpt"
 report_failing_points > "failing_points.rpt"
 report_aborted_points > "aborted_points.rpt"
 report_unverified_points > "unverified_points.rpt"
+start_gui     1  source -echo -verbose fm_script.tcl
+1
+1
+fm_shell (verify)> 

@@ -1,5 +1,6 @@
 set synopsys_auto_setup true
 set_svf "/mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf"
+#set_svf "/mnt/hgfs/Courses/System/UART/syn/UART.svf"
 
 set TTLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
 set FFLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
