@@ -1,0 +1,300 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Wed Aug 17 03:00:19 2022
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+set synopsys_auto_setup true
+true
+set_svf "/mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf"
+SVF set to '/mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf'.
+1
+set TTLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+set SSLIB "/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+read_db -container Ref [list $TTLIB $FFLIB $SSLIB]
+Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+read_verilog -container Ref "../rtl/UART_RX/*.v"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Bits_Counter.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Counter_Unit.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Data_Sampling.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Deserializer.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Parity_Check.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Start_Check.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Stop_Check.v'
+1
+read_verilog -container Ref "../rtl/UART_TX/*.v"
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Counter.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/FSM.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Mux_4.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Parity_Unit.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer_Top.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/UART_TX_Top.v'
+1
+read_verilog -container Ref "../rtl/UART_TOP/*.v"
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TOP/MUX2.v'
+Loading verilog file '/mnt/hgfs/Courses/System/UART/rtl/UART_TOP/UART.v'
+1
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Bits_Counter.v"
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Counter_Unit.v"
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Data_Sampling.v"
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Deserializer.v"
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Parity_Check.v"
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Start_Check.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Stop_Check.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Counter.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/FSM.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Mux_4.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Parity_Unit.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer_Top.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TX/UART_TX_Top.v" 
+#read_verilog -container Ref "/mnt/hgfs/Courses/System/UART/rtl/UART_TOP/UART.v" 
+set_reference_design UART
+Reference design set to 'Ref:/WORK/UART'
+1
+set_top UART
+Setting top design to 'Ref:/WORK/UART'
+Status:   Elaborating design UART   ...  
+Status:   Elaborating design MUX2   ...  
+Status:   Elaborating design RX   ...  
+Status:   Elaborating design RX_FSM   ...  
+Status:   Elaborating design Start_Check   ...  
+Status:   Elaborating design Parity_Check   ...  
+Status:   Elaborating design Stop_Check   ...  
+Status:   Elaborating design Counter_Unit   ...  
+Status:   Elaborating design Bits_Counter   ...  
+Status:   Elaborating design Edge_Bit_Counter   ...  
+Status:   Elaborating design Data_Sampling   ...  
+Status:   Elaborating design Deserializer   ...  
+Status:   Elaborating design UART_TX_Top   ...  
+Status:   Elaborating design Serializer_Top   ...  
+Status:   Elaborating design Counter   ...  
+Status:   Elaborating design Serializer   ...  
+Status:   Elaborating design FSM   ...  
+Status:   Elaborating design Parity_Unit   ...  
+Status:   Elaborating design Mux_4   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/UART'
+Reference design set to 'Ref:/WORK/UART'
+1
+read_db -container Imp [list $TTLIB $FFLIB $SSLIB]
+Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+#read_verilog -container Imp -netlist  "/mnt/hgfs/Courses/System/UART/syn/UART_TOP_M.v"
+read_verilog -container Imp -netlist  "/mnt/hgfs/Courses/System/UART/dft/UART_DFT_M.v"
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/Courses/System/UART/dft/UART_DFT_M.v'
+1
+set_implementation_design UART
+Implementation design set to 'Imp:/WORK/UART'
+1
+set_top UART
+Setting top design to 'Imp:/WORK/UART'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/UART'
+Implementation design set to 'Imp:/WORK/UART'
+1
+############################### Don't verify #################################
+# do not verify scan in & scan out ports as a compare point as it is existed only after synthesis and not existed in the RTL
+#scan in
+set_dont_verify_points -type port Ref:/WORK/*/SI
+Set don't verify point 'Ref:/WORK/UART/SI'
+1
+set_dont_verify_points -type port Imp:/WORK/*/SI
+Set don't verify point 'Imp:/WORK/UART/SI'
+1
+#scan_out
+set_dont_verify_points -type port Ref:/WORK/*/SO
+Set don't verify point 'Ref:/WORK/UART/SO'
+1
+set_dont_verify_points -type port Imp:/WORK/*/SO
+Set don't verify point 'Imp:/WORK/UART/SO'
+1
+############################### contants #####################################
+# all atpg enable(test_mode, scan_enable) are zero during formal compare
+#test_mode
+set_constant Ref:/WORK/*/test_mode 0
+Set 'Ref:/WORK/UART/test_mode' to constant 0
+1
+set_constant Imp:/WORK/*/test_mode 0
+Set 'Imp:/WORK/UART/test_mode' to constant 0
+1
+#scan_enable
+set_constant Ref:/WORK/*/SE 0
+Set 'Ref:/WORK/UART/SE' to constant 0
+1
+set_constant Imp:/WORK/*/SE 0
+Set 'Imp:/WORK/UART/SE' to constant 0
+1
+match
+Reference design is 'Ref:/WORK/UART'
+Implementation design is 'Imp:/WORK/UART'
+Status:  Checking designs...
+    Warning: 1 (0) undriven nets found in reference (implementation) design; see formality3.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+    Set 'Ref:/WORK/UART/SE' to constant 0    
+    Set 'Imp:/WORK/UART/SE' to constant 0    
+    Set 'Ref:/WORK/UART/test_mode' to constant 1    
+    Set 'Imp:/WORK/UART/test_mode' to constant 1    
+    Set 'Imp:/WORK/UART/SE' to constant 0    ; previous value was also 0
+    Set 'Imp:/WORK/UART/test_mode' to constant 1    ; previous value was also 1
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          3          0          0          0          3
+instance_map        :         18          0          0          0         18
+mark                :          8          0          0          0          8
+scan_input          :          2          0          0          0          2
+transformation
+   map              :          5          0          0          0          5
+   share            :          3          0          0          0          3
+uniquify            :         17          1          0          0         18
+ununiquify          :          1          0          0          0          1
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      /mnt/hgfs/Courses/System/UART/dft/UART_DFT.svf
+
+SVF files produced:
+  /mnt/hgfs/Courses/System/UART/fm/formality3_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 54 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 21 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+set successful [verify]
+Reference design is 'Ref:/WORK/UART'
+Implementation design is 'Imp:/WORK/UART'
+    
+*********************************** Matching Results ***********************************    
+ 54 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 21 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   Constants set on:
+     UART/SE
+     UART/test_mode
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/UART
+ Implementation design: Imp:/WORK/UART
+ 54 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      11      43       0      54
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       1       0       0       1
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+#Reports
+report_passing_points > "passing_points.rpt"
+report_failing_points > "failing_points.rpt"
+report_aborted_points > "aborted_points.rpt"
+report_unverified_points > "unverified_points.rpt"

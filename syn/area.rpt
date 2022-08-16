@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : area
+Design : UART
+Version: K-2015.06
+Date   : Wed Aug 17 02:28:20 2022
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (File: /mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db)
+
+Number of ports:                          254
+Number of nets:                           482
+Number of cells:                          258
+Number of combinational cells:            195
+Number of sequential cells:                43
+Number of macros/black boxes:               0
+Number of buf/inv:                         50
+Number of references:                       7
+
+Combinational area:               1619.139207
+Buf/Inv area:                      411.844994
+Noncombinational area:            1166.109697
+Macro/Black Box area:                0.000000
+Net Interconnect area:           27486.803040
+
+Total cell area:                  2785.248904
+Total area:                      30272.051944
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ----------------
+UART                              2785.2489    100.0    56.4816     0.0000  0.0000  UART
+u_MUX2_RST                          14.1204      0.5    14.1204     0.0000  0.0000  MUX2_0
+u_MUX2_RX_CLOCK                     12.9437      0.5    12.9437     0.0000  0.0000  MUX2_1
+u_MUX2_TX_CLOCK                     11.7670      0.4    11.7670     0.0000  0.0000  MUX2_2
+u_RX1                             1962.7356     70.5   254.1672     0.0000  0.0000  RX
+u_RX1/u_Counter_Unit               538.9286     19.3     5.8835     0.0000  0.0000  Counter_Unit
+u_RX1/u_Counter_Unit/u_Bits_Counter
+                                   137.6739      4.9    55.3049    82.3690  0.0000  Bits_Counter
+u_RX1/u_Counter_Unit/u_Edge_Bit_Counter
+                                   395.3712     14.2   229.4565   165.9147  0.0000  Edge_Bit_Counter
+u_RX1/u_Data_Sampling              128.2603      4.6    48.2447    80.0156  0.0000  Data_Sampling
+u_RX1/u_Deserializer               408.3149     14.7   177.6817   230.6332  0.0000  Deserializer
+u_RX1/u_FSM                        431.8489     15.5   271.8177   160.0312  0.0000  RX_FSM
+u_RX1/u_Parity_Check               130.6137      4.7   104.7263    25.8874  0.0000  Parity_Check
+u_RX1/u_Start_Check                 34.1243      1.2     8.2369    25.8874  0.0000  Start_Check
+u_RX1/u_Stop_Check                  36.4777      1.3    10.5903    25.8874  0.0000  Stop_Check
+u_UART_TX_Top1                     727.2006     26.1     0.0000     0.0000  0.0000  UART_TX_Top
+u_UART_TX_Top1/u_FSM               128.2603      4.6    74.1321    54.1282  0.0000  FSM
+u_UART_TX_Top1/u_Mux_4              21.1806      0.8    21.1806     0.0000  0.0000  Mux_4
+u_UART_TX_Top1/u_Parity_Unit       108.2564      3.9    87.0758    21.1806  0.0000  Parity_Unit
+u_UART_TX_Top1/u_Serializer_Top    469.5033     16.9     5.8835     0.0000  0.0000  Serializer_Top
+u_UART_TX_Top1/u_Serializer_Top/u_Counter
+                                   116.4933      4.2    38.8311    77.6622  0.0000  Counter
+u_UART_TX_Top1/u_Serializer_Top/u_Serializer
+                                   347.1265     12.5   130.6137   216.5128  0.0000  Serializer
+--------------------------------  ---------  -------  ---------  ---------  ------  ----------------
+Total                                                 1619.1392  1166.1097  0.0000
+
+1
