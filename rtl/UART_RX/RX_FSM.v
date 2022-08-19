@@ -32,11 +32,13 @@ module RX_FSM #(parameter Counter_Size='d5) (
 reg [2:0] CurrentState,NextState;
 wire start_first,start_sec,start_third;
 reg Rest_data_valid;
+reg Error_REG;
+reg Out_data_valid;
 //reg strt_error , par_error , stp_error;
 localparam Idle =3'b000, 
            Start=3'b001,
            Data =3'b011,
-           Parity=3'b111,
+           Parity=3'b010,
            Stop=3'b110;
 
 
@@ -61,9 +63,11 @@ always @(*) begin
     Compared_bit='b0;
     //data_valid='b0;
     Rest_data_valid='b0;
+    Out_data_valid='b0;
 
     case (CurrentState)
        Idle : begin
+        //data_valid=~Error_REG;
         if (!RX_IN) begin
             NextState=Start;
             counter_en='b1;
@@ -137,9 +141,11 @@ always @(*) begin
         end else  if (!RX_IN) begin 
             NextState=Start;
             counter_en='b0;
+            Out_data_valid='b1;
             //data_valid='b1;
         end else begin
             NextState=Idle;
+            Out_data_valid='b1;
             counter_en='b0;
         end
         end
@@ -154,11 +160,23 @@ end
 
 always @(posedge clk or negedge rst) begin
     if (!rst) begin
-        data_valid<='b1;
+        data_valid<='b0;
+    end else if(Out_data_valid) begin
+        data_valid<=~Error_REG;
+    end else begin
+        data_valid<='b0;
+
+    end
+
+end
+
+always @(posedge clk or negedge rst) begin
+    if (!rst) begin
+        Error_REG<='b0;
     end else if(Rest_data_valid)begin
-        data_valid<='b1;
-    end else if (Error_Unit_En&&data_valid)  begin   
-        data_valid<=~Error;
+        Error_REG<='b0;
+    end else if (Error_Unit_En)  begin   
+        Error_REG<=Error|Error_REG;
     end
 end
 /*

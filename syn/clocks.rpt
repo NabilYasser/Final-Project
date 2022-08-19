@@ -1,9 +1,9 @@
  
 ****************************************
 Report : clocks
-Design : UART
+Design : Design_Top
 Version: K-2015.06
-Date   : Wed Aug 17 05:40:05 2022
+Date   : Fri Aug 19 08:43:44 2022
 ****************************************
 
 Attributes:
@@ -15,7 +15,19 @@ Attributes:
 
 Clock          Period   Waveform            Attrs     Sources
 --------------------------------------------------------------------------------
-CLK1           100.00   {0 50}              d         {TX_CLK}
-RXCLK          100.00   {0 50}              d         {RX_CLK}
+CLK1          104166.00 {0 52083}           d         {UART_CLK}
+DIV_CLOCK     833328.00 {0 416664}          G         {u_Clock_Divider/o_div_clk}
+GATED_CLOCK   -         -                   G         {u_Clock_Gating/Gated_clk}
 --------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+DIV_CLOCK     UART_CLK       {u_Clock_Divider/o_div_clk}
+                                            CLK1           divide_by(8)
+GATED_CLOCK   REF_CLK        {u_Clock_Gating/Gated_clk}
+                                            *              divide_by(1)
+--------------------------------------------------------------------------------
+Warning: Some clocks have no period defined.  These clocks will not
+	be considered for timing. (RPT-27)
 1

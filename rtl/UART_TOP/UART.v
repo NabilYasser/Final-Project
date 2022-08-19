@@ -1,13 +1,13 @@
 
 module UART #( parameter DATA_WIDTH = 8 , PRESCALE_WIDTH = 5 )
 
-(
+(/*
  input   wire                          scan_clk,    
   input   wire                         scan_rst,    
  input   wire                          test_mode,    
  input   wire                          SE,    
  input   wire                          SI,    
- output   wire                          SO,
+ output   wire                          SO,*/
  input   wire                          RST,
  input   wire                          TX_CLK,
  input   wire                          RX_CLK,
@@ -22,6 +22,7 @@ module UART #( parameter DATA_WIDTH = 8 , PRESCALE_WIDTH = 5 )
  input   wire                          parity_enable,
  input   wire                          parity_type
 );
+/*
 wire TX_CLK_MUX,RX_CLK_MUX,RST_MUX;
 MUX2 u_MUX2_TX_CLOCK(
     .IN0     (TX_CLK     ),
@@ -43,10 +44,10 @@ MUX2 u_MUX2_RST(
     .SL      (test_mode      ),
     .MUX_out (RST_MUX )
 );
-
+*/
 RX u_RX1(
-    .clk_Top        (RX_CLK_MUX        ),
-    .rst_Top        (RST_MUX        ),
+    .clk_Top        (RX_CLK        ),
+    .rst_Top        (RST        ),
     .RX_IN_Top      (RX_IN_S      ),
     .Prescale_Top   (Prescale   ),
     .PAR_EN_TOP     (parity_enable     ),
@@ -56,8 +57,8 @@ RX u_RX1(
 );
 
 UART_TX_Top u_UART_TX_Top1(
-    .clk             (TX_CLK_MUX             ),
-    .RST             (RST_MUX             ),
+    .clk             (TX_CLK            ),
+    .RST             (RST             ),
     .P_Data_UART     (TX_IN_P     ),
     .Data_Valid_UART (TX_IN_V ),
     .Par_En_UART     (parity_enable     ),

@@ -85,3 +85,15 @@ report_unverified_points > "unverified_points.rpt"
 
 
 start_gui
+
+
+
+report_area -hierarchy > area.rpt
+report_power -hierarchy > power.rpt
+report_timing -max_paths 100 -delay_type min > hold.rpt
+report_timing -max_paths 100 -delay_type max > setup.rpt
+report_clock -attributes > clocks.rpt
+report_constraint -all_violators > constraints.rpt
+
+
+

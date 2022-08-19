@@ -4,8 +4,12 @@ set_svf UART.svf
 
 lappend ../rtl
 lappend search_path ../rtl/UART_RX
+lappend search_path ../rtl//UART_TX
 lappend search_path ../rtl//UART_TOP
-lappend search_path ./rtl/UART_TX
+lappend search_path ./rtl/Clock_Gating_and_Div
+lappend search_path ./rtl/Syncronizers
+lappend search_path ./rtl/System_Blocks
+
 lappend search_path ../std_cells
 
 
@@ -14,7 +18,7 @@ set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
 set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
 
 ## Standard Cell libraries 
-set target_library [list $TTLIB]
+set target_library [list $TTLIB $SSLIB $FFLIB]
 
 ## Standard Cell & Hard Macros libraries 
 set link_library [list * $TTLIB $SSLIB $FFLIB]  
@@ -23,7 +27,7 @@ echo "###############################################"
 echo "############# Reading RTL Files  ##############"
 echo "###############################################"
 
-read_file {../rtl/} -autoread -recursive -format verilog -top UART
+read_file {../rtl/} -autoread -recursive -format verilog -top Design_Top
 #read_file -format verilog Bits_Counter.v
 #read_file -format verilog Counter_Unit.v
 #read_file -format verilog Data_Sampling.v
@@ -76,13 +80,13 @@ compile
 # Write out Design after initial compile
 #############################################################################
 
-write_file -format verilog -hierarchy -output UART_TOP_M.v
-write_sdc  -nosplit UART_Top.sdc
-write_sdf UART_Top.sdf
+write_file -format verilog -hierarchy -output Design_Top_M.v
+write_sdc  -nosplit Design_Top.sdc
+write_sdf Design_Top.sdf
 
 report_area -hierarchy > area.rpt
-report_power  > power.rpt
-report_timing -max_paths 100 -delay_type min > hold.rpt
-report_timing -max_paths 100 -delay_type max > setup.rpt
+report_power  -verbose > power.rpt
+report_timing -max_paths 10 -delay_type min > hold.rpt
+report_timing -max_paths 10 -delay_type max > setup.rpt
 report_clock -attributes > clocks.rpt
 report_constraint -all_violators > constraints.rpt
