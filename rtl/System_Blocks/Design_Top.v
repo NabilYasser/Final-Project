@@ -40,6 +40,7 @@ wire [Data_width-1:0] Rx_P_Data_Top,Rx_P_Data_Syn;
 wire Tx_Busy_Top,Tx_Valid_Top_UnSyn,Tx_Busy_UnSyn,TX_IN_V_Top_Syn,Clk_Div_En_Top;
 wire [Data_width-1:0] Tx_P_Data_Top_UnSyn,TX_IN_P_Top_Syn;
 
+wire REF_CLK_Sync_RST,UART_CLK_Sync_RST;
 
 RX_Controler #(
     .Data_width     (Data_width     ),
@@ -51,7 +52,7 @@ RX_Controler #(
 )
 u_RX_Controler(
     .clk         (REF_CLK         ),
-    .rst         (RST             ),//!
+    .rst         (REF_CLK_Sync_RST             ),
 
     .ALU_Valid   (ALU_Valid_Top   ),
     .ALU_Enable  (ALU_Enable_Top  ),
@@ -86,7 +87,7 @@ Tx_Controler #(
 )
 u_Tx_Controler(
     .clk          (REF_CLK          ),
-    .rst          (RST          ), //!
+    .rst          (REF_CLK_Sync_RST          ), 
     .ALU_Out      (ALU_Out_Top      ),
     .ALU_Valid    (ALU_Out_Valid_Top    ),
     .REG_RdData   (REG_RdData_Top   ),
@@ -106,7 +107,7 @@ ALU #(
 )
 u_ALU(
     .clk       (ALU_CLK       ),
-    .rst       (RST       ),//!
+    .rst       (REF_CLK_Sync_RST       ),
     .Operand_A (Operand_A_Top ),
     .Operand_B (Operand_B_Top ),
     .ALU_Fun   (ALU_Fun_Top   ),
@@ -133,7 +134,7 @@ REG_File #(
 )
 u_REG_File(
     .clk          (REF_CLK          ),
-    .rst          (RST          ),//!
+    .rst          (REF_CLK_Sync_RST          ),
     .Address      (REG_Address_Top      ),
     .WrEn         (REG_WrEn_Top         ),
     .RdEn         (REG_RdEn_Top         ),
@@ -147,7 +148,7 @@ u_REG_File(
 );
 
 UART  u_UART(
-    .RST           (RST           ), //!
+    .RST           (UART_CLK_Sync_RST           ), 
     .TX_CLK        (TX_CLK        ),
     .RX_CLK        (UART_CLK        ),
     .RX_IN_S       (RX_IN       ),
@@ -165,7 +166,7 @@ UART  u_UART(
 Multi_Flop_Synchronizer u_Busy_Syn(
     .async (Tx_Busy_UnSyn ),
     .clk   (REF_CLK   ),
-    .rst   (RST   ),
+    .rst   (REF_CLK_Sync_RST   ), 
     .sync  (Tx_Busy_Top  )
 );  
 
@@ -174,18 +175,32 @@ Data_Sync u_Tx_Data_Syn(
     .Unsync_Bus   (Tx_P_Data_Top_UnSyn   ),
     .Enable       (Tx_Valid_Top_UnSyn       ),
     .clk          (TX_CLK          ),
-    .rst          (RST          ),//!
+    .rst          (UART_CLK_Sync_RST          ),
     .Sync_Bus     (TX_IN_P_Top_Syn     ),
     .Enable_Pulse (TX_IN_V_Top_Syn )
 );
 
 Clock_Divider u_Clock_Divider(
     .i_ref_clk   (UART_CLK   ),
-    .i_rst_n     (RST     ),//!
+    .i_rst_n     (UART_CLK_Sync_RST     ),
     .i_clk_en    (Clk_Div_En_Top    ),
     .i_div_ratio (REG3_DIV_Top ),
     .o_div_clk   (TX_CLK   )
 );
+
+RST_Sync u_REF_CLK_RST_SYN(
+    .RST      (RST      ),
+    .clk      (REF_CLK      ),
+    .Sync_RST (REF_CLK_Sync_RST )
+);
+
+RST_Sync u_RST_Sync(
+    .RST      (RST      ),
+    .clk      (UART_CLK      ),
+    .Sync_RST (UART_CLK_Sync_RST )
+);
+
+
 
 
 
