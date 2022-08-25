@@ -1,0 +1,479 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : Design_Top
+Version: K-2015.06
+Date   : Fri Aug 26 03:56:38 2022
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[1]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.31       0.84 f
+  u_RX_Controler/U50/Y (MX2X2M)                           0.16       1.00 f
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       1.00 f
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.00 f
+  u_REG_File/U264/Y (CLKBUFX2M)                           0.31       1.31 f
+  u_REG_File/U313/Y (MX4X1M)                              0.31       1.61 f
+  u_REG_File/U331/Y (MX4X1M)                              0.20       1.81 f
+  u_REG_File/RdData[1] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.81 f
+  u_Tx_Controler/REG_RdData[1] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.81 f
+  u_Tx_Controler/U14/Y (OAI2BB1X2M)                       0.11       1.92 f
+  u_Tx_Controler/Tx_P_Data[1] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.92 f
+  u_Tx_Data_Syn/Unsync_Bus[1] (Data_Sync_test_1)          0.00       1.92 f
+  u_Tx_Data_Syn/U5/Y (AO22X1M)                            0.19       2.11 f
+  u_Tx_Data_Syn/Sync_Bus_reg[1]/D (SDFFRQX2M)             0.00       2.11 f
+  data arrival time                                                  2.11
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[1]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.45
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[0]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.31       0.84 f
+  u_RX_Controler/U50/Y (MX2X2M)                           0.16       1.00 f
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       1.00 f
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.00 f
+  u_REG_File/U264/Y (CLKBUFX2M)                           0.31       1.31 f
+  u_REG_File/U312/Y (MX4X1M)                              0.31       1.61 f
+  u_REG_File/U330/Y (MX4X1M)                              0.20       1.81 f
+  u_REG_File/RdData[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.81 f
+  u_Tx_Controler/REG_RdData[0] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.81 f
+  u_Tx_Controler/U12/Y (OAI2BB1X2M)                       0.11       1.92 f
+  u_Tx_Controler/Tx_P_Data[0] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.92 f
+  u_Tx_Data_Syn/Unsync_Bus[0] (Data_Sync_test_1)          0.00       1.92 f
+  u_Tx_Data_Syn/U4/Y (AO22X1M)                            0.19       2.11 f
+  u_Tx_Data_Syn/Sync_Bus_reg[0]/D (SDFFRQX2M)             0.00       2.11 f
+  data arrival time                                                  2.11
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[0]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.11
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.45
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[3]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U50/Y (MX2X2M)                           0.14       0.94 r
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/U262/Y (BUFX4M)                              0.33       1.27 r
+  u_REG_File/U315/Y (MX4X1M)                              0.25       1.52 f
+  u_REG_File/U333/Y (MX4X1M)                              0.20       1.72 f
+  u_REG_File/RdData[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/REG_RdData[3] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/U18/Y (OAI2BB1X2M)                       0.11       1.83 f
+  u_Tx_Controler/Tx_P_Data[3] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.83 f
+  u_Tx_Data_Syn/Unsync_Bus[3] (Data_Sync_test_1)          0.00       1.83 f
+  u_Tx_Data_Syn/U7/Y (AO22X1M)                            0.19       2.01 f
+  u_Tx_Data_Syn/Sync_Bus_reg[3]/D (SDFFRQX2M)             0.00       2.01 f
+  data arrival time                                                  2.01
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[3]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.55
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[2]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U50/Y (MX2X2M)                           0.14       0.94 r
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/U262/Y (BUFX4M)                              0.33       1.27 r
+  u_REG_File/U314/Y (MX4X1M)                              0.25       1.52 f
+  u_REG_File/U332/Y (MX4X1M)                              0.20       1.72 f
+  u_REG_File/RdData[2] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/REG_RdData[2] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/U16/Y (OAI2BB1X2M)                       0.11       1.83 f
+  u_Tx_Controler/Tx_P_Data[2] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.83 f
+  u_Tx_Data_Syn/Unsync_Bus[2] (Data_Sync_test_1)          0.00       1.83 f
+  u_Tx_Data_Syn/U6/Y (AO22X1M)                            0.19       2.01 f
+  u_Tx_Data_Syn/Sync_Bus_reg[2]/D (SDFFRQX2M)             0.00       2.01 f
+  data arrival time                                                  2.01
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[2]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.55
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[5]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U50/Y (MX2X2M)                           0.14       0.94 r
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/U263/Y (BUFX4M)                              0.33       1.27 r
+  u_REG_File/U317/Y (MX4X1M)                              0.25       1.52 f
+  u_REG_File/U335/Y (MX4X1M)                              0.20       1.72 f
+  u_REG_File/RdData[5] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/REG_RdData[5] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/U22/Y (OAI2BB1X2M)                       0.11       1.83 f
+  u_Tx_Controler/Tx_P_Data[5] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.83 f
+  u_Tx_Data_Syn/Unsync_Bus[5] (Data_Sync_test_1)          0.00       1.83 f
+  u_Tx_Data_Syn/U9/Y (AO22X1M)                            0.19       2.01 f
+  u_Tx_Data_Syn/Sync_Bus_reg[5]/D (SDFFRQX2M)             0.00       2.01 f
+  data arrival time                                                  2.01
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[5]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.55
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[4]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U50/Y (MX2X2M)                           0.14       0.94 r
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/U262/Y (BUFX4M)                              0.33       1.27 r
+  u_REG_File/U316/Y (MX4X1M)                              0.25       1.52 f
+  u_REG_File/U334/Y (MX4X1M)                              0.20       1.72 f
+  u_REG_File/RdData[4] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/REG_RdData[4] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/U20/Y (OAI2BB1X2M)                       0.11       1.83 f
+  u_Tx_Controler/Tx_P_Data[4] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.83 f
+  u_Tx_Data_Syn/Unsync_Bus[4] (Data_Sync_test_1)          0.00       1.83 f
+  u_Tx_Data_Syn/U8/Y (AO22X1M)                            0.19       2.01 f
+  u_Tx_Data_Syn/Sync_Bus_reg[4]/D (SDFFRQX2M)             0.00       2.01 f
+  data arrival time                                                  2.01
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[4]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.55
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[7]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U50/Y (MX2X2M)                           0.14       0.94 r
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/U263/Y (BUFX4M)                              0.33       1.27 r
+  u_REG_File/U319/Y (MX4X1M)                              0.25       1.52 f
+  u_REG_File/U337/Y (MX4X1M)                              0.20       1.72 f
+  u_REG_File/RdData[7] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/REG_RdData[7] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/U26/Y (OAI2BB1X2M)                       0.11       1.83 f
+  u_Tx_Controler/Tx_P_Data[7] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.83 f
+  u_Tx_Data_Syn/Unsync_Bus[7] (Data_Sync_test_1)          0.00       1.83 f
+  u_Tx_Data_Syn/U11/Y (AO22X1M)                           0.19       2.01 f
+  u_Tx_Data_Syn/Sync_Bus_reg[7]/D (SDFFRQX2M)             0.00       2.01 f
+  data arrival time                                                  2.01
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[7]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.55
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/Sync_Bus_reg[6]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U51/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U50/Y (MX2X2M)                           0.14       0.94 r
+  u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/Address[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       0.94 r
+  u_REG_File/U263/Y (BUFX4M)                              0.33       1.27 r
+  u_REG_File/U318/Y (MX4X1M)                              0.25       1.52 f
+  u_REG_File/U336/Y (MX4X1M)                              0.20       1.72 f
+  u_REG_File/RdData[6] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/REG_RdData[6] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.72 f
+  u_Tx_Controler/U24/Y (OAI2BB1X2M)                       0.11       1.83 f
+  u_Tx_Controler/Tx_P_Data[6] (Tx_Controler_00000008_00000010_test_1)
+                                                          0.00       1.83 f
+  u_Tx_Data_Syn/Unsync_Bus[6] (Data_Sync_test_1)          0.00       1.83 f
+  u_Tx_Data_Syn/U10/Y (AO22X1M)                           0.19       2.01 f
+  u_Tx_Data_Syn/Sync_Bus_reg[6]/D (SDFFRQX2M)             0.00       2.01 f
+  data arrival time                                                  2.01
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_Tx_Data_Syn/Sync_Bus_reg[6]/CK (SDFFRQX2M)            0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -2.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.55
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_REG_File/Memory_reg[15][1]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U88/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U22/Y (MX2X2M)                           0.41       1.22 r
+  u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       1.22 r
+  u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.22 r
+  u_REG_File/U295/Y (AND2X2M)                             0.11       1.32 r
+  u_REG_File/U283/Y (AND2X2M)                             0.12       1.44 r
+  u_REG_File/U282/Y (NAND2X2M)                            0.12       1.56 f
+  u_REG_File/U339/Y (OAI2BB2X1M)                          0.17       1.73 f
+  u_REG_File/Memory_reg[15][1]/D (SDFFRQX1M)              0.00       1.73 f
+  data arrival time                                                  1.73
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_REG_File/Memory_reg[15][1]/CK (SDFFRQX1M)             0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -1.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.83
+
+
+  Startpoint: u_RX_Controler/Current_State_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_REG_File/Memory_reg[15][0]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_RX_Controler/Current_State_reg[2]/CK (SDFFRQX1M)      0.00       0.00 r
+  u_RX_Controler/Current_State_reg[2]/Q (SDFFRQX1M)       0.25       0.25 f
+  u_RX_Controler/U21/Y (CLKBUFX2M)                        0.29       0.54 f
+  u_RX_Controler/U88/Y (MX4X1M)                           0.27       0.80 r
+  u_RX_Controler/U22/Y (MX2X2M)                           0.41       1.22 r
+  u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004_test_1)
+                                                          0.00       1.22 r
+  u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008_test_1)
+                                                          0.00       1.22 r
+  u_REG_File/U295/Y (AND2X2M)                             0.11       1.32 r
+  u_REG_File/U283/Y (AND2X2M)                             0.12       1.44 r
+  u_REG_File/U282/Y (NAND2X2M)                            0.12       1.56 f
+  u_REG_File/U338/Y (OAI2BB2X1M)                          0.17       1.73 f
+  u_REG_File/Memory_reg[15][0]/D (SDFFRQX1M)              0.00       1.73 f
+  data arrival time                                                  1.73
+
+  clock SCAN_CLK (rise edge)                            100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.20      99.80
+  u_REG_File/Memory_reg[15][0]/CK (SDFFRQX1M)             0.00      99.80 r
+  library setup time                                     -0.24      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -1.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                       97.83
+
+
+1

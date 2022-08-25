@@ -1,0 +1,361 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : Design_Top
+Version: K-2015.06
+Date   : Fri Aug 26 03:56:38 2022
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: u_RST_Sync/u_Multi_Flop_Synchronizer/Q_reg[0]/CK
+              (internal path startpoint clocked by SCAN_CLK)
+  Endpoint: u_RST_Sync/u_Multi_Flop_Synchronizer/sync_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  u_RST_Sync/u_Multi_Flop_Synchronizer/Q_reg[0]/CK (SDFFRQX2M)
+                                                          0.00       0.00 r
+  u_RST_Sync/u_Multi_Flop_Synchronizer/Q_reg[0]/Q (SDFFRQX2M)
+                                                          0.21       0.21 r
+  u_RST_Sync/u_Multi_Flop_Synchronizer/sync_reg/D (SDFFRQX2M)
+                                                          0.00       0.21 r
+  data arrival time                                                  0.21
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_RST_Sync/u_Multi_Flop_Synchronizer/sync_reg/CK (SDFFRQX2M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.09       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer/Q_reg[0]/CK
+              (internal path startpoint clocked by SCAN_CLK)
+  Endpoint: u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer/sync_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer/Q_reg[0]/CK (SDFFRQX2M)
+                                                          0.00       0.00 r
+  u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer/Q_reg[0]/Q (SDFFRQX2M)
+                                                          0.21       0.21 r
+  u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer/sync_reg/D (SDFFRQX1M)
+                                                          0.00       0.21 r
+  data arrival time                                                  0.21
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer/sync_reg/CK (SDFFRQX1M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.10       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]/CK (SDFFRQX2M)
+                                                          0.00       0.00 r
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]/Q (SDFFRQX2M)
+                                                          0.21       0.21 r
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/D (SDFFRQX1M)
+                                                          0.00       0.21 r
+  data arrival time                                                  0.21
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/CK (SDFFRQX1M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.10       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: u_UART/u_RX1/u_RX_FSM/data_valid_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART/u_RX1/u_RX_FSM/data_valid_reg/CK (SDFFRQX2M)     0.00       0.00 r
+  u_UART/u_RX1/u_RX_FSM/data_valid_reg/Q (SDFFRQX2M)      0.21       0.21 r
+  u_UART/u_RX1/u_RX_FSM/data_valid (RX_FSM_test_1)        0.00       0.21 r
+  u_UART/u_RX1/Data_Valid_Top (RX_test_1)                 0.00       0.21 r
+  u_UART/RX_OUT_V (UART_test_1)                           0.00       0.21 r
+  u_Data_Sync/Enable (Data_Sync_test_0)                   0.00       0.21 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/ASYNC[0] (Multi_Flop_Synchronizer_Multi_bits_NUM_STAGES2_BUS_WIDTH1_test_0)
+                                                          0.00       0.21 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/async (Multi_Flop_Synchronizer_NUM_STAGES2_test_0)
+                                                          0.00       0.21 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]/D (SDFFRQX1M)
+                                                          0.00       0.21 r
+  data arrival time                                                  0.21
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]/CK (SDFFRQX1M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.10       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.20
+
+
+  Startpoint: u_Busy_Syn/Q_reg[0]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Busy_Syn/sync_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock SCAN_CLK (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  u_Busy_Syn/Q_reg[0]/CK (SDFFRQX1M)       0.00       0.00 r
+  u_Busy_Syn/Q_reg[0]/Q (SDFFRQX1M)        0.22       0.22 r
+  u_Busy_Syn/sync_reg/D (SDFFRQX1M)        0.00       0.22 r
+  data arrival time                                   0.22
+
+  clock SCAN_CLK (rise edge)               0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  clock uncertainty                        0.10       0.10
+  u_Busy_Syn/sync_reg/CK (SDFFRQX1M)       0.00       0.10 r
+  library hold time                       -0.10       0.00
+  data required time                                  0.00
+  -----------------------------------------------------------
+  data required time                                  0.00
+  data arrival time                                  -0.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.21
+
+
+  Startpoint: u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]/CK (SDFFRQX1M)
+                                                          0.00       0.00 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/Q_reg[0]/Q (SDFFRQX1M)
+                                                          0.22       0.22 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/D (SDFFRQX1M)
+                                                          0.00       0.22 r
+  data arrival time                                                  0.22
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/CK (SDFFRQX1M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.10       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.22
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.21
+
+
+  Startpoint: u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Tx_Data_Syn/u_Pulse_Gen/Q_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/CK (SDFFRQX1M)
+                                                          0.00       0.00 r
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/Q (SDFFRQX1M)
+                                                          0.23       0.23 r
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync (Multi_Flop_Synchronizer_NUM_STAGES2_test_3)
+                                                          0.00       0.23 r
+  u_Tx_Data_Syn/u_Multi_Flop_Synchronizer_Multi_bits/SYNC[0] (Multi_Flop_Synchronizer_Multi_bits_NUM_STAGES2_BUS_WIDTH1_test_1)
+                                                          0.00       0.23 r
+  u_Tx_Data_Syn/u_Pulse_Gen/Signal_in (Pulse_Gen_test_1)
+                                                          0.00       0.23 r
+  u_Tx_Data_Syn/u_Pulse_Gen/Q_reg/D (SDFFRQX2M)           0.00       0.23 r
+  data arrival time                                                  0.23
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_Tx_Data_Syn/u_Pulse_Gen/Q_reg/CK (SDFFRQX2M)          0.00       0.10 r
+  library hold time                                      -0.09       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.23
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.22
+
+
+  Startpoint: u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_Data_Sync/u_Pulse_Gen/Q_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/CK (SDFFRQX1M)
+                                                          0.00       0.00 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync_reg/Q (SDFFRQX1M)
+                                                          0.23       0.23 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/genblk1[0].u0/sync (Multi_Flop_Synchronizer_NUM_STAGES2_test_0)
+                                                          0.00       0.23 r
+  u_Data_Sync/u_Multi_Flop_Synchronizer_Multi_bits/SYNC[0] (Multi_Flop_Synchronizer_Multi_bits_NUM_STAGES2_BUS_WIDTH1_test_0)
+                                                          0.00       0.23 r
+  u_Data_Sync/u_Pulse_Gen/Signal_in (Pulse_Gen_test_0)
+                                                          0.00       0.23 r
+  u_Data_Sync/u_Pulse_Gen/Q_reg/D (SDFFRQX1M)             0.00       0.23 r
+  data arrival time                                                  0.23
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_Data_Sync/u_Pulse_Gen/Q_reg/CK (SDFFRQX1M)            0.00       0.10 r
+  library hold time                                      -0.10       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.23
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.23
+
+
+  Startpoint: u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[3]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[3]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[3]/CK (SDFFRQX2M)
+                                                          0.00       0.00 r
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[3]/Q (SDFFRQX2M)
+                                                          0.22       0.22 r
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U19/Y (OAI2BB1X2M)
+                                                          0.07       0.29 r
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[3]/D (SDFFRQX2M)
+                                                          0.00       0.29 r
+  data arrival time                                                  0.29
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[3]/CK (SDFFRQX2M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.09       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+  Startpoint: u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]/CK (SDFFRQX2M)
+                                                          0.00       0.00 r
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]/Q (SDFFRQX2M)
+                                                          0.22       0.22 r
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/U17/Y (OAI2BB1X2M)
+                                                          0.07       0.29 r
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]/D (SDFFRQX2M)
+                                                          0.00       0.29 r
+  data arrival time                                                  0.29
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer/Data_reg[2]/CK (SDFFRQX2M)
+                                                          0.00       0.10 r
+  library hold time                                      -0.09       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.28
+
+
+1

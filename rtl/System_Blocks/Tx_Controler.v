@@ -12,16 +12,12 @@ module Tx_Controler #(
 
     input  wire                    Tx_Busy      ,
     output reg  [Data_width-1:0]   Tx_P_Data    ,
-    output reg                     Tx_Valid     ,
-    output wire                    Clk_Div_En   //!
-
+    output reg                     Tx_Valid     
 ); 
 wire [1:0] Flags;
 //reg Save_En;
 
 assign Flags={REG_Rd_Valid,ALU_Valid};
-
-assign Clk_Div_En=1'b1;
 
 //reg [Data_width:0] Saved_Data;
 reg [2:0] Current_State,Next_State;

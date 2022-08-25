@@ -9,7 +9,7 @@ module RST_Sync #(
         .NUM_STAGES (NUM_STAGES )
     )
     u_Multi_Flop_Synchronizer(
-    	.async ('b1 ),
+    	.async (1'b1 ),
         .clk   (clk   ),
         .rst   (RST   ),
         .sync  (Sync_RST )

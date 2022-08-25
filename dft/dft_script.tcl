@@ -1,6 +1,6 @@
 define_design_lib work -path ./work
 
-set_svf UART_DFT.svf
+set_svf Design_Top.svf
 
 lappend ../rtl
 lappend search_path ../rtl/UART_RX
@@ -22,7 +22,7 @@ echo "###############################################"
 echo "############# Reading RTL Files  ##############"
 echo "###############################################"
 
-read_file {../rtl/} -autoread -recursive -format verilog -top UART
+read_file {../rtl/} -autoread -recursive -format verilog -top Design_Top
 echo "###############################################"
 echo "# Linking The Top Module with its submodules  #"
 echo "###############################################"
@@ -32,7 +32,7 @@ link
 ############# Make unique copies of replicated modules by ##################
 ############# giving each replicated module a unique name  #############
 
-uniquify
+#uniquify
 echo "#############################Check design #######################################"
 
 check_design
@@ -78,14 +78,17 @@ compile -scan -incremental
 echo "######################## DFT DRC and coverage estimate #########################"
 dft_drc -verbose -coverage_estimate
 
-write_file -format verilog -hierarchy -output UART_DFT_M.v
-
-
-report_area -hierarchy > area.rpt
-report_power > power.rpt
-report_timing -max_paths 100 -delay_type min > hold.rpt
-report_timing -max_paths 100 -delay_type max > setup.rpt
-report_clock -attributes > clocks.rpt
-report_constraint -all_violators > constraints.rpt
-
+write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.v
+write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.ddc
+write_sdf  sdf/Design_Top.sdf
+write_sdc  -nosplit sdc/Design_Top.sdc
 set_svf -off
+
+report_area -hierarchy > reports/area.rpt
+report_power  -verbose > reports/power.rpt
+report_timing -max_paths 10 -delay_type min > reports/hold.rpt
+report_timing -max_paths 10 -delay_type max > reports/setup.rpt
+report_clock -attributes > reports/clocks.rpt
+report_constraint -all_violators > reports/constraints.rpt
+
+

@@ -1,0 +1,326 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Fri Aug 26 02:25:02 2022
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+set synopsys_auto_setup true
+true
+set_svf "../../dft/Design_Top.svf"
+SVF set to '../../dft/Design_Top.svf'.
+1
+lappend search_path ../../rtl
+../../rtl
+set TTLIB "../../std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+../../std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "../../std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+../../std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+set SSLIB "../../std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+../../std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set RTL_Design_Top Design_Top
+Design_Top
+read_db -container Ref [list $TTLIB $FFLIB $SSLIB]
+Loading db file '/mnt/hgfs/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/mnt/hgfs/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/mnt/hgfs/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+read_verilog -container Ref "../../rtl/*/*.v"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Divider.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Gating.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/Syncronizers/Data_Sync.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/Syncronizers/Pulse_Gen.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/Syncronizers/RST_Sync.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/Syncronizers/Synchronizer.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/System_Blocks/ALU.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/System_Blocks/Design_Top.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/System_Blocks/REG_File.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/System_Blocks/RX_Controler.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/System_Blocks/Tx_Controler.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/Bits_Counter.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/Counter_Unit.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/Data_Sampling.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/Deserializer.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/Edge_Bit_Counter.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/Error_Unit.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/RX_FSM.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_RX/RX.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TOP/MUX2.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TOP/UART.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/Counter.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/FSM.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/Mux_4.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/Parity_Unit.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/Serializer_Top.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/Serializer.v'
+Loading verilog file '/mnt/hgfs/Courses/System/System/rtl/UART_TX/UART_TX_Top.v'
+1
+set_reference_design $RTL_Design_Top
+Reference design set to 'Ref:/WORK/Design_Top'
+1
+set_top $RTL_Design_Top
+Setting top design to 'Ref:/WORK/Design_Top'
+Status:   Elaborating design Design_Top   ...  
+Status:   Elaborating design MUX2   ...  
+Status:   Elaborating design RX_Controler  Data_width='d8, REG_File_Depth='d16, Address_Depth=4, Num_Of_instructions='d14, Decoder_Size=4 ...  
+Information: Created design named 'RX_Controler_00000008_00000010_4_0000000e_4'. (FE-LINK-13)
+Status:   Elaborating design Data_Sync   ...  
+Status:   Elaborating design Multi_Flop_Synchronizer_Multi_bits  NUM_STAGES=2, BUS_WIDTH=1 ...  
+Information: Created design named 'Multi_Flop_Synchronizer_Multi_bits_NUM_STAGES2_BUS_WIDTH1'. (FE-LINK-13)
+Status:   Elaborating design Multi_Flop_Synchronizer  NUM_STAGES=2 ...  
+Information: Created design named 'Multi_Flop_Synchronizer_NUM_STAGES2'. (FE-LINK-13)
+Status:   Elaborating design Pulse_Gen   ...  
+Status:   Elaborating design Tx_Controler  Data_width='d8, ALU_Output_Data_width='d16 ...  
+Information: Created design named 'Tx_Controler_00000008_00000010'. (FE-LINK-13)
+Status:   Elaborating design ALU  Data_width='d8, Output_Data_width='d16, Num_Of_instructions='d14, Decoder_Size=4 ...  
+Information: Created design named 'ALU_00000008_00000010_0000000e_4'. (FE-LINK-13)
+Status:   Elaborating design Clock_Gating   ...  
+Status:   Elaborating design REG_File  Data_width='d8, REG_File_Depth='d16, Address_Depth=4, ALU_Operand_A_RST='b00000000000000000000000000000000, ALU_Operand_B_RST='b00000000000000000000000000000000, UART_Config_RST='b00000000000000000000000000011100, Div_Ratio_RST='b00000000000000000000000000001000 ...  
+Information: Created design named 'REG_File_00000008_00000010_4_00000000_00000000_0000001c_00000008'. (FE-LINK-13)
+Status:   Elaborating design UART   ...  
+Status:   Elaborating design RX   ...  
+Status:   Elaborating design RX_FSM   ...  
+Status:   Elaborating design Error_Unit   ...  
+Status:   Elaborating design Counter_Unit   ...  
+Status:   Elaborating design Bits_Counter   ...  
+Status:   Elaborating design Edge_Bit_Counter   ...  
+Status:   Elaborating design Data_Sampling   ...  
+Status:   Elaborating design Deserializer   ...  
+Status:   Elaborating design UART_TX_Top   ...  
+Status:   Elaborating design Serializer_Top   ...  
+Status:   Elaborating design Counter   ...  
+Status:   Elaborating design Serializer   ...  
+Status:   Elaborating design FSM   ...  
+Status:   Elaborating design Parity_Unit   ...  
+Status:   Elaborating design Mux_4   ...  
+Status:   Elaborating design Multi_Flop_Synchronizer   ...  
+Status:   Elaborating design Clock_Divider   ...  
+Status:   Elaborating design RST_Sync   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/Design_Top'
+Reference design set to 'Ref:/WORK/Design_Top'
+1
+set Netlist_Design_Top Design_Top
+Design_Top
+read_db -container Imp [list $TTLIB $FFLIB $SSLIB]
+Loading db file '/mnt/hgfs/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/mnt/hgfs/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/mnt/hgfs/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+1
+read_verilog -container Imp -netlist  "../../dft/netlists/Design_Top_Netlist.v"
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/Courses/System/System/dft/netlists/Design_Top_Netlist.v'
+1
+set_implementation_design $Netlist_Design_Top
+Implementation design set to 'Imp:/WORK/Design_Top'
+1
+set_top $Netlist_Design_Top
+Setting top design to 'Imp:/WORK/Design_Top'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/Design_Top'
+Implementation design set to 'Imp:/WORK/Design_Top'
+1
+############################### Don't verify #################################
+# do not verify scan in & scan out ports as a compare point as it is existed only after synthesis and not existed in the RTL
+#scan in
+set_dont_verify_points -type port Ref:/WORK/*/SI
+Error: Unknown name: 'Ref:/WORK/*/SI' (FM-036)
+0
+set_dont_verify_points -type port Imp:/WORK/*/SI
+Error: Unknown name: 'Imp:/WORK/*/SI' (FM-036)
+0
+#scan_out
+set_dont_verify_points -type port Ref:/WORK/*/SO
+Error: Unknown name: 'Ref:/WORK/*/SO' (FM-036)
+0
+set_dont_verify_points -type port Imp:/WORK/*/SO
+Error: Unknown name: 'Imp:/WORK/*/SO' (FM-036)
+0
+############################### contants #####################################
+# all atpg enable(test_mode, scan_enable) are zero during formal compare
+#test_mode
+set_constant Ref:/WORK/*/test_mode 0
+Set 'Ref:/WORK/Clock_Gating/test_mode' to constant 0
+Set 'Ref:/WORK/Design_Top/test_mode' to constant 0
+1
+set_constant Imp:/WORK/*/test_mode 0
+Set 'Imp:/WORK/Clock_Gating/test_mode' to constant 0
+Set 'Imp:/WORK/Design_Top/test_mode' to constant 0
+1
+#scan_enable
+set_constant Ref:/WORK/*/SE 0
+Set 'Ref:/WORK/Design_Top/SE' to constant 0
+1
+set_constant Imp:/WORK/*/SE 0
+Set 'Imp:/WORK/Design_Top/SE' to constant 0
+1
+match
+Reference design is 'Ref:/WORK/Design_Top'
+Implementation design is 'Imp:/WORK/Design_Top'
+Status:  Checking designs...
+    Warning: 4 (12) undriven nets found in reference (implementation) design; see formality2.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+    Set 'Ref:/WORK/Design_Top/SE' to constant 0    
+    Set 'Imp:/WORK/Design_Top/SE' to constant 0    
+    Set 'Ref:/WORK/Design_Top/test_mode' to constant 1    
+    Set 'Imp:/WORK/Design_Top/test_mode' to constant 1    
+    Set 'Imp:/WORK/Design_Top/SE' to constant 0    ; previous value was also 0
+    Set 'Imp:/WORK/Design_Top/test_mode' to constant 1    ; previous value was also 1
+    Set don't verify point 'Ref:/WORK/Design_Top/SO[2]'
+    Set don't verify point 'Ref:/WORK/Design_Top/SO[1]'
+    Set don't verify point 'Ref:/WORK/Design_Top/SO[0]'
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          3          0          0          0          3
+instance_map        :         29          0          0          0         29
+mark                :         14          0          0          0         14
+multiplier          :          2          0          0          0          2
+scan_input          :          2          0          0          0          2
+transformation
+   map              :         13          0          0          0         13
+   share            :          4          0          0          0          4
+uniquify            :         36          2          0          0         38
+ununiquify          :          2          0          0          0          2
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      ../../dft/Design_Top.svf
+
+SVF files produced:
+  /mnt/hgfs/Courses/System/System/fm/Post_DFT/formality2_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 232 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 5 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 4(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+1
+set successful [verify]
+Reference design is 'Ref:/WORK/Design_Top'
+Implementation design is 'Imp:/WORK/Design_Top'
+    
+*********************************** Matching Results ***********************************    
+ 232 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 5 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+ 4(0) Unmatched reference(implementation) unread points    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   Constants set on:
+     Design_Top/SE
+     Design_Top/test_mode
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/Design_Top
+ Implementation design: Imp:/WORK/Design_Top
+ 232 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       1     230       1     232
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       3       0       0       3
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+#Reports
+report_passing_points > "reports/passing_points.rpt"
+report_failing_points > "reports/failing_points.rpt"
+report_aborted_points > "reports/aborted_points.rpt"
+report_unverified_points > "reports/unverified_points.rpt"
+start_gui
+     1  source -echo -verbose dft_fm_script.tcl
+1
+1
+fm_shell (verify)> 
+Maximum memory usage for this session: 450256 KB
+CPU usage for this session: 8.42 seconds
+Current time: Fri Aug 26 02:25:28 2022
+Elapsed time: 39 seconds
+
+Thank you for using Formality (R)!

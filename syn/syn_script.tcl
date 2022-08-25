@@ -1,5 +1,5 @@
 define_design_lib work -path ./work
-set_svf UART.svf
+set_svf Design_Top.svf
 ################## Design Compiler Library Files ######################
 
 lappend ../rtl
@@ -28,6 +28,7 @@ echo "############# Reading RTL Files  ##############"
 echo "###############################################"
 
 read_file {../rtl/} -autoread -recursive -format verilog -top Design_Top
+
 #read_file -format verilog Bits_Counter.v
 #read_file -format verilog Counter_Unit.v
 #read_file -format verilog Data_Sampling.v
@@ -80,13 +81,22 @@ compile
 # Write out Design after initial compile
 #############################################################################
 
-write_file -format verilog -hierarchy -output Design_Top_M.v
-write_sdc  -nosplit Design_Top.sdc
-write_sdf Design_Top.sdf
+write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.ddc
+write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.v
+write_sdf  sdf/Design_Top.sdf
+write_sdc  -nosplit sdc/Design_Top.sdc
+#set_svf -off 
 
-report_area -hierarchy > area.rpt
-report_power  -verbose > power.rpt
-report_timing -max_paths 10 -delay_type min > hold.rpt
-report_timing -max_paths 10 -delay_type max > setup.rpt
-report_clock -attributes > clocks.rpt
-report_constraint -all_violators > constraints.rpt
+
+report_area -hierarchy > reports/area.rpt
+report_power  -verbose > reports/power.rpt
+report_timing -max_paths 10 -delay_type min > reports/hold.rpt
+report_timing -max_paths 10 -delay_type max > reports/setup.rpt
+report_clock -attributes > reports/clocks.rpt
+report_constraint -all_violators > reports/constraints.rpt
+
+
+echo "################## DFT Prepreatios stage ######################"
+set flops_per_chain 100
+set num_flops [sizeof_collection [all_registers -edge_triggered]]
+set num_chains [expr $num_flops / $flops_per_chain + 1 ]
