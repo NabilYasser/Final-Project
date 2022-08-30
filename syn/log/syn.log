@@ -62,46 +62,65 @@ read_file {../rtl/} -autoread -recursive -format verilog -top Design_Top
 == READ_FILE autoread for top design 'Design_Top' ==
 
 Starting READ_FILE autoread mode...
-Warning: Defining design library 'WORK' at directory '/mnt/hgfs/Courses/System/UART/syn/WORK_autoread'. (AUTOREAD-107)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/'.  (AUTOREAD-100)
-Warning: Adding missing directory to search_path - '/mnt/hgfs/Courses/System/UART/rtl/'. (AUTOREAD-105)
-Warning: Adding missing directory to search_path - '/mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div'. (AUTOREAD-105)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div'.  (AUTOREAD-100)
-Warning: Adding missing directory to search_path - '/mnt/hgfs/Courses/System/UART/rtl/Syncronizers'. (AUTOREAD-105)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Syncronizers'.  (AUTOREAD-100)
-Warning: Adding missing directory to search_path - '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks'. (AUTOREAD-105)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TOP'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div/Clock_Divider.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div/Clock_Gating.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Data_Sync.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Pulse_Gen.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/RST_Sync.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Synchronizer.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/ALU.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/Design_Top.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/REG_File.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/RX_Controler.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/Tx_Controler.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Bits_Counter.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Counter_Unit.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Data_Sampling.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Deserializer.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Error_Unit.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TOP/MUX2.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TOP/UART.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Counter.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/FSM.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Mux_4.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Parity_Unit.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer_Top.v'.  (AUTOREAD-100)
-Information: Adding '/mnt/hgfs/Courses/System/UART/rtl/UART_TX/UART_TX_Top.v'.  (AUTOREAD-100)
+Warning: Defining design library 'WORK' at directory '/mnt/hgfs/Digital/Courses/System/System/syn/WORK_autoread'. (AUTOREAD-107)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/mnt/hgfs/Digital/Courses/System/System/rtl/'. (AUTOREAD-105)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/ALU_tb.v'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi'. (AUTOREAD-105)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div'. (AUTOREAD-105)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/RX_tb.v'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers'. (AUTOREAD-105)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks'. (AUTOREAD-105)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TOP'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX_tb.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Booth_Multi.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Control_Unit.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_ALU.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_Counter.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_REG_File.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Divider.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Gating.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Data_Sync.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Pulse_Gen.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/RST_Sync.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Synchronizer.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/ALU.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/Design_Top.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/REG_File.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/RX_Controler.v'.  (AUTOREAD-100)
+Information: Source transcript ignored by autoread due to filtering.  (AUTOREAD-102)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/Tx_Controler.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Bits_Counter.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Counter_Unit.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Data_Sampling.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Deserializer.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Edge_Bit_Counter.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Error_Unit.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX_FSM.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TOP/MUX2.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TOP/UART.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Counter.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/FSM.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Mux_4.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Parity_Unit.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Serializer.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Serializer_Top.v'.  (AUTOREAD-100)
+Information: Adding '/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/UART_TX_Top.v'.  (AUTOREAD-100)
+Information: Scanning file { ALU_tb.v }. (AUTOREAD-303)
+Information: Scanning file { RX_tb.v }. (AUTOREAD-303)
+Information: Scanning file { UART_TX_tb.v }. (AUTOREAD-303)
+Information: Scanning file { Booth_Multi.v }. (AUTOREAD-303)
+Information: Scanning file { Control_Unit.v }. (AUTOREAD-303)
+Information: Scanning file { Multi_ALU.v }. (AUTOREAD-303)
+Information: Scanning file { Multi_Counter.v }. (AUTOREAD-303)
+Information: Scanning file { Multi_REG_File.v }. (AUTOREAD-303)
 Information: Scanning file { Clock_Divider.v }. (AUTOREAD-303)
 Information: Scanning file { Clock_Gating.v }. (AUTOREAD-303)
 Information: Scanning file { Data_Sync.v }. (AUTOREAD-303)
@@ -130,67 +149,77 @@ Information: Scanning file { Parity_Unit.v }. (AUTOREAD-303)
 Information: Scanning file { Serializer.v }. (AUTOREAD-303)
 Information: Scanning file { Serializer_Top.v }. (AUTOREAD-303)
 Information: Scanning file { UART_TX_Top.v }. (AUTOREAD-303)
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TOP/MUX2.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TOP/MUX2.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/System_Blocks/RX_Controler.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/RX_Controler.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Synchronizer.v
-Warning:  /mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Synchronizer.v:31: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Synchronizer.v
+Warning:  /mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Synchronizer.v:31: A unnamed generate block with an LRM-defined name 'genblk1' is detected, which is incompatible with Verilog standard 2001 or 1995. (VER-944)
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Pulse_Gen.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Pulse_Gen.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Data_Sync.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Data_Sync.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/System_Blocks/Tx_Controler.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/Tx_Controler.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/System_Blocks/ALU.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Control_Unit.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div/Clock_Gating.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_ALU.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/System_Blocks/REG_File.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_REG_File.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_Counter.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/Error_Unit.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Booth_Multi.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/Bits_Counter.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/ALU.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Gating.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/Counter_Unit.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/REG_File.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/Data_Sampling.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX_FSM.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/Deserializer.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Error_Unit.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Bits_Counter.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/Counter.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Edge_Bit_Counter.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Counter_Unit.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer_Top.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Data_Sampling.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/FSM.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Deserializer.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/Parity_Unit.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/Mux_4.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Counter.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TX/UART_TX_Top.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Serializer.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/UART_TOP/UART.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Serializer_Top.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div/Clock_Divider.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/FSM.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/Syncronizers/RST_Sync.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Parity_Unit.v
 Presto compilation completed successfully.
-Compiling source file /mnt/hgfs/Courses/System/UART/rtl/System_Blocks/Design_Top.v
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Mux_4.v
+Presto compilation completed successfully.
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/UART_TX_Top.v
+Presto compilation completed successfully.
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/UART_TOP/UART.v
+Presto compilation completed successfully.
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Divider.v
+Presto compilation completed successfully.
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/RST_Sync.v
+Presto compilation completed successfully.
+Compiling source file /mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/Design_Top.v
 Presto compilation completed successfully.
 Elaborating top design Design_Top
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+Loading db file '/mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
 Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
 Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
   Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
@@ -207,7 +236,7 @@ Information: Building the design 'RX_Controler' instantiated from design 'Design
 	the parameters "Data_width=32'h00000008,REG_File_Depth=32'h00000010,Address_Depth=32'h00000004,Num_Of_instructions=32'h0000000e,Decoder_Size=32'h00000004". (HDL-193)
 
 Statistics for case statements in always block at line 58 in file
-	'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/RX_Controler.v'
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/RX_Controler.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -217,7 +246,7 @@ Statistics for case statements in always block at line 58 in file
 
 Inferred memory devices in process
 	in routine RX_Controler_00000008_00000010_00000004_0000000e_00000004 line 39 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/RX_Controler.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/RX_Controler.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -226,7 +255,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine RX_Controler_00000008_00000010_00000004_0000000e_00000004 line 48 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/RX_Controler.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/RX_Controler.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -237,7 +266,7 @@ Information: Building the design 'Data_Sync'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Data_Sync line 14 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Data_Sync.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Data_Sync.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -246,7 +275,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine Data_Sync line 24 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Data_Sync.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Data_Sync.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -256,18 +285,18 @@ Presto compilation completed successfully.
 Information: Building the design 'Tx_Controler' instantiated from design 'Design_Top' with
 	the parameters "Data_width=32'h00000008,ALU_Output_Data_width=32'h00000010". (HDL-193)
 
-Statistics for case statements in always block at line 54 in file
-	'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/Tx_Controler.v'
+Statistics for case statements in always block at line 50 in file
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/Tx_Controler.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            57            |    auto/auto     |
-|            60            |    auto/auto     |
+|            53            |    auto/auto     |
+|            56            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine Tx_Controler_00000008_00000010 line 35 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/Tx_Controler.v'.
+	in routine Tx_Controler_00000008_00000010 line 31 in file
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/Tx_Controler.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -277,17 +306,17 @@ Presto compilation completed successfully.
 Information: Building the design 'ALU' instantiated from design 'Design_Top' with
 	the parameters "Data_width=32'h00000008,Output_Data_width=32'h00000010,Num_Of_instructions=32'h0000000e,Decoder_Size=32'h00000004". (HDL-193)
 
-Statistics for case statements in always block at line 47 in file
-	'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/ALU.v'
+Statistics for case statements in always block at line 48 in file
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/ALU.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            53            |    auto/auto     |
+|            55            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine ALU_00000008_00000010_0000000e_00000004 line 36 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/ALU.v'.
+	in routine ALU_00000008_00000010_0000000e_00000004 line 37 in file
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/ALU.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -299,11 +328,11 @@ Information: Building the design 'Clock_Gating'. (HDL-193)
 Presto compilation completed successfully.
 Information: Building the design 'REG_File' instantiated from design 'Design_Top' with
 	the parameters "Data_width=32'h00000008,REG_File_Depth=32'h00000010,Address_Depth=32'h00000004,ALU_Operand_A_RST=32'h00000000,ALU_Operand_B_RST=32'h00000000,UART_Config_RST=32'h0000001c,Div_Ratio_RST=32'h00000008". (HDL-193)
-Warning:  /mnt/hgfs/Courses/System/UART/rtl/System_Blocks/REG_File.v:32: signed to unsigned conversion occurs. (VER-318)
+Warning:  /mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/REG_File.v:32: signed to unsigned conversion occurs. (VER-318)
 
 Inferred memory devices in process
 	in routine REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008 line 23 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/System_Blocks/REG_File.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/System_Blocks/REG_File.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -323,7 +352,7 @@ Information: Building the design 'Multi_Flop_Synchronizer'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Multi_Flop_Synchronizer line 10 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Synchronizer.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Synchronizer.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -335,7 +364,7 @@ Information: Building the design 'Clock_Divider'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Clock_Divider line 16 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/Clock_Gating_and_Div/Clock_Divider.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Clock_Gating_and_Div/Clock_Divider.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -353,12 +382,16 @@ Information: Building the design 'Pulse_Gen'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Pulse_Gen line 8 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Pulse_Gen.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Pulse_Gen.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |        Q_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Booth_Multi' instantiated from design 'ALU_00000008_00000010_0000000e_00000004' with
+	the parameters "Data_Width=32'h00000008,Counter_Width=32'h00000003". (HDL-193)
+Warning:  /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Booth_Multi.v:24: unsigned to signed assignment occurs. (VER-318)
 Presto compilation completed successfully.
 Information: Building the design 'RX'. (HDL-193)
 Presto compilation completed successfully.
@@ -369,7 +402,7 @@ Information: Building the design 'Multi_Flop_Synchronizer' instantiated from des
 
 Inferred memory devices in process
 	in routine Multi_Flop_Synchronizer_NUM_STAGES2 line 10 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/Syncronizers/Synchronizer.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Syncronizers/Synchronizer.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -377,10 +410,79 @@ Inferred memory devices in process
 |      sync_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
+Information: Building the design 'Control_Unit'. (HDL-193)
+
+Statistics for case statements in always block at line 44 in file
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Control_Unit.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+|            67            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Control_Unit line 34 in file
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Control_Unit.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  Current_State_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Multi_ALU' instantiated from design 'Booth_Multi_00000008_00000003' with
+	the parameters "data_Width=32'h00000008". (HDL-193)
+Warning:  /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_ALU.v:17: unsigned to signed assignment occurs. (VER-318)
+Warning:  /mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_ALU.v:36: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 19 in file
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_ALU.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            23            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'Multi_REG_File' instantiated from design 'Booth_Multi_00000008_00000003' with
+	the parameters "data_Width=32'h00000008". (HDL-193)
+
+Inferred memory devices in process
+	in routine Multi_REG_File_00000008 line 14 in file
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_REG_File.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Data_Out_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Multi_REG_File' instantiated from design 'Booth_Multi_00000008_00000003' with
+	the parameters "data_Width=32'h00000001,RST_Value=32'h00000000". (HDL-193)
+
+Inferred memory devices in process
+	in routine Multi_REG_File_00000001_00000000 line 14 in file
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_REG_File.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    Data_Out_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Multi_Counter' instantiated from design 'Booth_Multi_00000008_00000003' with
+	the parameters "Data_Width=32'h00000008,Counter_Width=32'h00000003". (HDL-193)
+
+Inferred memory devices in process
+	in routine Multi_Counter_00000008_00000003 line 12 in file
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/Booth_Multi/Multi_Counter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     Counter_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
 Information: Building the design 'RX_FSM'. (HDL-193)
 
 Statistics for case statements in always block at line 55 in file
-	'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX_FSM.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -389,7 +491,7 @@ Statistics for case statements in always block at line 55 in file
 
 Inferred memory devices in process
 	in routine RX_FSM line 45 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX_FSM.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -398,7 +500,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine RX_FSM line 161 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX_FSM.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -407,7 +509,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine RX_FSM line 173 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/RX_FSM.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/RX_FSM.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -422,7 +524,7 @@ Information: Building the design 'Data_Sampling'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Data_Sampling line 21 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Data_Sampling.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Data_Sampling.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -433,7 +535,7 @@ Information: Building the design 'Deserializer'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Deserializer line 13 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Deserializer.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Deserializer.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -445,7 +547,7 @@ Presto compilation completed successfully.
 Information: Building the design 'FSM'. (HDL-193)
 
 Statistics for case statements in always block at line 29 in file
-	'/mnt/hgfs/Courses/System/UART/rtl/UART_TX/FSM.v'
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/FSM.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -454,7 +556,7 @@ Statistics for case statements in always block at line 29 in file
 
 Inferred memory devices in process
 	in routine FSM line 21 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_TX/FSM.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/FSM.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -465,7 +567,7 @@ Information: Building the design 'Parity_Unit'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Parity_Unit line 8 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Parity_Unit.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Parity_Unit.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -475,7 +577,7 @@ Presto compilation completed successfully.
 Information: Building the design 'Mux_4'. (HDL-193)
 
 Statistics for case statements in always block at line 13 in file
-	'/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Mux_4.v'
+	'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Mux_4.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
@@ -486,7 +588,7 @@ Information: Building the design 'Bits_Counter'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Bits_Counter line 15 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Bits_Counter.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Bits_Counter.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -497,7 +599,7 @@ Information: Building the design 'Edge_Bit_Counter'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Edge_Bit_Counter line 15 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Edge_Bit_Counter.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -506,7 +608,7 @@ Inferred memory devices in process
 
 Inferred memory devices in process
 	in routine Edge_Bit_Counter line 25 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_RX/Edge_Bit_Counter.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_RX/Edge_Bit_Counter.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -517,7 +619,7 @@ Information: Building the design 'Counter'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Counter line 12 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Counter.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Counter.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -528,7 +630,7 @@ Information: Building the design 'Serializer'. (HDL-193)
 
 Inferred memory devices in process
 	in routine Serializer line 14 in file
-		'/mnt/hgfs/Courses/System/UART/rtl/UART_TX/Serializer.v'.
+		'/mnt/hgfs/Digital/Courses/System/System/rtl/UART_TX/Serializer.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
@@ -566,10 +668,10 @@ link
   Linking design 'Design_Top'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (30 designs)              /mnt/hgfs/Courses/System/UART/syn/Design_Top.db, etc
-  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
-  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
-  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+  * (36 designs)              /mnt/hgfs/Digital/Courses/System/System/syn/Design_Top.db, etc
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
 
 1
 ############# Make unique copies of replicated modules by ##################
@@ -581,6 +683,7 @@ Information: Uniquified 2 instances of design 'RST_Sync'. (OPT-1056)
 Information: Uniquified 2 instances of design 'Multi_Flop_Synchronizer_Multi_bits_NUM_STAGES2_BUS_WIDTH1'. (OPT-1056)
 Information: Uniquified 2 instances of design 'Pulse_Gen'. (OPT-1056)
 Information: Uniquified 4 instances of design 'Multi_Flop_Synchronizer_NUM_STAGES2'. (OPT-1056)
+Information: Uniquified 3 instances of design 'Multi_REG_File_00000008'. (OPT-1056)
 1
 echo "#############################Check design #######################################"
 #############################Check design #######################################
@@ -589,33 +692,37 @@ check_design
 ****************************************
 check_design summary:
 Version:     K-2015.06
-Date:        Thu Aug 25 03:44:53 2022
+Date:        Wed Aug 31 03:46:19 2022
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                     11
-    Unconnected ports (LINT-28)                                    10
-    Constant outputs (LINT-52)                                      1
+Inputs/Outputs                                                     54
+    Unconnected ports (LINT-28)                                    17
+    Shorted outputs (LINT-31)                                       3
+    Externally driven outputs (LINT-64)                            17
+    Port direction conflicts with RTL (LINT-68)                    17
 
-Cells                                                              19
-    Cells do not drive (LINT-1)                                    15
-    Connected to power or ground (LINT-32)                          2
-    Leaf pins connected to undriven nets (LINT-58)                  1
-    Cells have undriven hier pins (LINT-59)                         1
+Cells                                                              40
+    Cells do not drive (LINT-1)                                    17
+    Connected to power or ground (LINT-32)                         21
+    Nets connected to multiple pins on same cell (LINT-33)          2
 
-Nets                                                                1
-    Undriven nets (LINT-3)                                          1
+Nets                                                               20
+    Unloaded nets (LINT-2)                                          3
+    Net type is unknown (LINT-38)                                  17
 --------------------------------------------------------------------------------
 
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C341' does not drive any nets. (LINT-1)
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C342' does not drive any nets. (LINT-1)
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C343' does not drive any nets. (LINT-1)
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C344' does not drive any nets. (LINT-1)
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C369' does not drive any nets. (LINT-1)
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C371' does not drive any nets. (LINT-1)
-Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C373' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C345' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C346' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C347' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C372' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C374' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_00000008_00000010_0000000e_00000004', cell 'C376' does not drive any nets. (LINT-1)
 Warning: In design 'Clock_Divider', cell 'C102' does not drive any nets. (LINT-1)
+Warning: In design 'Multi_ALU_00000008', cell 'C101' does not drive any nets. (LINT-1)
+Warning: In design 'Multi_ALU_00000008', cell 'C102' does not drive any nets. (LINT-1)
+Warning: In design 'Multi_Counter_00000008_00000003', cell 'C52' does not drive any nets. (LINT-1)
 Warning: In design 'RX_FSM', cell 'B_14' does not drive any nets. (LINT-1)
 Warning: In design 'RX_FSM', cell 'B_15' does not drive any nets. (LINT-1)
 Warning: In design 'RX_FSM', cell 'B_16' does not drive any nets. (LINT-1)
@@ -623,10 +730,19 @@ Warning: In design 'RX_FSM', cell 'B_17' does not drive any nets. (LINT-1)
 Warning: In design 'Bits_Counter', cell 'C36' does not drive any nets. (LINT-1)
 Warning: In design 'Edge_Bit_Counter', cell 'C53' does not drive any nets. (LINT-1)
 Warning: In design 'Counter', cell 'C35' does not drive any nets. (LINT-1)
-Warning: In design 'Design_Top', net 'ALU_Valid_Top' has no drivers.  Logic 0 assumed. (LINT-3)
+Warning: In design 'Design_Top', net 'u_ALU/u_Booth_Multi/Counter_Top[0]' driven by pin 'u_ALU/u_Booth_Multi/SC/Counter[0]' has no loads. (LINT-2)
+Warning: In design 'Design_Top', net 'u_ALU/u_Booth_Multi/Counter_Top[1]' driven by pin 'u_ALU/u_Booth_Multi/SC/Counter[1]' has no loads. (LINT-2)
+Warning: In design 'Design_Top', net 'u_ALU/u_Booth_Multi/Counter_Top[2]' driven by pin 'u_ALU/u_Booth_Multi/SC/Counter[2]' has no loads. (LINT-2)
 Warning: In design 'Design_Top', port 'SE' is not connected to any nets. (LINT-28)
-Warning: In design 'Design_Top', port 'SI' is not connected to any nets. (LINT-28)
-Warning: In design 'Design_Top', port 'SO' is not connected to any nets. (LINT-28)
+Warning: In design 'Design_Top', port 'SI[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'Design_Top', port 'SI[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'Design_Top', port 'SI[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'Design_Top', port 'SO[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'Design_Top', port 'SO[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'Design_Top', port 'SO[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'Multi_ALU_00000008', port 'clk' is not connected to any nets. (LINT-28)
+Warning: In design 'Multi_ALU_00000008', port 'rst' is not connected to any nets. (LINT-28)
+Warning: In design 'Multi_ALU_00000008', port 'q' is not connected to any nets. (LINT-28)
 Warning: In design 'Error_Unit', port 'clk' is not connected to any nets. (LINT-28)
 Warning: In design 'Error_Unit', port 'rst' is not connected to any nets. (LINT-28)
 Warning: In design 'Parity_Unit', port 'Data_Valid' is not connected to any nets. (LINT-28)
@@ -634,13 +750,106 @@ Warning: In design 'Mux_4', port 'clk' is not connected to any nets. (LINT-28)
 Warning: In design 'Serializer', port 'Counter[2]' is not connected to any nets. (LINT-28)
 Warning: In design 'Serializer', port 'Counter[1]' is not connected to any nets. (LINT-28)
 Warning: In design 'Serializer', port 'Counter[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'Control_Unit', output port 'ALU_EN' is connected directly to output port 'AC_EN'. (LINT-31)
+Warning: In design 'Control_Unit', output port 'Counter_Down' is connected directly to output port 'q1_En'. (LINT-31)
+Warning: In design 'Control_Unit', output port 'Counter_Down' is connected directly to output port 'Q_En'. (LINT-31)
+Warning: In design 'Design_Top', a pin on submodule 'u_Clock_Divider' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_clk_en' is connected to logic 1. 
 Warning: In design 'RST_Sync_1', a pin on submodule 'u_Multi_Flop_Synchronizer' is connected to logic 1 or logic 0. (LINT-32)
    Pin 'async' is connected to logic 1. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[7]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[6]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[5]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[4]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[3]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[2]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[1]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_AC' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[0]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[7]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[6]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[5]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[4]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[3]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[2]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[1]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[0]' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_Multiplicand' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Load_Default' is connected to logic 0. 
+Warning: In design 'Booth_Multi_00000008_00000003', a pin on submodule 'u_REG_File' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Default_Value[0]' is connected to logic 0. 
 Warning: In design 'RST_Sync_0', a pin on submodule 'u_Multi_Flop_Synchronizer' is connected to logic 1 or logic 0. (LINT-32)
    Pin 'async' is connected to logic 1. 
-Warning: In design 'Tx_Controler_00000008_00000010', output port 'Clk_Div_En' is connected directly to 'logic 1'. (LINT-52)
-Warning: In design 'RX_Controler_00000008_00000010_00000004_0000000e_00000004', input pin 'A' of leaf cell 'I_23' is connected to undriven net 'ALU_Valid'.  (LINT-58)
-Warning: In design 'Design_Top', input pin 'ALU_Valid' of hierarchical cell 'u_RX_Controler' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: In design 'Booth_Multi_00000008_00000003', the same net is connected to more than one pin on submodule 'u_AC'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'Default_Value[7]', 'Default_Value[6]'', 'Default_Value[5]', 'Default_Value[4]', 'Default_Value[3]', 'Default_Value[2]', 'Default_Value[1]', 'Default_Value[0]'.
+Warning: In design 'Booth_Multi_00000008_00000003', the same net is connected to more than one pin on submodule 'u_Multiplicand'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'Default_Value[7]', 'Default_Value[6]'', 'Default_Value[5]', 'Default_Value[4]', 'Default_Value[3]', 'Default_Value[2]', 'Default_Value[1]', 'Default_Value[0]', 'Load_Default'.
+Warning: In design 'Design_Top', net 'ALU_Out_Top[0]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[1]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[2]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[3]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[4]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[5]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[6]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[7]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[8]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[9]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[10]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[11]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[12]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[13]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[14]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Top[15]' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Design_Top', net 'ALU_Out_Valid_Top' has multiple drivers (unknown wired-logic type). (LINT-38)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multip_Finsh' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[15]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[14]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[13]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[12]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[11]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[10]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[9]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[8]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[7]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[6]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[5]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[4]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[3]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[2]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[1]' is driven from the outside. (LINT-64)
+Warning: In design 'Booth_Multi_00000008_00000003', output port 'Multiplication_Out[0]' is driven from the outside. (LINT-64)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multip_Finsh' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[15]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[14]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[13]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[12]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[11]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[10]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[9]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[8]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[7]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[6]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[5]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[4]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[3]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[2]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[1]' is not being used in accordance with its stated direction. (LINT-68)
+Warning: In design 'u_ALU/u_Booth_Multi', output port 'Multiplication_Out[0]' is not being used in accordance with its stated direction. (LINT-68)
 1
 echo "#############################Grouping #######################################"
 #############################Grouping #######################################
@@ -676,7 +885,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 31 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 114 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design Design_Top has different process,
@@ -711,6 +920,12 @@ scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate a
   Processing 'UART'
   Processing 'REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008'
   Processing 'Clock_Gating'
+  Processing 'Multi_Counter_00000008_00000003'
+  Processing 'Multi_REG_File_00000001_00000000'
+  Processing 'Multi_REG_File_00000008_0'
+  Processing 'Multi_ALU_00000008'
+  Processing 'Control_Unit'
+  Processing 'Booth_Multi_00000008_00000003'
   Processing 'ALU_00000008_00000010_0000000e_00000004'
   Processing 'Tx_Controler_00000008_00000010'
   Processing 'RX_Controler_00000008_00000010_00000004_0000000e_00000004'
@@ -733,8 +948,8 @@ Information: There are 212 clock pins driven by multiple clocks, and some of the
   Processing 'ALU_00000008_00000010_0000000e_00000004_DW01_sub_0'
   Processing 'ALU_00000008_00000010_0000000e_00000004_DW01_add_0'
   Processing 'ALU_00000008_00000010_0000000e_00000004_DW01_cmp6_0'
-  Processing 'ALU_00000008_00000010_0000000e_00000004_DW02_mult_0'
-  Processing 'ALU_00000008_00000010_0000000e_00000004_DW01_add_1'
+  Processing 'Multi_ALU_00000008_DW01_add_0'
+  Processing 'Multi_ALU_00000008_DW01_sub_0'
 Information: There are 212 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
 
   Beginning Mapping Optimizations  (Medium effort)
@@ -745,21 +960,21 @@ Information: There are 212 clock pins driven by multiple clocks, and some of the
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04   32500.5      0.00       0.0       3.3                          
-    0:00:04   32500.5      0.00       0.0       3.3                          
-    0:00:04   32500.5      0.00       0.0       3.3                          
-    0:00:04   32500.5      0.00       0.0       3.3                          
-    0:00:04   32500.5      0.00       0.0       3.3                          
-    0:00:05   16114.9      0.00       0.0       1.0                          
-    0:00:05   16071.4      0.00       0.0       1.0                          
-    0:00:05   16071.4      0.00       0.0       1.0                          
-    0:00:05   16071.4      0.00       0.0       1.0                          
-    0:00:05   16071.4      0.00       0.0       1.0                          
-    0:00:05   16071.4      0.00       0.0       1.0                          
-    0:00:05   16025.5      0.00       0.0       0.0                          
-    0:00:05   16025.5      0.00       0.0       0.0                          
-    0:00:05   16025.5      0.00       0.0       0.0                          
-    0:00:05   16025.5      0.00       0.0       0.0                          
+    0:00:05   32380.4      0.00       0.0       3.0                          
+    0:00:05   32380.4      0.00       0.0       3.0                          
+    0:00:05   32380.4      0.00       0.0       3.0                          
+    0:00:05   32380.4      0.00       0.0       3.0                          
+    0:00:05   32380.4      0.00       0.0       3.0                          
+    0:00:05   16144.3      0.00       0.0       1.0                          
+    0:00:05   16107.8      0.00       0.0       1.0                          
+    0:00:06   16107.8      0.00       0.0       1.0                          
+    0:00:06   16107.8      0.00       0.0       1.0                          
+    0:00:06   16107.8      0.00       0.0       1.0                          
+    0:00:06   16107.8      0.00       0.0       1.0                          
+    0:00:06   16062.0      0.00       0.0       0.0                          
+    0:00:06   16062.0      0.00       0.0       0.0                          
+    0:00:06   16062.0      0.00       0.0       0.0                          
+    0:00:06   16062.0      0.00       0.0       0.0                          
 
 
 
@@ -770,9 +985,9 @@ Information: There are 212 clock pins driven by multiple clocks, and some of the
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:05   16025.5      0.00       0.0       0.0                          
-    0:00:05   16025.5      0.00       0.0       0.0                          
-    0:00:06   16016.1      0.00       0.0       0.0                          
+    0:00:06   16062.0      0.00       0.0       0.0                          
+    0:00:06   16062.0      0.00       0.0       0.0                          
+    0:00:06   16052.5      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -782,25 +997,25 @@ Information: There are 212 clock pins driven by multiple clocks, and some of the
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:06   16016.1      0.00       0.0       0.0                          
-    0:00:06   16016.1      0.00       0.0       0.0                          
-    0:00:06   15951.3      0.00       0.0       0.0                          
-    0:00:06   15938.4      0.00       0.0       0.0                          
-    0:00:06   15934.9      0.00       0.0       0.0                          
-    0:00:06   15931.3      0.00       0.0       0.0                          
-    0:00:06   15927.8      0.00       0.0       0.0                          
-    0:00:06   15927.8      0.00       0.0       0.0                          
-    0:00:06   15927.8      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-    0:00:06   15921.9      0.00       0.0       0.0                          
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
-Loading db file '/mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+    0:00:06   16052.5      0.00       0.0       0.0                          
+    0:00:06   16052.5      0.00       0.0       0.0                          
+    0:00:07   15986.6      0.00       0.0       0.0                          
+    0:00:07   15969.0      0.00       0.0       0.0                          
+    0:00:07   15958.4      0.00       0.0       0.0                          
+    0:00:07   15954.9      0.00       0.0       0.0                          
+    0:00:07   15951.3      0.00       0.0       0.0                          
+    0:00:07   15951.3      0.00       0.0       0.0                          
+    0:00:07   15951.3      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+    0:00:07   15945.5      0.00       0.0       0.0                          
+Loading db file '/mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -813,24 +1028,25 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 # Write out Design after initial compile
 #############################################################################
 write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.ddc
-Writing verilog file '/mnt/hgfs/Courses/System/UART/syn/netlists/Design_Top_Netlist.ddc'.
+Writing verilog file '/mnt/hgfs/Digital/Courses/System/System/syn/netlists/Design_Top_Netlist.ddc'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.v
-Writing verilog file '/mnt/hgfs/Courses/System/UART/syn/netlists/Design_Top_Netlist.v'.
+Writing verilog file '/mnt/hgfs/Digital/Courses/System/System/syn/netlists/Design_Top_Netlist.v'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 write_sdf  sdf/Design_Top.sdf
 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/mnt/hgfs/Courses/System/UART/syn/sdf/Design_Top.sdf'. (WT-3)
+Information: Writing timing information to file '/mnt/hgfs/Digital/Courses/System/System/syn/sdf/Design_Top.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 Information: There are 212 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
 1
 write_sdc  -nosplit sdc/Design_Top.sdc
 1
-#set_svf -off 
+set_svf -off 
+1
 report_area -hierarchy > reports/area.rpt
-report_power  -verbose > reports/power.rpt
+report_power  -verbose  -hierarchy > reports/power.rpt
 report_timing -max_paths 10 -delay_type min > reports/hold.rpt
 report_timing -max_paths 10 -delay_type max > reports/setup.rpt
 report_clock -attributes > reports/clocks.rpt
@@ -840,13 +1056,8 @@ echo "################## DFT Prepreatios stage ######################"
 set flops_per_chain 100
 100
 set num_flops [sizeof_collection [all_registers -edge_triggered]]
-230
+261
 set num_chains [expr $num_flops / $flops_per_chain + 1 ]
 3
 3
 dc_shell> 
-Memory usage for main task 286 Mbytes.
-Memory usage for this session 286 Mbytes.
-CPU usage for this session 10 seconds ( 0.00 hours ).
-
-Thank you...

@@ -89,7 +89,7 @@ set_svf -off
 
 
 report_area -hierarchy > reports/area.rpt
-report_power  -verbose > reports/power.rpt
+report_power  -verbose  -hierarchy > reports/power.rpt
 report_timing -max_paths 10 -delay_type min > reports/hold.rpt
 report_timing -max_paths 10 -delay_type max > reports/setup.rpt
 report_clock -attributes > reports/clocks.rpt

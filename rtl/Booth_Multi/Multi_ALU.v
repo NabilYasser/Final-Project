@@ -1,4 +1,4 @@
-module ALU #(
+module Multi_ALU #(
     parameter data_Width='d4
 ) (
     input  wire                 clk,

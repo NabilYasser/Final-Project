@@ -1,4 +1,4 @@
-module REG_File #(
+module Multi_REG_File #(
     parameter data_Width='d4,RST_Value='d0
 ) (
     input  wire                            clk       ,

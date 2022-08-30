@@ -3,6 +3,7 @@ module Booth_Multi #(
 ) (
     input  wire       clk,
     input  wire       rst,
+    input  wire       Multi_En,
     input  wire signed [Data_Width-1:0] Multiplicand,
     input  wire signed [Data_Width-1:0] Multiplier ,
     output wire                  Multip_Finsh,
@@ -31,6 +32,7 @@ assign Default_Value='b0;
    	.clk           (clk           ),
     .rst           (rst           ),
     .The_2_Qs      ({Q_Out[0],q1_Out}     ),
+    .Multi_En      (Multi_En),
     .Counter_Finsh (Counter_Finsh_Top ),
     .ALU_Valid     (ALU_Valid_Top),
     .Load_Defult   (Load_Defult_Top   ),
@@ -44,7 +46,7 @@ assign Default_Value='b0;
    );
 
 
-   ALU #(
+   Multi_ALU #(
     .data_Width (Data_Width )
    )
    u_ALU(
@@ -61,7 +63,7 @@ assign Default_Value='b0;
    );
    
 
-   REG_File #(
+   Multi_REG_File #(
     .data_Width (Data_Width )
    )
    u_AC(
@@ -76,7 +78,7 @@ assign Default_Value='b0;
 
    
     
-    REG_File #(
+    Multi_REG_File #(
         .data_Width (Data_Width )
     )
     u_Multiplicand(
@@ -89,7 +91,7 @@ assign Default_Value='b0;
         .Data_Out (BR_Out )
     );
 
-    REG_File #(
+    Multi_REG_File #(
         .data_Width (Data_Width )
     )
     u_Q(
@@ -104,7 +106,7 @@ assign Default_Value='b0;
     
 
 
-    REG_File #(
+    Multi_REG_File #(
         .data_Width ('d1 ),
         .RST_Value  ('b0  )
     )
@@ -119,7 +121,7 @@ assign Default_Value='b0;
     );
     
 
-    Counter #(
+    Multi_Counter #(
         .Data_Width    (Data_Width    ),
         .Counter_Width (Counter_Width )
     )

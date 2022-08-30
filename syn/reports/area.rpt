@@ -3,29 +3,29 @@
 Report : area
 Design : Design_Top
 Version: K-2015.06
-Date   : Thu Aug 25 03:45:02 2022
+Date   : Wed Aug 31 03:46:29 2022
 ****************************************
 
 Library(s) Used:
 
-    scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (File: /mnt/hgfs/Courses/System/UART/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db)
+    scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (File: /mnt/hgfs/Digital/Courses/System/System/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db)
 
-Number of ports:                          685
-Number of nets:                          2000
-Number of cells:                         1319
-Number of combinational cells:           1031
-Number of sequential cells:               242
+Number of ports:                          862
+Number of nets:                          2163
+Number of cells:                         1345
+Number of combinational cells:           1021
+Number of sequential cells:               270
 Number of macros/black boxes:               0
-Number of buf/inv:                        180
+Number of buf/inv:                        190
 Number of references:                      20
 
-Combinational area:               9953.705459
-Buf/Inv area:                      682.486015
-Noncombinational area:            5968.222326
+Combinational area:               9174.730073
+Buf/Inv area:                      723.670516
+Noncombinational area:            6770.731716
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                 15921.927785
+Total cell area:                 15945.461789
 Total area:                 undefined
 
 Hierarchical area distribution
@@ -36,13 +36,23 @@ Hierarchical area distribution
 Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
                                   Total       Total    national   national   boxes   Design
 --------------------------------  ----------  -------  ---------  ---------  ------  -----------------------------------------------------------------------
-Design_Top                        15921.9278    100.0     8.2369     0.0000  0.0000  Design_Top
-u_ALU                              5497.5424     34.5  1001.3717   440.0858  0.0000  ALU_00000008_00000010_0000000e_00000004
-u_ALU/add_55                        231.8099      1.5   231.8099     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW01_add_0
-u_ALU/div_67                       1437.9274      9.0  1437.9274     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0
-u_ALU/mult_63                      2120.4134     13.3  1914.4909     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW02_mult_0
-u_ALU/mult_63/FS_1                  205.9225      1.3   205.9225     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW01_add_1
-u_ALU/sub_59                        265.9342      1.7   265.9342     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW01_sub_0
+Design_Top                        15945.4618    100.0     8.2369     0.0000  0.0000  Design_Top
+u_ALU                              5521.0764     34.6  1040.2028   440.0858  0.0000  ALU_00000008_00000010_0000000e_00000004
+u_ALU/add_57                        231.8099      1.5   231.8099     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW01_add_0
+u_ALU/div_71                       1437.9274      9.0  1437.9274     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0
+u_ALU/sub_61                        265.9342      1.7   265.9342     0.0000  0.0000  ALU_00000008_00000010_0000000e_00000004_DW01_sub_0
+u_ALU/u_Booth_Multi                2105.1163     13.2     8.2369     0.0000  0.0000  Booth_Multi_00000008_00000003
+u_ALU/u_Booth_Multi/SC              144.7341      0.9    67.0719    77.6622  0.0000  Multi_Counter_00000008_00000003
+u_ALU/u_Booth_Multi/u_AC            330.6527      2.1   123.5535   207.0992  0.0000  Multi_REG_File_00000008_2
+u_ALU/u_Booth_Multi/u_ALU           695.4297      4.4   220.0429     0.0000  0.0000  Multi_ALU_00000008
+u_ALU/u_Booth_Multi/u_ALU/add_30    222.3963      1.4   222.3963     0.0000  0.0000  Multi_ALU_00000008_DW01_add_0
+u_ALU/u_Booth_Multi/u_ALU/sub_25    252.9905      1.6   252.9905     0.0000  0.0000  Multi_ALU_00000008_DW01_sub_0
+u_ALU/u_Booth_Multi/u_Control_Unit
+                                    208.2759      1.3   130.6137    77.6622  0.0000  Control_Unit
+u_ALU/u_Booth_Multi/u_Multiplicand
+                                    330.6527      2.1   123.5535   207.0992  0.0000  Multi_REG_File_00000008_1
+u_ALU/u_Booth_Multi/u_Q             337.7129      2.1   130.6137   207.0992  0.0000  Multi_REG_File_00000008_0
+u_ALU/u_Booth_Multi/u_REG_File       49.4214      0.3    23.5340    25.8874  0.0000  Multi_REG_File_00000001_00000000
 u_Busy_Syn                           51.7748      0.3     0.0000    51.7748  0.0000  Multi_Flop_Synchronizer
 u_Clock_Divider                     396.5479      2.5   238.8701   157.6778  0.0000  Clock_Divider
 u_Clock_Gating                       21.1806      0.1     5.8835    15.2971  0.0000  Clock_Gating
@@ -61,7 +71,7 @@ u_MUX2_UART_RST                      11.7670      0.1    11.7670     0.0000  0.0
 u_REF_CLK_RST_SYN                    51.7748      0.3     0.0000     0.0000  0.0000  RST_Sync_1
 u_REF_CLK_RST_SYN/u_Multi_Flop_Synchronizer
                                      51.7748      0.3     0.0000    51.7748  0.0000  Multi_Flop_Synchronizer_NUM_STAGES2_3
-u_REG_File                         5748.1795     36.1  2434.5924  3313.5872  0.0000  REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008
+u_REG_File                         5748.1795     36.0  2434.5924  3313.5872  0.0000  REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008
 u_RST_Sync                           51.7748      0.3     0.0000     0.0000  0.0000  RST_Sync_0
 u_RST_Sync/u_Multi_Flop_Synchronizer
                                      51.7748      0.3     0.0000    51.7748  0.0000  Multi_Flop_Synchronizer_NUM_STAGES2_2
@@ -96,6 +106,6 @@ u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Counter
 u_UART/u_UART_TX_Top1/u_Serializer_Top/u_Serializer
                                     325.9459      2.0   118.8467   207.0992  0.0000  Serializer
 --------------------------------  ----------  -------  ---------  ---------  ------  -----------------------------------------------------------------------
-Total                                                  9953.7055  5968.2223  0.0000
+Total                                                  9174.7301  6770.7317  0.0000
 
 1

@@ -1,6 +1,6 @@
 module ALU #(
     parameter Data_width='d8,Output_Data_width='d16,Num_Of_instructions='d14,
-    Decoder_Size=$clog2(Num_Of_instructions)
+    Decoder_Size=$clog2(Num_Of_instructions),Counter_Width=$clog2(Data_width)
 ) (
     input  wire                      clk      ,
     input  wire                      rst      ,
@@ -15,6 +15,7 @@ module ALU #(
 
 reg [Output_Data_width-1:0] ALU_Out_Comb;
 reg Out_Valid_Comb;
+reg Mutli_Start;
 
 localparam Add ='d0, 
            Sub ='d1,
@@ -47,6 +48,7 @@ end
 always @(*) begin
     Out_Valid_Comb='b0;
     ALU_Out_Comb='b0;
+    Mutli_Start='b0;
 
     if (Enable) begin
     Out_Valid_Comb='b1;
@@ -60,7 +62,9 @@ always @(*) begin
         end
 
         Multi:begin
-            ALU_Out_Comb=Operand_A*Operand_B; //TODO Find another algo
+            Mutli_Start='b1;
+
+            //ALU_Out_Comb=Operand_A*Operand_B; //TODO Find another algo
         end
 
         Div:begin
@@ -132,5 +136,22 @@ end else begin
     ALU_Out_Comb='b0;
 end
 end
+
+            Booth_Multi #(
+                .Data_Width    (Data_width    ),
+                .Counter_Width (Counter_Width )
+            )
+            u_Booth_Multi(
+            	.clk                (clk                ),
+                .rst                (rst                ),
+                .Multi_En           (Mutli_Start),
+                .Multiplicand       (Operand_A       ),
+                .Multiplier         (Operand_B         ),
+                .Multip_Finsh       (Out_Valid       ),
+                .Multiplication_Out (ALU_Out )
+            );
+            
     
 endmodule
+
+

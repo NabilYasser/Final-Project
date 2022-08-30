@@ -1,4 +1,4 @@
-module Counter #(
+module Multi_Counter #(
     parameter Data_Width='d4,Counter_Width=$clog2(Data_Width)
 ) (
     input  wire     clk,

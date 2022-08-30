@@ -6,7 +6,7 @@ Report : timing
         -max_paths 10
 Design : Design_Top
 Version: K-2015.06
-Date   : Thu Aug 25 03:45:02 2022
+Date   : Wed Aug 31 03:46:30 2022
 ****************************************
 
 Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
@@ -25,9 +25,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -65,9 +65,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -105,9 +105,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -145,9 +145,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -185,9 +185,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -225,9 +225,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -265,9 +265,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -305,9 +305,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -345,9 +345,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -385,9 +385,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -1368,60 +1368,61 @@ Wire Load Model Mode: top
                                                           0.00       0.29 f
   u_ALU/Operand_B[6] (ALU_00000008_00000010_0000000e_00000004)
                                                           0.00       0.29 f
-  u_ALU/U4/Y (CLKBUFX2M)                                  0.17       0.45 f
-  u_ALU/div_67/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+  u_ALU/U93/Y (CLKBUFX2M)                                 0.17       0.45 f
+  u_ALU/div_71/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
                                                           0.00       0.45 f
-  u_ALU/div_67/U71/Y (NOR2X1M)                            0.13       0.58 r
-  u_ALU/div_67/U68/Y (AND3X1M)                            0.12       0.70 r
-  u_ALU/div_67/U66/Y (AND2X1M)                            0.10       0.80 r
-  u_ALU/div_67/U63/Y (AND4X1M)                            0.15       0.95 r
-  u_ALU/div_67/U41/Y (CLKMX2X2M)                          0.14       1.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.36 f
-  u_ALU/div_67/U64/Y (AND3X1M)                            0.20       1.55 f
-  u_ALU/div_67/U47/Y (CLKMX2X2M)                          0.15       1.70 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.01 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.15 r
-  u_ALU/div_67/U65/Y (AND2X1M)                            0.16       2.30 r
-  u_ALU/div_67/U52/Y (CLKMX2X2M)                          0.16       2.46 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.74 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
-  u_ALU/div_67/U67/Y (AND2X1M)                            0.17       3.28 f
-  u_ALU/div_67/U56/Y (CLKMX2X2M)                          0.15       3.43 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.71 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.90 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.28 f
-  u_ALU/div_67/U69/Y (AND3X1M)                            0.24       4.52 f
-  u_ALU/div_67/U59/Y (CLKMX2X2M)                          0.15       4.67 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_1/CO (ADDFX2M)      0.28       4.95 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_2/CO (ADDFX2M)      0.19       5.14 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_3/CO (ADDFX2M)      0.19       5.34 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_4/CO (ADDFX2M)      0.19       5.53 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_5/CO (ADDFX2M)      0.18       5.71 f
-  u_ALU/div_67/U70/Y (AND2X1M)                            0.20       5.91 f
-  u_ALU/div_67/U61/Y (CLKMX2X2M)                          0.16       6.07 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_1/CO (ADDFX2M)      0.28       6.35 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_2/CO (ADDFX2M)      0.19       6.54 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_3/CO (ADDFX2M)      0.19       6.73 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_4/CO (ADDFX2M)      0.19       6.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_5/CO (ADDFX2M)      0.19       7.12 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_6/CO (ADDFX2M)      0.18       7.30 f
-  u_ALU/div_67/U72/Y (AND2X1M)                            0.21       7.52 f
-  u_ALU/div_67/U62/Y (CLKMX2X2M)                          0.15       7.67 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_1/CO (ADDFX2M)      0.27       7.94 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_2/CO (ADDFX2M)      0.19       8.14 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_3/CO (ADDFX2M)      0.19       8.33 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_4/CO (ADDFX2M)      0.19       8.52 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_5/CO (ADDFX2M)      0.19       8.72 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_6/CO (ADDFX2M)      0.19       8.91 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_0_7/CO (ADDFX2M)      0.19       9.10 f
-  u_ALU/div_67/quotient[0] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
-                                                          0.00       9.10 f
-  u_ALU/U45/Y (AOI222X1M)                                 0.27       9.36 r
-  u_ALU/U42/Y (AOI31X2M)                                  0.07       9.44 f
-  u_ALU/ALU_Out_reg[0]/D (DFFRQX2M)                       0.00       9.44 f
-  data arrival time                                                  9.44
+  u_ALU/div_71/U71/Y (NOR2X1M)                            0.12       0.58 r
+  u_ALU/div_71/U68/Y (AND3X1M)                            0.12       0.70 r
+  u_ALU/div_71/U66/Y (AND2X1M)                            0.10       0.79 r
+  u_ALU/div_71/U63/Y (AND4X1M)                            0.15       0.94 r
+  u_ALU/div_71/U41/Y (CLKMX2X2M)                          0.14       1.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.35 f
+  u_ALU/div_71/U64/Y (AND3X1M)                            0.20       1.54 f
+  u_ALU/div_71/U47/Y (CLKMX2X2M)                          0.15       1.69 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.00 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.14 r
+  u_ALU/div_71/U65/Y (AND2X1M)                            0.16       2.30 r
+  u_ALU/div_71/U52/Y (CLKMX2X2M)                          0.16       2.45 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.73 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.92 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
+  u_ALU/div_71/U67/Y (AND2X1M)                            0.17       3.28 f
+  u_ALU/div_71/U56/Y (CLKMX2X2M)                          0.15       3.42 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.70 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.89 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.27 f
+  u_ALU/div_71/U69/Y (AND3X1M)                            0.24       4.51 f
+  u_ALU/div_71/U59/Y (CLKMX2X2M)                          0.15       4.67 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_1/CO (ADDFX2M)      0.28       4.94 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_2/CO (ADDFX2M)      0.19       5.14 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_3/CO (ADDFX2M)      0.19       5.33 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_4/CO (ADDFX2M)      0.19       5.52 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_5/CO (ADDFX2M)      0.18       5.71 f
+  u_ALU/div_71/U70/Y (AND2X1M)                            0.20       5.91 f
+  u_ALU/div_71/U61/Y (CLKMX2X2M)                          0.16       6.06 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_1/CO (ADDFX2M)      0.28       6.34 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_2/CO (ADDFX2M)      0.19       6.53 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_3/CO (ADDFX2M)      0.19       6.73 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_4/CO (ADDFX2M)      0.19       6.92 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_5/CO (ADDFX2M)      0.19       7.12 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_6/CO (ADDFX2M)      0.18       7.30 f
+  u_ALU/div_71/U72/Y (AND2X1M)                            0.21       7.51 f
+  u_ALU/div_71/U62/Y (CLKMX2X2M)                          0.15       7.66 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_1/CO (ADDFX2M)      0.27       7.93 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_2/CO (ADDFX2M)      0.19       8.13 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_3/CO (ADDFX2M)      0.19       8.32 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_4/CO (ADDFX2M)      0.19       8.52 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_5/CO (ADDFX2M)      0.19       8.71 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_6/CO (ADDFX2M)      0.19       8.91 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_0_7/CO (ADDFX2M)      0.18       9.09 f
+  u_ALU/div_71/quotient[0] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+                                                          0.00       9.09 f
+  u_ALU/U38/Y (OAI2BB2X1M)                                0.15       9.23 f
+  u_ALU/U91/Y (AOI221XLM)                                 0.21       9.44 r
+  u_ALU/U88/Y (AOI31X2M)                                  0.07       9.51 f
+  u_ALU/ALU_Out_reg[0]/D (DFFRQX2M)                       0.00       9.51 f
+  data arrival time                                                  9.51
 
   clock GATED_CLOCK (rise edge)                          20.00      20.00
   clock network delay (ideal)                             0.00      20.00
@@ -1430,9 +1431,9 @@ Wire Load Model Mode: top
   data required time                                                19.90
   --------------------------------------------------------------------------
   data required time                                                19.90
-  data arrival time                                                 -9.44
+  data arrival time                                                 -9.51
   --------------------------------------------------------------------------
-  slack (MET)                                                       10.46
+  slack (MET)                                                       10.38
 
 
   Startpoint: u_REG_File/Memory_reg[1][6]
@@ -1452,52 +1453,52 @@ Wire Load Model Mode: top
                                                           0.00       0.29 f
   u_ALU/Operand_B[6] (ALU_00000008_00000010_0000000e_00000004)
                                                           0.00       0.29 f
-  u_ALU/U4/Y (CLKBUFX2M)                                  0.17       0.45 f
-  u_ALU/div_67/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+  u_ALU/U93/Y (CLKBUFX2M)                                 0.17       0.45 f
+  u_ALU/div_71/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
                                                           0.00       0.45 f
-  u_ALU/div_67/U71/Y (NOR2X1M)                            0.13       0.58 r
-  u_ALU/div_67/U68/Y (AND3X1M)                            0.12       0.70 r
-  u_ALU/div_67/U66/Y (AND2X1M)                            0.10       0.80 r
-  u_ALU/div_67/U63/Y (AND4X1M)                            0.15       0.95 r
-  u_ALU/div_67/U41/Y (CLKMX2X2M)                          0.14       1.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.36 f
-  u_ALU/div_67/U64/Y (AND3X1M)                            0.20       1.55 f
-  u_ALU/div_67/U47/Y (CLKMX2X2M)                          0.15       1.70 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.01 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.15 r
-  u_ALU/div_67/U65/Y (AND2X1M)                            0.16       2.30 r
-  u_ALU/div_67/U52/Y (CLKMX2X2M)                          0.16       2.46 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.74 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
-  u_ALU/div_67/U67/Y (AND2X1M)                            0.17       3.28 f
-  u_ALU/div_67/U56/Y (CLKMX2X2M)                          0.15       3.43 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.71 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.90 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.28 f
-  u_ALU/div_67/U69/Y (AND3X1M)                            0.24       4.52 f
-  u_ALU/div_67/U59/Y (CLKMX2X2M)                          0.15       4.67 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_1/CO (ADDFX2M)      0.28       4.95 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_2/CO (ADDFX2M)      0.19       5.14 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_3/CO (ADDFX2M)      0.19       5.34 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_4/CO (ADDFX2M)      0.19       5.53 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_5/CO (ADDFX2M)      0.18       5.71 f
-  u_ALU/div_67/U70/Y (AND2X1M)                            0.20       5.91 f
-  u_ALU/div_67/U61/Y (CLKMX2X2M)                          0.16       6.07 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_1/CO (ADDFX2M)      0.28       6.35 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_2/CO (ADDFX2M)      0.19       6.54 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_3/CO (ADDFX2M)      0.19       6.73 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_4/CO (ADDFX2M)      0.19       6.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_5/CO (ADDFX2M)      0.19       7.12 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_1_6/CO (ADDFX2M)      0.18       7.30 f
-  u_ALU/div_67/U72/Y (AND2X1M)                            0.21       7.52 f
-  u_ALU/div_67/quotient[1] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
-                                                          0.00       7.52 f
-  u_ALU/U49/Y (AOI222X1M)                                 0.29       7.81 r
-  u_ALU/U46/Y (AOI31X2M)                                  0.07       7.88 f
-  u_ALU/ALU_Out_reg[1]/D (DFFRQX2M)                       0.00       7.88 f
-  data arrival time                                                  7.88
+  u_ALU/div_71/U71/Y (NOR2X1M)                            0.12       0.58 r
+  u_ALU/div_71/U68/Y (AND3X1M)                            0.12       0.70 r
+  u_ALU/div_71/U66/Y (AND2X1M)                            0.10       0.79 r
+  u_ALU/div_71/U63/Y (AND4X1M)                            0.15       0.94 r
+  u_ALU/div_71/U41/Y (CLKMX2X2M)                          0.14       1.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.35 f
+  u_ALU/div_71/U64/Y (AND3X1M)                            0.20       1.54 f
+  u_ALU/div_71/U47/Y (CLKMX2X2M)                          0.15       1.69 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.00 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.14 r
+  u_ALU/div_71/U65/Y (AND2X1M)                            0.16       2.30 r
+  u_ALU/div_71/U52/Y (CLKMX2X2M)                          0.16       2.45 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.73 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.92 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
+  u_ALU/div_71/U67/Y (AND2X1M)                            0.17       3.28 f
+  u_ALU/div_71/U56/Y (CLKMX2X2M)                          0.15       3.42 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.70 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.89 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.27 f
+  u_ALU/div_71/U69/Y (AND3X1M)                            0.24       4.51 f
+  u_ALU/div_71/U59/Y (CLKMX2X2M)                          0.15       4.67 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_1/CO (ADDFX2M)      0.28       4.94 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_2/CO (ADDFX2M)      0.19       5.14 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_3/CO (ADDFX2M)      0.19       5.33 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_4/CO (ADDFX2M)      0.19       5.52 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_5/CO (ADDFX2M)      0.18       5.71 f
+  u_ALU/div_71/U70/Y (AND2X1M)                            0.20       5.91 f
+  u_ALU/div_71/U61/Y (CLKMX2X2M)                          0.16       6.06 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_1/CO (ADDFX2M)      0.28       6.34 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_2/CO (ADDFX2M)      0.19       6.53 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_3/CO (ADDFX2M)      0.19       6.73 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_4/CO (ADDFX2M)      0.19       6.92 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_5/CO (ADDFX2M)      0.19       7.12 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_1_6/CO (ADDFX2M)      0.18       7.30 f
+  u_ALU/div_71/U72/Y (AND2X1M)                            0.21       7.51 f
+  u_ALU/div_71/quotient[1] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+                                                          0.00       7.51 f
+  u_ALU/U42/Y (AOI22X1M)                                  0.16       7.67 r
+  u_ALU/U39/Y (AOI31X2M)                                  0.06       7.73 f
+  u_ALU/ALU_Out_reg[1]/D (DFFRQX2M)                       0.00       7.73 f
+  data arrival time                                                  7.73
 
   clock GATED_CLOCK (rise edge)                          20.00      20.00
   clock network delay (ideal)                             0.00      20.00
@@ -1506,9 +1507,9 @@ Wire Load Model Mode: top
   data required time                                                19.90
   --------------------------------------------------------------------------
   data required time                                                19.90
-  data arrival time                                                 -7.88
+  data arrival time                                                 -7.73
   --------------------------------------------------------------------------
-  slack (MET)                                                       12.02
+  slack (MET)                                                       12.16
 
 
   Startpoint: u_REG_File/Memory_reg[1][6]
@@ -1528,44 +1529,44 @@ Wire Load Model Mode: top
                                                           0.00       0.29 f
   u_ALU/Operand_B[6] (ALU_00000008_00000010_0000000e_00000004)
                                                           0.00       0.29 f
-  u_ALU/U4/Y (CLKBUFX2M)                                  0.17       0.45 f
-  u_ALU/div_67/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+  u_ALU/U93/Y (CLKBUFX2M)                                 0.17       0.45 f
+  u_ALU/div_71/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
                                                           0.00       0.45 f
-  u_ALU/div_67/U71/Y (NOR2X1M)                            0.13       0.58 r
-  u_ALU/div_67/U68/Y (AND3X1M)                            0.12       0.70 r
-  u_ALU/div_67/U66/Y (AND2X1M)                            0.10       0.80 r
-  u_ALU/div_67/U63/Y (AND4X1M)                            0.15       0.95 r
-  u_ALU/div_67/U41/Y (CLKMX2X2M)                          0.14       1.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.36 f
-  u_ALU/div_67/U64/Y (AND3X1M)                            0.20       1.55 f
-  u_ALU/div_67/U47/Y (CLKMX2X2M)                          0.15       1.70 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.01 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.15 r
-  u_ALU/div_67/U65/Y (AND2X1M)                            0.16       2.30 r
-  u_ALU/div_67/U52/Y (CLKMX2X2M)                          0.16       2.46 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.74 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
-  u_ALU/div_67/U67/Y (AND2X1M)                            0.17       3.28 f
-  u_ALU/div_67/U56/Y (CLKMX2X2M)                          0.15       3.43 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.71 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.90 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.28 f
-  u_ALU/div_67/U69/Y (AND3X1M)                            0.24       4.52 f
-  u_ALU/div_67/U59/Y (CLKMX2X2M)                          0.15       4.67 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_1/CO (ADDFX2M)      0.28       4.95 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_2/CO (ADDFX2M)      0.19       5.14 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_3/CO (ADDFX2M)      0.19       5.34 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_4/CO (ADDFX2M)      0.19       5.53 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_2_5/CO (ADDFX2M)      0.18       5.71 f
-  u_ALU/div_67/U70/Y (AND2X1M)                            0.20       5.91 f
-  u_ALU/div_67/quotient[2] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+  u_ALU/div_71/U71/Y (NOR2X1M)                            0.12       0.58 r
+  u_ALU/div_71/U68/Y (AND3X1M)                            0.12       0.70 r
+  u_ALU/div_71/U66/Y (AND2X1M)                            0.10       0.79 r
+  u_ALU/div_71/U63/Y (AND4X1M)                            0.15       0.94 r
+  u_ALU/div_71/U41/Y (CLKMX2X2M)                          0.14       1.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.35 f
+  u_ALU/div_71/U64/Y (AND3X1M)                            0.20       1.54 f
+  u_ALU/div_71/U47/Y (CLKMX2X2M)                          0.15       1.69 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.00 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.14 r
+  u_ALU/div_71/U65/Y (AND2X1M)                            0.16       2.30 r
+  u_ALU/div_71/U52/Y (CLKMX2X2M)                          0.16       2.45 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.73 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.92 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
+  u_ALU/div_71/U67/Y (AND2X1M)                            0.17       3.28 f
+  u_ALU/div_71/U56/Y (CLKMX2X2M)                          0.15       3.42 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.70 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.89 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.27 f
+  u_ALU/div_71/U69/Y (AND3X1M)                            0.24       4.51 f
+  u_ALU/div_71/U59/Y (CLKMX2X2M)                          0.15       4.67 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_1/CO (ADDFX2M)      0.28       4.94 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_2/CO (ADDFX2M)      0.19       5.14 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_3/CO (ADDFX2M)      0.19       5.33 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_4/CO (ADDFX2M)      0.19       5.52 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_2_5/CO (ADDFX2M)      0.18       5.71 f
+  u_ALU/div_71/U70/Y (AND2X1M)                            0.20       5.91 f
+  u_ALU/div_71/quotient[2] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
                                                           0.00       5.91 f
-  u_ALU/U53/Y (AOI222X1M)                                 0.29       6.20 r
-  u_ALU/U50/Y (AOI31X2M)                                  0.07       6.27 f
-  u_ALU/ALU_Out_reg[2]/D (DFFRQX2M)                       0.00       6.27 f
-  data arrival time                                                  6.27
+  u_ALU/U46/Y (AOI22X1M)                                  0.15       6.06 r
+  u_ALU/U43/Y (AOI31X2M)                                  0.06       6.12 f
+  u_ALU/ALU_Out_reg[2]/D (DFFRQX2M)                       0.00       6.12 f
+  data arrival time                                                  6.12
 
   clock GATED_CLOCK (rise edge)                          20.00      20.00
   clock network delay (ideal)                             0.00      20.00
@@ -1574,9 +1575,9 @@ Wire Load Model Mode: top
   data required time                                                19.90
   --------------------------------------------------------------------------
   data required time                                                19.90
-  data arrival time                                                 -6.27
+  data arrival time                                                 -6.12
   --------------------------------------------------------------------------
-  slack (MET)                                                       13.63
+  slack (MET)                                                       13.77
 
 
   Startpoint: u_REG_File/Memory_reg[1][6]
@@ -1596,37 +1597,37 @@ Wire Load Model Mode: top
                                                           0.00       0.29 f
   u_ALU/Operand_B[6] (ALU_00000008_00000010_0000000e_00000004)
                                                           0.00       0.29 f
-  u_ALU/U4/Y (CLKBUFX2M)                                  0.17       0.45 f
-  u_ALU/div_67/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+  u_ALU/U93/Y (CLKBUFX2M)                                 0.17       0.45 f
+  u_ALU/div_71/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
                                                           0.00       0.45 f
-  u_ALU/div_67/U71/Y (NOR2X1M)                            0.13       0.58 r
-  u_ALU/div_67/U68/Y (AND3X1M)                            0.12       0.70 r
-  u_ALU/div_67/U66/Y (AND2X1M)                            0.10       0.80 r
-  u_ALU/div_67/U63/Y (AND4X1M)                            0.15       0.95 r
-  u_ALU/div_67/U41/Y (CLKMX2X2M)                          0.14       1.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.36 f
-  u_ALU/div_67/U64/Y (AND3X1M)                            0.20       1.55 f
-  u_ALU/div_67/U47/Y (CLKMX2X2M)                          0.15       1.70 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.01 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.15 r
-  u_ALU/div_67/U65/Y (AND2X1M)                            0.16       2.30 r
-  u_ALU/div_67/U52/Y (CLKMX2X2M)                          0.16       2.46 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.74 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
-  u_ALU/div_67/U67/Y (AND2X1M)                            0.17       3.28 f
-  u_ALU/div_67/U56/Y (CLKMX2X2M)                          0.15       3.43 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.71 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.90 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.28 f
-  u_ALU/div_67/U69/Y (AND3X1M)                            0.24       4.52 f
-  u_ALU/div_67/quotient[3] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
-                                                          0.00       4.52 f
-  u_ALU/U57/Y (AOI222X1M)                                 0.28       4.80 r
-  u_ALU/U54/Y (AOI31X2M)                                  0.07       4.87 f
-  u_ALU/ALU_Out_reg[3]/D (DFFRQX2M)                       0.00       4.87 f
-  data arrival time                                                  4.87
+  u_ALU/div_71/U71/Y (NOR2X1M)                            0.12       0.58 r
+  u_ALU/div_71/U68/Y (AND3X1M)                            0.12       0.70 r
+  u_ALU/div_71/U66/Y (AND2X1M)                            0.10       0.79 r
+  u_ALU/div_71/U63/Y (AND4X1M)                            0.15       0.94 r
+  u_ALU/div_71/U41/Y (CLKMX2X2M)                          0.14       1.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.35 f
+  u_ALU/div_71/U64/Y (AND3X1M)                            0.20       1.54 f
+  u_ALU/div_71/U47/Y (CLKMX2X2M)                          0.15       1.69 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.00 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.14 r
+  u_ALU/div_71/U65/Y (AND2X1M)                            0.16       2.30 r
+  u_ALU/div_71/U52/Y (CLKMX2X2M)                          0.16       2.45 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.73 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.92 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
+  u_ALU/div_71/U67/Y (AND2X1M)                            0.17       3.28 f
+  u_ALU/div_71/U56/Y (CLKMX2X2M)                          0.15       3.42 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_1/CO (ADDFX2M)      0.28       3.70 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_2/CO (ADDFX2M)      0.19       3.89 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_3/CO (ADDFX2M)      0.19       4.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_3_4/CO (ADDFX2M)      0.18       4.27 f
+  u_ALU/div_71/U69/Y (AND3X1M)                            0.24       4.51 f
+  u_ALU/div_71/quotient[3] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+                                                          0.00       4.51 f
+  u_ALU/U50/Y (AOI22X1M)                                  0.15       4.66 r
+  u_ALU/U47/Y (AOI31X2M)                                  0.06       4.72 f
+  u_ALU/ALU_Out_reg[3]/D (DFFRQX2M)                       0.00       4.72 f
+  data arrival time                                                  4.72
 
   clock GATED_CLOCK (rise edge)                          20.00      20.00
   clock network delay (ideal)                             0.00      20.00
@@ -1635,240 +1636,9 @@ Wire Load Model Mode: top
   data required time                                                19.90
   --------------------------------------------------------------------------
   data required time                                                19.90
-  data arrival time                                                 -4.87
+  data arrival time                                                 -4.72
   --------------------------------------------------------------------------
-  slack (MET)                                                       15.02
-
-
-  Startpoint: u_REG_File/Memory_reg[0][0]
-              (rising edge-triggered flip-flop clocked by CLK1)
-  Endpoint: u_ALU/ALU_Out_reg[15]
-            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
-  Path Group: GATED_CLOCK
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_REG_File/Memory_reg[0][0]/CK (DFFRQX1M)               0.00       0.00 r
-  u_REG_File/Memory_reg[0][0]/Q (DFFRQX1M)                0.27       0.27 r
-  u_REG_File/REG0_ALU_A[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
-                                                          0.00       0.27 r
-  u_ALU/Operand_A[0] (ALU_00000008_00000010_0000000e_00000004)
-                                                          0.00       0.27 r
-  u_ALU/U99/Y (CLKBUFX2M)                                 0.18       0.45 r
-  u_ALU/mult_63/A[0] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       0.45 r
-  u_ALU/mult_63/U37/Y (INVX2M)                            0.09       0.54 f
-  u_ALU/mult_63/U114/Y (NOR2X1M)                          0.12       0.65 r
-  u_ALU/mult_63/U6/Y (AND2X2M)                            0.10       0.75 r
-  u_ALU/mult_63/S2_2_2/CO (ADDFX2M)                       0.34       1.09 r
-  u_ALU/mult_63/S2_3_2/CO (ADDFX2M)                       0.35       1.43 r
-  u_ALU/mult_63/S2_4_2/CO (ADDFX2M)                       0.35       1.78 r
-  u_ALU/mult_63/S2_5_2/CO (ADDFX2M)                       0.35       2.13 r
-  u_ALU/mult_63/S2_6_2/CO (ADDFX2M)                       0.35       2.47 r
-  u_ALU/mult_63/S4_2/S (ADDFX2M)                          0.35       2.83 f
-  u_ALU/mult_63/U11/Y (CLKXOR2X2M)                        0.19       3.02 r
-  u_ALU/mult_63/FS_1/A[7] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.02 r
-  u_ALU/mult_63/FS_1/U3/Y (NAND2X2M)                      0.04       3.06 f
-  u_ALU/mult_63/FS_1/U23/Y (OA21X1M)                      0.22       3.28 f
-  u_ALU/mult_63/FS_1/U20/Y (AOI2BB1X1M)                   0.16       3.44 f
-  u_ALU/mult_63/FS_1/U18/Y (OA21X1M)                      0.24       3.68 f
-  u_ALU/mult_63/FS_1/U13/Y (OAI21BX1M)                    0.16       3.85 r
-  u_ALU/mult_63/FS_1/U11/Y (OAI21X1M)                     0.07       3.92 f
-  u_ALU/mult_63/FS_1/U2/Y (AOI21BX2M)                     0.11       4.03 f
-  u_ALU/mult_63/FS_1/U4/Y (XNOR2X2M)                      0.08       4.10 r
-  u_ALU/mult_63/FS_1/SUM[13] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       4.10 r
-  u_ALU/mult_63/PRODUCT[15] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       4.10 r
-  u_ALU/U12/Y (OAI2BB1X2M)                                0.09       4.19 r
-  u_ALU/ALU_Out_reg[15]/D (DFFRQX2M)                      0.00       4.19 r
-  data arrival time                                                  4.19
-
-  clock GATED_CLOCK (rise edge)                          20.00      20.00
-  clock network delay (ideal)                             0.00      20.00
-  u_ALU/ALU_Out_reg[15]/CK (DFFRQX2M)                     0.00      20.00 r
-  library setup time                                     -0.16      19.84
-  data required time                                                19.84
-  --------------------------------------------------------------------------
-  data required time                                                19.84
-  data arrival time                                                 -4.19
-  --------------------------------------------------------------------------
-  slack (MET)                                                       15.65
-
-
-  Startpoint: u_REG_File/Memory_reg[0][0]
-              (rising edge-triggered flip-flop clocked by CLK1)
-  Endpoint: u_ALU/ALU_Out_reg[14]
-            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
-  Path Group: GATED_CLOCK
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_REG_File/Memory_reg[0][0]/CK (DFFRQX1M)               0.00       0.00 r
-  u_REG_File/Memory_reg[0][0]/Q (DFFRQX1M)                0.27       0.27 r
-  u_REG_File/REG0_ALU_A[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
-                                                          0.00       0.27 r
-  u_ALU/Operand_A[0] (ALU_00000008_00000010_0000000e_00000004)
-                                                          0.00       0.27 r
-  u_ALU/U99/Y (CLKBUFX2M)                                 0.18       0.45 r
-  u_ALU/mult_63/A[0] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       0.45 r
-  u_ALU/mult_63/U37/Y (INVX2M)                            0.09       0.54 f
-  u_ALU/mult_63/U114/Y (NOR2X1M)                          0.12       0.65 r
-  u_ALU/mult_63/U6/Y (AND2X2M)                            0.10       0.75 r
-  u_ALU/mult_63/S2_2_2/CO (ADDFX2M)                       0.34       1.09 r
-  u_ALU/mult_63/S2_3_2/CO (ADDFX2M)                       0.35       1.43 r
-  u_ALU/mult_63/S2_4_2/CO (ADDFX2M)                       0.35       1.78 r
-  u_ALU/mult_63/S2_5_2/CO (ADDFX2M)                       0.35       2.13 r
-  u_ALU/mult_63/S2_6_2/CO (ADDFX2M)                       0.35       2.47 r
-  u_ALU/mult_63/S4_2/S (ADDFX2M)                          0.35       2.83 f
-  u_ALU/mult_63/U11/Y (CLKXOR2X2M)                        0.19       3.02 r
-  u_ALU/mult_63/FS_1/A[7] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.02 r
-  u_ALU/mult_63/FS_1/U3/Y (NAND2X2M)                      0.04       3.06 f
-  u_ALU/mult_63/FS_1/U23/Y (OA21X1M)                      0.22       3.28 f
-  u_ALU/mult_63/FS_1/U20/Y (AOI2BB1X1M)                   0.16       3.44 f
-  u_ALU/mult_63/FS_1/U18/Y (OA21X1M)                      0.24       3.68 f
-  u_ALU/mult_63/FS_1/U13/Y (OAI21BX1M)                    0.16       3.85 r
-  u_ALU/mult_63/FS_1/U12/Y (XOR3XLM)                      0.13       3.98 f
-  u_ALU/mult_63/FS_1/SUM[12] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.98 f
-  u_ALU/mult_63/PRODUCT[14] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       3.98 f
-  u_ALU/U9/Y (OAI2BB1X2M)                                 0.12       4.10 f
-  u_ALU/ALU_Out_reg[14]/D (DFFRQX2M)                      0.00       4.10 f
-  data arrival time                                                  4.10
-
-  clock GATED_CLOCK (rise edge)                          20.00      20.00
-  clock network delay (ideal)                             0.00      20.00
-  u_ALU/ALU_Out_reg[14]/CK (DFFRQX2M)                     0.00      20.00 r
-  library setup time                                     -0.10      19.90
-  data required time                                                19.90
-  --------------------------------------------------------------------------
-  data required time                                                19.90
-  data arrival time                                                 -4.10
-  --------------------------------------------------------------------------
-  slack (MET)                                                       15.81
-
-
-  Startpoint: u_REG_File/Memory_reg[0][0]
-              (rising edge-triggered flip-flop clocked by CLK1)
-  Endpoint: u_ALU/ALU_Out_reg[13]
-            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
-  Path Group: GATED_CLOCK
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_REG_File/Memory_reg[0][0]/CK (DFFRQX1M)               0.00       0.00 r
-  u_REG_File/Memory_reg[0][0]/Q (DFFRQX1M)                0.27       0.27 r
-  u_REG_File/REG0_ALU_A[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
-                                                          0.00       0.27 r
-  u_ALU/Operand_A[0] (ALU_00000008_00000010_0000000e_00000004)
-                                                          0.00       0.27 r
-  u_ALU/U99/Y (CLKBUFX2M)                                 0.18       0.45 r
-  u_ALU/mult_63/A[0] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       0.45 r
-  u_ALU/mult_63/U37/Y (INVX2M)                            0.09       0.54 f
-  u_ALU/mult_63/U114/Y (NOR2X1M)                          0.12       0.65 r
-  u_ALU/mult_63/U6/Y (AND2X2M)                            0.10       0.75 r
-  u_ALU/mult_63/S2_2_2/CO (ADDFX2M)                       0.34       1.09 r
-  u_ALU/mult_63/S2_3_2/CO (ADDFX2M)                       0.35       1.43 r
-  u_ALU/mult_63/S2_4_2/CO (ADDFX2M)                       0.35       1.78 r
-  u_ALU/mult_63/S2_5_2/CO (ADDFX2M)                       0.35       2.13 r
-  u_ALU/mult_63/S2_6_2/CO (ADDFX2M)                       0.35       2.47 r
-  u_ALU/mult_63/S4_2/S (ADDFX2M)                          0.35       2.83 f
-  u_ALU/mult_63/U11/Y (CLKXOR2X2M)                        0.19       3.02 r
-  u_ALU/mult_63/FS_1/A[7] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.02 r
-  u_ALU/mult_63/FS_1/U3/Y (NAND2X2M)                      0.04       3.06 f
-  u_ALU/mult_63/FS_1/U23/Y (OA21X1M)                      0.22       3.28 f
-  u_ALU/mult_63/FS_1/U20/Y (AOI2BB1X1M)                   0.16       3.44 f
-  u_ALU/mult_63/FS_1/U18/Y (OA21X1M)                      0.24       3.68 f
-  u_ALU/mult_63/FS_1/U14/Y (XNOR2X1M)                     0.07       3.75 r
-  u_ALU/mult_63/FS_1/SUM[11] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.75 r
-  u_ALU/mult_63/PRODUCT[13] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       3.75 r
-  u_ALU/U11/Y (OAI2BB1X2M)                                0.09       3.83 r
-  u_ALU/ALU_Out_reg[13]/D (DFFRQX2M)                      0.00       3.83 r
-  data arrival time                                                  3.83
-
-  clock GATED_CLOCK (rise edge)                          20.00      20.00
-  clock network delay (ideal)                             0.00      20.00
-  u_ALU/ALU_Out_reg[13]/CK (DFFRQX2M)                     0.00      20.00 r
-  library setup time                                     -0.16      19.84
-  data required time                                                19.84
-  --------------------------------------------------------------------------
-  data required time                                                19.84
-  data arrival time                                                 -3.83
-  --------------------------------------------------------------------------
-  slack (MET)                                                       16.00
-
-
-  Startpoint: u_REG_File/Memory_reg[0][0]
-              (rising edge-triggered flip-flop clocked by CLK1)
-  Endpoint: u_ALU/ALU_Out_reg[12]
-            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
-  Path Group: GATED_CLOCK
-  Path Type: max
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock CLK1 (rise edge)                                  0.00       0.00
-  clock network delay (ideal)                             0.00       0.00
-  u_REG_File/Memory_reg[0][0]/CK (DFFRQX1M)               0.00       0.00 r
-  u_REG_File/Memory_reg[0][0]/Q (DFFRQX1M)                0.27       0.27 r
-  u_REG_File/REG0_ALU_A[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
-                                                          0.00       0.27 r
-  u_ALU/Operand_A[0] (ALU_00000008_00000010_0000000e_00000004)
-                                                          0.00       0.27 r
-  u_ALU/U99/Y (CLKBUFX2M)                                 0.18       0.45 r
-  u_ALU/mult_63/A[0] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       0.45 r
-  u_ALU/mult_63/U37/Y (INVX2M)                            0.09       0.54 f
-  u_ALU/mult_63/U114/Y (NOR2X1M)                          0.12       0.65 r
-  u_ALU/mult_63/U6/Y (AND2X2M)                            0.10       0.75 r
-  u_ALU/mult_63/S2_2_2/CO (ADDFX2M)                       0.34       1.09 r
-  u_ALU/mult_63/S2_3_2/CO (ADDFX2M)                       0.35       1.43 r
-  u_ALU/mult_63/S2_4_2/CO (ADDFX2M)                       0.35       1.78 r
-  u_ALU/mult_63/S2_5_2/CO (ADDFX2M)                       0.35       2.13 r
-  u_ALU/mult_63/S2_6_2/CO (ADDFX2M)                       0.35       2.47 r
-  u_ALU/mult_63/S4_2/S (ADDFX2M)                          0.35       2.83 f
-  u_ALU/mult_63/U11/Y (CLKXOR2X2M)                        0.19       3.02 r
-  u_ALU/mult_63/FS_1/A[7] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.02 r
-  u_ALU/mult_63/FS_1/U3/Y (NAND2X2M)                      0.04       3.06 f
-  u_ALU/mult_63/FS_1/U23/Y (OA21X1M)                      0.22       3.28 f
-  u_ALU/mult_63/FS_1/U20/Y (AOI2BB1X1M)                   0.16       3.44 f
-  u_ALU/mult_63/FS_1/U19/Y (CLKXOR2X2M)                   0.16       3.60 r
-  u_ALU/mult_63/FS_1/SUM[10] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.60 r
-  u_ALU/mult_63/PRODUCT[12] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       3.60 r
-  u_ALU/U10/Y (OAI2BB1X2M)                                0.07       3.67 r
-  u_ALU/ALU_Out_reg[12]/D (DFFRQX2M)                      0.00       3.67 r
-  data arrival time                                                  3.67
-
-  clock GATED_CLOCK (rise edge)                          20.00      20.00
-  clock network delay (ideal)                             0.00      20.00
-  u_ALU/ALU_Out_reg[12]/CK (DFFRQX2M)                     0.00      20.00 r
-  library setup time                                     -0.16      19.84
-  data required time                                                19.84
-  --------------------------------------------------------------------------
-  data required time                                                19.84
-  data arrival time                                                 -3.67
-  --------------------------------------------------------------------------
-  slack (MET)                                                       16.17
+  slack (MET)                                                       15.17
 
 
   Startpoint: u_REG_File/Memory_reg[1][6]
@@ -1888,45 +1658,143 @@ Wire Load Model Mode: top
                                                           0.00       0.29 f
   u_ALU/Operand_B[6] (ALU_00000008_00000010_0000000e_00000004)
                                                           0.00       0.29 f
-  u_ALU/U4/Y (CLKBUFX2M)                                  0.17       0.45 f
-  u_ALU/div_67/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+  u_ALU/U93/Y (CLKBUFX2M)                                 0.17       0.45 f
+  u_ALU/div_71/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
                                                           0.00       0.45 f
-  u_ALU/div_67/U71/Y (NOR2X1M)                            0.13       0.58 r
-  u_ALU/div_67/U68/Y (AND3X1M)                            0.12       0.70 r
-  u_ALU/div_67/U66/Y (AND2X1M)                            0.10       0.80 r
-  u_ALU/div_67/U63/Y (AND4X1M)                            0.15       0.95 r
-  u_ALU/div_67/U41/Y (CLKMX2X2M)                          0.14       1.09 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.36 f
-  u_ALU/div_67/U64/Y (AND3X1M)                            0.20       1.55 f
-  u_ALU/div_67/U47/Y (CLKMX2X2M)                          0.15       1.70 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.01 r
-  u_ALU/div_67/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.15 r
-  u_ALU/div_67/U65/Y (AND2X1M)                            0.16       2.30 r
-  u_ALU/div_67/U52/Y (CLKMX2X2M)                          0.16       2.46 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.28       2.74 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.19       2.93 f
-  u_ALU/div_67/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.18       3.11 f
-  u_ALU/div_67/U67/Y (AND2X1M)                            0.17       3.28 f
-  u_ALU/div_67/quotient[4] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
-                                                          0.00       3.28 f
-  u_ALU/U61/Y (AOI222X1M)                                 0.28       3.56 r
-  u_ALU/U58/Y (AOI31X2M)                                  0.07       3.63 f
-  u_ALU/ALU_Out_reg[4]/D (DFFRQX2M)                       0.00       3.63 f
-  data arrival time                                                  3.63
+  u_ALU/div_71/U71/Y (NOR2X1M)                            0.12       0.58 r
+  u_ALU/div_71/U68/Y (AND3X1M)                            0.12       0.70 r
+  u_ALU/div_71/U66/Y (AND2X1M)                            0.10       0.79 r
+  u_ALU/div_71/U63/Y (AND4X1M)                            0.15       0.94 r
+  u_ALU/div_71/U41/Y (CLKMX2X2M)                          0.14       1.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.35 f
+  u_ALU/div_71/U64/Y (AND3X1M)                            0.20       1.54 f
+  u_ALU/div_71/U47/Y (CLKMX2X2M)                          0.14       1.68 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.28       1.96 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.18       2.14 f
+  u_ALU/div_71/U65/Y (AND2X1M)                            0.16       2.30 f
+  u_ALU/div_71/U52/Y (CLKMX2X2M)                          0.15       2.45 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_1/CO (ADDFX2M)      0.31       2.76 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_2/CO (ADDFX2M)      0.15       2.91 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_4_3/CO (ADDFX2M)      0.14       3.05 r
+  u_ALU/div_71/U67/Y (AND2X1M)                            0.18       3.23 r
+  u_ALU/div_71/quotient[4] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+                                                          0.00       3.23 r
+  u_ALU/U54/Y (AOI22X1M)                                  0.10       3.33 f
+  u_ALU/U51/Y (AOI31X2M)                                  0.11       3.44 r
+  u_ALU/ALU_Out_reg[4]/D (DFFRQX2M)                       0.00       3.44 r
+  data arrival time                                                  3.44
 
   clock GATED_CLOCK (rise edge)                          20.00      20.00
   clock network delay (ideal)                             0.00      20.00
   u_ALU/ALU_Out_reg[4]/CK (DFFRQX2M)                      0.00      20.00 r
-  library setup time                                     -0.10      19.90
-  data required time                                                19.90
+  library setup time                                     -0.17      19.83
+  data required time                                                19.83
   --------------------------------------------------------------------------
-  data required time                                                19.90
-  data arrival time                                                 -3.63
+  data required time                                                19.83
+  data arrival time                                                 -3.44
   --------------------------------------------------------------------------
-  slack (MET)                                                       16.26
+  slack (MET)                                                       16.39
 
 
-  Startpoint: u_REG_File/Memory_reg[0][0]
+  Startpoint: u_REG_File/Memory_reg[1][6]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_ALU/ALU_Out_reg[5]
+            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
+  Path Group: GATED_CLOCK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_REG_File/Memory_reg[1][6]/CK (DFFRQX2M)               0.00       0.00 r
+  u_REG_File/Memory_reg[1][6]/Q (DFFRQX2M)                0.29       0.29 f
+  u_REG_File/REG1_ALU_B[6] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
+                                                          0.00       0.29 f
+  u_ALU/Operand_B[6] (ALU_00000008_00000010_0000000e_00000004)
+                                                          0.00       0.29 f
+  u_ALU/U93/Y (CLKBUFX2M)                                 0.17       0.45 f
+  u_ALU/div_71/b[6] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+                                                          0.00       0.45 f
+  u_ALU/div_71/U71/Y (NOR2X1M)                            0.12       0.58 r
+  u_ALU/div_71/U68/Y (AND3X1M)                            0.12       0.70 r
+  u_ALU/div_71/U66/Y (AND2X1M)                            0.10       0.79 r
+  u_ALU/div_71/U63/Y (AND4X1M)                            0.15       0.94 r
+  u_ALU/div_71/U41/Y (CLKMX2X2M)                          0.14       1.09 f
+  u_ALU/div_71/u_div/u_fa_PartRem_0_6_1/CO (ADDFX2M)      0.26       1.35 f
+  u_ALU/div_71/U64/Y (AND3X1M)                            0.20       1.54 f
+  u_ALU/div_71/U47/Y (CLKMX2X2M)                          0.15       1.69 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_1/CO (ADDFX2M)      0.31       2.00 r
+  u_ALU/div_71/u_div/u_fa_PartRem_0_5_2/CO (ADDFX2M)      0.14       2.14 r
+  u_ALU/div_71/U65/Y (AND2X1M)                            0.16       2.30 r
+  u_ALU/div_71/quotient[5] (ALU_00000008_00000010_0000000e_00000004_DW_div_uns_0)
+                                                          0.00       2.30 r
+  u_ALU/U58/Y (AOI22X1M)                                  0.09       2.39 f
+  u_ALU/U55/Y (AOI31X2M)                                  0.11       2.50 r
+  u_ALU/ALU_Out_reg[5]/D (DFFRQX2M)                       0.00       2.50 r
+  data arrival time                                                  2.50
+
+  clock GATED_CLOCK (rise edge)                          20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  u_ALU/ALU_Out_reg[5]/CK (DFFRQX2M)                      0.00      20.00 r
+  library setup time                                     -0.17      19.83
+  data required time                                                19.83
+  --------------------------------------------------------------------------
+  data required time                                                19.83
+  data arrival time                                                 -2.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                       17.33
+
+
+  Startpoint: u_REG_File/Memory_reg[0][1]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_ALU/ALU_Out_reg[12]
+            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
+  Path Group: GATED_CLOCK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_REG_File/Memory_reg[0][1]/CK (DFFRQX1M)               0.00       0.00 r
+  u_REG_File/Memory_reg[0][1]/Q (DFFRQX1M)                0.31       0.31 f
+  u_REG_File/REG0_ALU_A[1] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
+                                                          0.00       0.31 f
+  u_ALU/Operand_A[1] (ALU_00000008_00000010_0000000e_00000004)
+                                                          0.00       0.31 f
+  u_ALU/U98/Y (CLKBUFX2M)                                 0.19       0.50 f
+  u_ALU/sub_61/A[1] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       0.50 f
+  u_ALU/sub_61/U2_1/CO (ADDFX2M)                          0.31       0.82 f
+  u_ALU/sub_61/U2_2/CO (ADDFX2M)                          0.19       1.01 f
+  u_ALU/sub_61/U2_3/CO (ADDFX2M)                          0.19       1.21 f
+  u_ALU/sub_61/U2_4/CO (ADDFX2M)                          0.19       1.40 f
+  u_ALU/sub_61/U2_5/CO (ADDFX2M)                          0.19       1.59 f
+  u_ALU/sub_61/U2_6/CO (ADDFX2M)                          0.19       1.79 f
+  u_ALU/sub_61/U2_7/CO (ADDFX2M)                          0.19       1.98 f
+  u_ALU/sub_61/U1/Y (INVX2M)                              0.04       2.02 r
+  u_ALU/sub_61/DIFF[8] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       2.02 r
+  u_ALU/U62/Y (AND2X2M)                                   0.07       2.09 r
+  u_ALU/U3/Y (OAI31X1M)                                   0.08       2.17 f
+  u_ALU/U29/Y (INVX2M)                                    0.07       2.24 r
+  u_ALU/ALU_Out_reg[12]/D (DFFRQX2M)                      0.00       2.24 r
+  data arrival time                                                  2.24
+
+  clock GATED_CLOCK (rise edge)                          20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  u_ALU/ALU_Out_reg[12]/CK (DFFRQX2M)                     0.00      20.00 r
+  library setup time                                     -0.17      19.83
+  data required time                                                19.83
+  --------------------------------------------------------------------------
+  data required time                                                19.83
+  data arrival time                                                 -2.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                       17.59
+
+
+  Startpoint: u_REG_File/Memory_reg[0][1]
               (rising edge-triggered flip-flop clocked by CLK1)
   Endpoint: u_ALU/ALU_Out_reg[11]
             (rising edge-triggered flip-flop clocked by GATED_CLOCK)
@@ -1937,48 +1805,137 @@ Wire Load Model Mode: top
   --------------------------------------------------------------------------
   clock CLK1 (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  u_REG_File/Memory_reg[0][0]/CK (DFFRQX1M)               0.00       0.00 r
-  u_REG_File/Memory_reg[0][0]/Q (DFFRQX1M)                0.27       0.27 r
-  u_REG_File/REG0_ALU_A[0] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
-                                                          0.00       0.27 r
-  u_ALU/Operand_A[0] (ALU_00000008_00000010_0000000e_00000004)
-                                                          0.00       0.27 r
-  u_ALU/U99/Y (CLKBUFX2M)                                 0.18       0.45 r
-  u_ALU/mult_63/A[0] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       0.45 r
-  u_ALU/mult_63/U37/Y (INVX2M)                            0.09       0.54 f
-  u_ALU/mult_63/U114/Y (NOR2X1M)                          0.12       0.65 r
-  u_ALU/mult_63/U6/Y (AND2X2M)                            0.10       0.75 r
-  u_ALU/mult_63/S2_2_2/CO (ADDFX2M)                       0.34       1.09 r
-  u_ALU/mult_63/S2_3_2/CO (ADDFX2M)                       0.35       1.43 r
-  u_ALU/mult_63/S2_4_2/CO (ADDFX2M)                       0.35       1.78 r
-  u_ALU/mult_63/S2_5_2/CO (ADDFX2M)                       0.35       2.13 r
-  u_ALU/mult_63/S2_6_2/CO (ADDFX2M)                       0.35       2.47 r
-  u_ALU/mult_63/S4_2/S (ADDFX2M)                          0.35       2.83 f
-  u_ALU/mult_63/U11/Y (CLKXOR2X2M)                        0.19       3.02 r
-  u_ALU/mult_63/FS_1/A[7] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.02 r
-  u_ALU/mult_63/FS_1/U3/Y (NAND2X2M)                      0.04       3.06 f
-  u_ALU/mult_63/FS_1/U23/Y (OA21X1M)                      0.22       3.28 f
-  u_ALU/mult_63/FS_1/U7/Y (XNOR2X1M)                      0.07       3.35 r
-  u_ALU/mult_63/FS_1/SUM[9] (ALU_00000008_00000010_0000000e_00000004_DW01_add_1)
-                                                          0.00       3.35 r
-  u_ALU/mult_63/PRODUCT[11] (ALU_00000008_00000010_0000000e_00000004_DW02_mult_0)
-                                                          0.00       3.35 r
-  u_ALU/U15/Y (OAI2BB1X2M)                                0.09       3.43 r
-  u_ALU/ALU_Out_reg[11]/D (DFFRQX2M)                      0.00       3.43 r
-  data arrival time                                                  3.43
+  u_REG_File/Memory_reg[0][1]/CK (DFFRQX1M)               0.00       0.00 r
+  u_REG_File/Memory_reg[0][1]/Q (DFFRQX1M)                0.31       0.31 f
+  u_REG_File/REG0_ALU_A[1] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
+                                                          0.00       0.31 f
+  u_ALU/Operand_A[1] (ALU_00000008_00000010_0000000e_00000004)
+                                                          0.00       0.31 f
+  u_ALU/U98/Y (CLKBUFX2M)                                 0.19       0.50 f
+  u_ALU/sub_61/A[1] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       0.50 f
+  u_ALU/sub_61/U2_1/CO (ADDFX2M)                          0.31       0.82 f
+  u_ALU/sub_61/U2_2/CO (ADDFX2M)                          0.19       1.01 f
+  u_ALU/sub_61/U2_3/CO (ADDFX2M)                          0.19       1.21 f
+  u_ALU/sub_61/U2_4/CO (ADDFX2M)                          0.19       1.40 f
+  u_ALU/sub_61/U2_5/CO (ADDFX2M)                          0.19       1.59 f
+  u_ALU/sub_61/U2_6/CO (ADDFX2M)                          0.19       1.79 f
+  u_ALU/sub_61/U2_7/CO (ADDFX2M)                          0.19       1.98 f
+  u_ALU/sub_61/U1/Y (INVX2M)                              0.04       2.02 r
+  u_ALU/sub_61/DIFF[8] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       2.02 r
+  u_ALU/U62/Y (AND2X2M)                                   0.07       2.09 r
+  u_ALU/U3/Y (OAI31X1M)                                   0.08       2.17 f
+  u_ALU/U29/Y (INVX2M)                                    0.07       2.24 r
+  u_ALU/ALU_Out_reg[11]/D (DFFRQX2M)                      0.00       2.24 r
+  data arrival time                                                  2.24
 
   clock GATED_CLOCK (rise edge)                          20.00      20.00
   clock network delay (ideal)                             0.00      20.00
   u_ALU/ALU_Out_reg[11]/CK (DFFRQX2M)                     0.00      20.00 r
-  library setup time                                     -0.16      19.84
-  data required time                                                19.84
+  library setup time                                     -0.17      19.83
+  data required time                                                19.83
   --------------------------------------------------------------------------
-  data required time                                                19.84
-  data arrival time                                                 -3.43
+  data required time                                                19.83
+  data arrival time                                                 -2.24
   --------------------------------------------------------------------------
-  slack (MET)                                                       16.40
+  slack (MET)                                                       17.59
+
+
+  Startpoint: u_REG_File/Memory_reg[0][1]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_ALU/ALU_Out_reg[10]
+            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
+  Path Group: GATED_CLOCK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_REG_File/Memory_reg[0][1]/CK (DFFRQX1M)               0.00       0.00 r
+  u_REG_File/Memory_reg[0][1]/Q (DFFRQX1M)                0.31       0.31 f
+  u_REG_File/REG0_ALU_A[1] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
+                                                          0.00       0.31 f
+  u_ALU/Operand_A[1] (ALU_00000008_00000010_0000000e_00000004)
+                                                          0.00       0.31 f
+  u_ALU/U98/Y (CLKBUFX2M)                                 0.19       0.50 f
+  u_ALU/sub_61/A[1] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       0.50 f
+  u_ALU/sub_61/U2_1/CO (ADDFX2M)                          0.31       0.82 f
+  u_ALU/sub_61/U2_2/CO (ADDFX2M)                          0.19       1.01 f
+  u_ALU/sub_61/U2_3/CO (ADDFX2M)                          0.19       1.21 f
+  u_ALU/sub_61/U2_4/CO (ADDFX2M)                          0.19       1.40 f
+  u_ALU/sub_61/U2_5/CO (ADDFX2M)                          0.19       1.59 f
+  u_ALU/sub_61/U2_6/CO (ADDFX2M)                          0.19       1.79 f
+  u_ALU/sub_61/U2_7/CO (ADDFX2M)                          0.19       1.98 f
+  u_ALU/sub_61/U1/Y (INVX2M)                              0.04       2.02 r
+  u_ALU/sub_61/DIFF[8] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       2.02 r
+  u_ALU/U62/Y (AND2X2M)                                   0.07       2.09 r
+  u_ALU/U3/Y (OAI31X1M)                                   0.08       2.17 f
+  u_ALU/U29/Y (INVX2M)                                    0.07       2.24 r
+  u_ALU/ALU_Out_reg[10]/D (DFFRQX2M)                      0.00       2.24 r
+  data arrival time                                                  2.24
+
+  clock GATED_CLOCK (rise edge)                          20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  u_ALU/ALU_Out_reg[10]/CK (DFFRQX2M)                     0.00      20.00 r
+  library setup time                                     -0.17      19.83
+  data required time                                                19.83
+  --------------------------------------------------------------------------
+  data required time                                                19.83
+  data arrival time                                                 -2.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                       17.59
+
+
+  Startpoint: u_REG_File/Memory_reg[0][1]
+              (rising edge-triggered flip-flop clocked by CLK1)
+  Endpoint: u_ALU/ALU_Out_reg[9]
+            (rising edge-triggered flip-flop clocked by GATED_CLOCK)
+  Path Group: GATED_CLOCK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK1 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_REG_File/Memory_reg[0][1]/CK (DFFRQX1M)               0.00       0.00 r
+  u_REG_File/Memory_reg[0][1]/Q (DFFRQX1M)                0.31       0.31 f
+  u_REG_File/REG0_ALU_A[1] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
+                                                          0.00       0.31 f
+  u_ALU/Operand_A[1] (ALU_00000008_00000010_0000000e_00000004)
+                                                          0.00       0.31 f
+  u_ALU/U98/Y (CLKBUFX2M)                                 0.19       0.50 f
+  u_ALU/sub_61/A[1] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       0.50 f
+  u_ALU/sub_61/U2_1/CO (ADDFX2M)                          0.31       0.82 f
+  u_ALU/sub_61/U2_2/CO (ADDFX2M)                          0.19       1.01 f
+  u_ALU/sub_61/U2_3/CO (ADDFX2M)                          0.19       1.21 f
+  u_ALU/sub_61/U2_4/CO (ADDFX2M)                          0.19       1.40 f
+  u_ALU/sub_61/U2_5/CO (ADDFX2M)                          0.19       1.59 f
+  u_ALU/sub_61/U2_6/CO (ADDFX2M)                          0.19       1.79 f
+  u_ALU/sub_61/U2_7/CO (ADDFX2M)                          0.19       1.98 f
+  u_ALU/sub_61/U1/Y (INVX2M)                              0.04       2.02 r
+  u_ALU/sub_61/DIFF[8] (ALU_00000008_00000010_0000000e_00000004_DW01_sub_0)
+                                                          0.00       2.02 r
+  u_ALU/U62/Y (AND2X2M)                                   0.07       2.09 r
+  u_ALU/U3/Y (OAI31X1M)                                   0.08       2.17 f
+  u_ALU/U29/Y (INVX2M)                                    0.07       2.24 r
+  u_ALU/ALU_Out_reg[9]/D (DFFRQX2M)                       0.00       2.24 r
+  data arrival time                                                  2.24
+
+  clock GATED_CLOCK (rise edge)                          20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  u_ALU/ALU_Out_reg[9]/CK (DFFRQX2M)                      0.00      20.00 r
+  library setup time                                     -0.17      19.83
+  data required time                                                19.83
+  --------------------------------------------------------------------------
+  data required time                                                19.83
+  data arrival time                                                 -2.24
+  --------------------------------------------------------------------------
+  slack (MET)                                                       17.59
 
 
   Startpoint: RX_IN (input port clocked by CLK2)
@@ -2328,7 +2285,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.31       0.88 f
   u_RX_Controler/U67/Y (MX2X2M)                           0.16       1.04 f
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2376,7 +2333,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.31       0.88 f
   u_RX_Controler/U67/Y (MX2X2M)                           0.16       1.04 f
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2424,7 +2381,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.27       0.84 r
   u_RX_Controler/U67/Y (MX2X2M)                           0.14       0.98 r
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2472,7 +2429,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.27       0.84 r
   u_RX_Controler/U67/Y (MX2X2M)                           0.14       0.98 r
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2520,7 +2477,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.27       0.84 r
   u_RX_Controler/U67/Y (MX2X2M)                           0.14       0.98 r
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2568,7 +2525,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.27       0.84 r
   u_RX_Controler/U67/Y (MX2X2M)                           0.14       0.98 r
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2616,7 +2573,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.27       0.84 r
   u_RX_Controler/U67/Y (MX2X2M)                           0.14       0.98 r
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2664,7 +2621,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U68/Y (MX4X1M)                           0.27       0.84 r
   u_RX_Controler/U67/Y (MX2X2M)                           0.14       0.98 r
   u_RX_Controler/REG_Address[0] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
@@ -2712,9 +2669,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)
@@ -2752,9 +2709,9 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   u_RX_Controler/Current_State_reg[2]/CK (DFFRQX1M)       0.00       0.00 r
   u_RX_Controler/Current_State_reg[2]/Q (DFFRQX1M)        0.29       0.29 f
-  u_RX_Controler/U8/Y (CLKBUFX2M)                         0.29       0.57 f
+  u_RX_Controler/U4/Y (CLKBUFX2M)                         0.29       0.57 f
   u_RX_Controler/U71/Y (MX4X1M)                           0.31       0.88 f
-  u_RX_Controler/U7/Y (MX2X2M)                            0.30       1.17 f
+  u_RX_Controler/U5/Y (MX2X2M)                            0.30       1.17 f
   u_RX_Controler/REG_Address[3] (RX_Controler_00000008_00000010_00000004_0000000e_00000004)
                                                           0.00       1.17 f
   u_REG_File/Address[3] (REG_File_00000008_00000010_00000004_00000000_00000000_0000001c_00000008)

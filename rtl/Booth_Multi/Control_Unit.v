@@ -4,6 +4,7 @@ module Control_Unit (
     input  wire [1:0]     The_2_Qs,
     input  wire           Counter_Finsh,
     input  wire           ALU_Valid ,
+    input  wire           Multi_En,
 
     output reg            Load_Defult  ,
 
@@ -53,7 +54,13 @@ localparam Idle ='b000 ,
         case (Current_State)
             Idle: begin
                 Load_Defult='b1;
-                Next_State=Comparing_QS;
+                if (Multi_En) begin
+                    Next_State=Comparing_QS;
+                end else begin
+                    Next_State=Idle;
+                end
+                
+                
             end
 
             Comparing_QS:begin
