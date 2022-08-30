@@ -85,7 +85,7 @@ write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.ddc
 write_file -format verilog -hierarchy -output netlists/Design_Top_Netlist.v
 write_sdf  sdf/Design_Top.sdf
 write_sdc  -nosplit sdc/Design_Top.sdc
-#set_svf -off 
+set_svf -off 
 
 
 report_area -hierarchy > reports/area.rpt
